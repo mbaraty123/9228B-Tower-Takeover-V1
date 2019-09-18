@@ -63,10 +63,7 @@ void autonomous( void ) {
 void usercontrol( void ) {
   // User control code here, inside the loop
   while (1) {
-    
-    arcadeDrive();
-
-
+    drive();
     vex::task::sleep(20); //Sleep the task for a short amount of time to prevent wasted resources. 
   }
 }

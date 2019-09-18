@@ -12,7 +12,11 @@ enum class DriveSide : int {
 
 void arcadeDrive();
 
+void tankDrive();
+
 void setMotorSpeed(DriveSide side, int speed);
+
+void drive();
 
 
 #endif

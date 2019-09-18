@@ -2,7 +2,7 @@
 
 
 int axisValue(controller::axis Axis) {
-  return Axis.value();
+  return Axis.position();
 }
 
 bool buttonIsPressed(controller::button Button) {
