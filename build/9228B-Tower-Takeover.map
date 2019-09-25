@@ -60,15 +60,38 @@ Discarded input sections
                 0x0000000000000000        0x8 build/src/controller.o
  .llvm_addrsig  0x0000000000000000        0x0 build/src/controller.o
  .text          0x0000000000000000        0x0 build/src/drive.o
- .text._Z13setMotorSpeed9DriveSidei
+ .text._Z12setSideSpeed9DriveSidei
                 0x0000000000000000       0xa8 build/src/drive.o
- .ARM.exidx.text._Z13setMotorSpeed9DriveSidei
+ .ARM.exidx.text._Z12setSideSpeed9DriveSidei
                 0x0000000000000000        0x8 build/src/drive.o
  .text._Z11arcadeDrivev
                 0x0000000000000000      0x100 build/src/drive.o
  .ARM.exidx.text._Z11arcadeDrivev
                 0x0000000000000000        0x8 build/src/drive.o
+ .text._Z16moveStackForwardv
+                0x0000000000000000       0x38 build/src/drive.o
+ .ARM.exidx.text._Z16moveStackForwardv
+                0x0000000000000000        0x8 build/src/drive.o
+ .text._Z13moveStackBackv
+                0x0000000000000000       0x38 build/src/drive.o
+ .ARM.exidx.text._Z13moveStackBackv
+                0x0000000000000000        0x8 build/src/drive.o
+ .text._Z12stackControlv
+                0x0000000000000000        0x4 build/src/drive.o
+ .ARM.exidx.text._Z12stackControlv
+                0x0000000000000000        0x8 build/src/drive.o
  .llvm_addrsig  0x0000000000000000        0xc build/src/drive.o
+ .text          0x0000000000000000        0x0 build/src/init.o
+ .text._Z9initStackv
+                0x0000000000000000        0x4 build/src/init.o
+ .ARM.exidx.text._Z9initStackv
+                0x0000000000000000        0x8 build/src/init.o
+ .comment       0x0000000000000000       0x2e build/src/init.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 build/src/init.o
+ .ARM.attributes
+                0x0000000000000000       0x3a build/src/init.o
+ .llvm_addrsig  0x0000000000000000        0x0 build/src/init.o
  .text          0x0000000000000000        0x0 build/src/main.o
  .text._Z9pre_autonv
                 0x0000000000000000        0x4 build/src/main.o
@@ -2555,15 +2578,15 @@ Linker script and memory map
  .bss.MOTOR_FRONT_RIGHT
                 0x00000000038029d8       0x28 build/src/drive.o
                 0x00000000038029d8                MOTOR_FRONT_RIGHT
- .bss.MOTOR_LIFT_A
+ .bss.MOTOR_INTAKE_A
                 0x0000000003802a00       0x28 build/src/drive.o
-                0x0000000003802a00                MOTOR_LIFT_A
- .bss.MOTOR_LIFT_B
+                0x0000000003802a00                MOTOR_INTAKE_A
+ .bss.MOTOR_INTAKE_B
                 0x0000000003802a28       0x28 build/src/drive.o
-                0x0000000003802a28                MOTOR_LIFT_B
- .bss.MOTOR_ARM
+                0x0000000003802a28                MOTOR_INTAKE_B
+ .bss.MOTOR_STACK
                 0x0000000003802a50       0x28 build/src/drive.o
-                0x0000000003802a50                MOTOR_ARM
+                0x0000000003802a50                MOTOR_STACK
  .bss.MOTOR_CLAW
                 0x0000000003802a78       0x28 build/src/drive.o
                 0x0000000003802a78                MOTOR_CLAW
@@ -2688,6 +2711,7 @@ Linker script and memory map
 LOAD /Applications/VEXcode V5 Text.app/Contents/Resources/sdk/vexv5/stdlib_0.lib
 LOAD build/src/controller.o
 LOAD build/src/drive.o
+LOAD build/src/init.o
 LOAD build/src/main.o
 START GROUP
 LOAD /Applications/VEXcode V5 Text.app/Contents/Resources/sdk/vexv5/libv5rt.a
