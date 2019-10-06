@@ -23,4 +23,11 @@ void moveStackBack();
 
 void stackControl();
 
+void armUp();
+
+void armDown();
+
+void armControl();
+
+
 #endif

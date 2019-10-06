@@ -2,19 +2,18 @@
 #define DECLARATIONS_H
 using namespace vex;
 
-brain Brain;
-
 controller MASTER = controller();
 
-motor MOTOR_BACK_LEFT   = motor(1, false);
-motor MOTOR_BACK_RIGHT  = motor(2, false);
-motor MOTOR_FRONT_LEFT  = motor(3, false);
-motor MOTOR_FRONT_RIGHT = motor(4, false);
-motor MOTOR_INTAKE_A    = motor(5, false);
-motor MOTOR_INTAKE_B    = motor(6, false);
-motor MOTOR_STACK       = motor(7, false);
-motor MOTOR_CLAW        = motor(8, false);
+motor MOTOR_BACK_LEFT   = motor(PORT9, false);
+motor MOTOR_BACK_RIGHT  = motor(PORT3, false);
+motor MOTOR_FRONT_LEFT  = motor(PORT10, false);
+motor MOTOR_FRONT_RIGHT = motor(PORT2, false);
+motor MOTOR_INTAKE_A    = motor(PORT5, false);
+motor MOTOR_INTAKE_B    = motor(PORT6, false);
+motor MOTOR_STACK       = motor(PORT16, false);
+motor MOTOR_ARM         = motor(PORT12, gearSetting::ratio36_1, true);
 
 static int THRESHOLD = 5;
+static float SPEED_MULTIPLIER = .9;
 
 #endif
