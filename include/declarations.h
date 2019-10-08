@@ -15,5 +15,7 @@ motor MOTOR_ARM         = motor(PORT12, gearSetting::ratio36_1, true);
 
 static int THRESHOLD = 5;
 static float SPEED_MULTIPLIER = .9;
-
+static float WHEEL_DIAMETER = 4;
+static double INCHES_PER_ROTATION = .07962;
+static float ROTATIONS_PER_INCH = 12.56;
 #endif

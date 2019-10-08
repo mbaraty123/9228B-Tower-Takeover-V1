@@ -6,6 +6,7 @@ void drive() {
   arcadeDrive();
   stackControl();
   armControl();
+  intakeControl();
 }
 
 void setSideSpeed(DriveSide side, int speed) {
@@ -91,3 +92,28 @@ void armControl(){
     MOTOR_ARM.stop(brakeType::hold);
   }
 }
+
+void intakeIn() {
+  MOTOR_INTAKE_A.spin(directionType::fwd, 90, velocityUnits::pct);
+  MOTOR_INTAKE_B.spin(directionType::fwd, -90, velocityUnits::pct);
+}
+
+void intakeOut() {
+  MOTOR_INTAKE_A.spin(directionType::rev, 90, velocityUnits::pct);
+  MOTOR_INTAKE_B.spin(directionType::rev, -90, velocityUnits::pct);
+}
+
+void intakeControl() {
+  if(buttonIsPressed(MASTER.ButtonL1)){
+    intakeIn();
+  }
+  else if (buttonIsPressed(MASTER.ButtonL2)) {
+    intakeOut();
+  }
+  else {
+    MOTOR_INTAKE_A.stop(brakeType::hold);
+    MOTOR_INTAKE_B.stop(brakeType::hold);
+  }
+}
+
+

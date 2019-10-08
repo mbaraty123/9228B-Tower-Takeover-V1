@@ -29,5 +29,11 @@ void armDown();
 
 void armControl();
 
+void intakeIn();
+
+void intakeOut();
+
+void intakeControl();
+
 
 #endif
