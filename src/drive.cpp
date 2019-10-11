@@ -20,7 +20,7 @@ void setSideSpeed(DriveSide side, int speed) {
 }
 
 void arcadeDrive() {
-  int x = SPEED_MULTIPLIER  * /*(pow(-axisValue(MASTER.Axis1) / 10, 3) / 10)*/ -axisValue(MASTER.Axis4);
+  int x = SPEED_MULTIPLIER  * /*(pow(-axisValue(MASTER.Axis1) / 10, 3) / 10)*/ -axisValue(MASTER.Axis1);
   int y = SPEED_MULTIPLIER * (.7  * (pow(-axisValue(MASTER.Axis3) / 9, 3) / 10)) /*-axisValue(MASTER.Axis3)*/;
   int speedLeft = abs(x + y) > THRESHOLD? -(x + y): 0;
   int speedRight = abs(x - y) > THRESHOLD? -(x - y): 0;
@@ -55,12 +55,12 @@ void tankDrive() {
 
 void moveStackForward() {
   double final = 1.5; 
-  MOTOR_STACK.startSpinTo(final, rotationUnits::rev, 70, velocityUnits::pct);
+  MOTOR_STACK.startSpinTo(final, rotationUnits::rev, 50, velocityUnits::pct);
 }
 
 void moveStackBack() {
   double final = 0;
-  MOTOR_STACK.startSpinTo(final, rotationUnits::rev, 50, velocityUnits::pct); 
+  MOTOR_STACK.startSpinTo(final, rotationUnits::rev, 80, velocityUnits::pct); 
 }
 
 void stackControl() {
@@ -74,11 +74,11 @@ void stackControl() {
 }
 
 void armUp(){
-  MOTOR_ARM.startSpinTo(2.1, rotationUnits::rev, 80, velocityUnits::pct);
+  MOTOR_ARM.startSpinTo(2.1, rotationUnits::rev, 100, velocityUnits::pct);
 }
 
 void armDown(){
-  MOTOR_ARM.startSpinTo(0.15, rotationUnits::rev, 80, velocityUnits::pct);
+  MOTOR_ARM.startSpinTo(0.1, rotationUnits::rev, 100, velocityUnits::pct);
 }
 
 void armControl(){
@@ -94,13 +94,13 @@ void armControl(){
 }
 
 void intakeIn() {
-  MOTOR_INTAKE_A.spin(directionType::fwd, 90, velocityUnits::pct);
-  MOTOR_INTAKE_B.spin(directionType::fwd, -90, velocityUnits::pct);
+  MOTOR_INTAKE_A.spin(directionType::fwd, 70, velocityUnits::pct);
+  MOTOR_INTAKE_B.spin(directionType::fwd, -70, velocityUnits::pct);
 }
 
 void intakeOut() {
-  MOTOR_INTAKE_A.spin(directionType::rev, 90, velocityUnits::pct);
-  MOTOR_INTAKE_B.spin(directionType::rev, -90, velocityUnits::pct);
+  MOTOR_INTAKE_A.spin(directionType::rev, 70, velocityUnits::pct);
+  MOTOR_INTAKE_B.spin(directionType::rev, -70, velocityUnits::pct);
 }
 
 void intakeControl() {

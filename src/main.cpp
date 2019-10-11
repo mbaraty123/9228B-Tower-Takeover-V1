@@ -15,6 +15,16 @@ using namespace vex;
 // A global instance of vex::competition
 vex::competition Competition;
 vex::brain Brain;
+controller MASTER = controller();
+
+motor MOTOR_BACK_LEFT   = motor(PORT9, false);
+motor MOTOR_BACK_RIGHT  = motor(PORT3, false);
+motor MOTOR_FRONT_LEFT  = motor(PORT10, false);
+motor MOTOR_FRONT_RIGHT = motor(PORT2, false);
+motor MOTOR_INTAKE_A    = motor(PORT5, false);
+motor MOTOR_INTAKE_B    = motor(PORT6, false);
+motor MOTOR_STACK       = motor(PORT16, false);
+motor MOTOR_ARM         = motor(PORT12, gearSetting::ratio36_1, true);
 
 // define your global instances of motors and other devices here
 
