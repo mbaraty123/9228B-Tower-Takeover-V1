@@ -1,9 +1,6 @@
 #ifndef AUTON_H
 #define AUTON_H
 
-void moveForward(double inches, int velocity);
-
-void moveFor(double rotations, int velocity);
-
+void moveForward(double inches);
 
 #endif

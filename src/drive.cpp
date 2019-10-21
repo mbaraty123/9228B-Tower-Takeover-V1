@@ -1,12 +1,18 @@
 #include "drive.h"
 #include "declarations.h"
+#include "auton.h"
 
 
 void drive() {
-  arcadeDrive();
+  tankDrive();
   stackControl();
   armControl();
   intakeControl();
+
+  if(buttonIsPressed(MASTER.ButtonUp)){
+    moveForward(1);
+  }
+
 }
 
 void setSideSpeed(DriveSide side, int speed) {
@@ -55,7 +61,7 @@ void tankDrive() {
 
 void moveStackForward() {
   double final = 1.5; 
-  MOTOR_STACK.startSpinTo(final, rotationUnits::rev, 50, velocityUnits::pct);
+  MOTOR_STACK.startSpinTo(final, rotationUnits::rev, 30, velocityUnits::pct);
 }
 
 void moveStackBack() {

@@ -2,16 +2,19 @@
 #include "drive.h"
 #include "declarations.h"
 
-void moveForward(double inches, int velocity) {
-  double rotations = ROTATIONS_PER_INCH * inches;
+void moveForward(double inches) {
+  double time = inches * (476.19)/9;
 
-  moveFor(rotations, velocity);
-}
+  MOTOR_BACK_LEFT.spin(directionType::fwd, 100, velocityUnits::rpm);
+  MOTOR_FRONT_LEFT.spin(directionType::fwd, 100, velocityUnits::rpm);
+  MOTOR_BACK_RIGHT.spin(directionType::rev, 100, velocityUnits::rpm);
+  MOTOR_FRONT_RIGHT.spin(directionType::rev, 100, velocityUnits::rpm);
+  
+  vexDelay(time);
 
-void moveFor(double rotations, int velocity) {
-  MOTOR_BACK_LEFT.spinFor(rotations, rotationUnits::rev, velocity, velocityUnits::pct);
-  MOTOR_BACK_RIGHT.spinFor(rotations, rotationUnits::rev, velocity, velocityUnits::pct);
-  MOTOR_FRONT_LEFT.spinFor(rotations, rotationUnits::rev, velocity, velocityUnits::pct);
-  MOTOR_FRONT_RIGHT.spinFor(rotations, rotationUnits::rev, 80, velocityUnits::pct);
+  MOTOR_BACK_LEFT.stop(brakeType::hold);
+  MOTOR_FRONT_LEFT.stop(brakeType::hold);
+  MOTOR_BACK_RIGHT.stop(brakeType::hold);
+  MOTOR_FRONT_RIGHT.stop(brakeType::hold);
 }
 
