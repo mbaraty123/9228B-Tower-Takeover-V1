@@ -4,7 +4,7 @@
 
 
 void drive() {
-  tankDrive();
+  arcadeDrive();
   stackControl();
   armControl();
   intakeControl();
@@ -23,38 +23,29 @@ void setSideSpeed(DriveSide side, int speed) {
     MOTOR_BACK_RIGHT.spin(directionType::fwd, speed, velocityUnits::pct);
     MOTOR_FRONT_RIGHT.spin(directionType::fwd, speed, velocityUnits::pct);
   }
+  else {
+    MOTOR_FRONT_LEFT.spin(directionType::fwd, speed, velocityUnits::pct);
+    MOTOR_FRONT_RIGHT.spin(directionType::fwd, speed, velocityUnits::pct);
+    MOTOR_BACK_RIGHT.spin(directionType::fwd, speed, velocityUnits::pct);
+    MOTOR_BACK_LEFT.spin(directionType::fwd, speed, velocityUnits::pct);
+  }
 }
 
 void arcadeDrive() {
-  int x = SPEED_MULTIPLIER  * /*(pow(-axisValue(MASTER.Axis1) / 10, 3) / 10)*/ -axisValue(MASTER.Axis1);
-  int y = SPEED_MULTIPLIER * (.7  * (pow(-axisValue(MASTER.Axis3) / 9, 3) / 10)) /*-axisValue(MASTER.Axis3)*/;
+  int x = SPEED_MULTIPLIER  * -axisValue(MASTER.Axis1);
+  int y = SPEED_MULTIPLIER * (.7  * (pow(-axisValue(MASTER.Axis3) / 9, 3) / 10));
   int speedLeft = abs(x + y) > THRESHOLD? -(x + y): 0;
-  int speedRight = abs(x - y) > THRESHOLD? -(x - y): 0;
+  int speedRight = abs(x - y) > THRESHOLD? (x - y): 0;
 
   setSideSpeed(DriveSide::LEFT, speedLeft);
   setSideSpeed(DriveSide::RIGHT, speedRight);
 }
 
-/* simple
-void arcadeDrive() {
-  int x = -axisValue(MASTER.Axis1); // get the current position on the x axis of the controller's right joystick
-  int y = -axisValue(MASTER.Axis3); // get the current position on the y axis of the controller's left joystick
-
-  int speedLeft = abs(x + y) > THRESHOLD? -(x + y): 0;
-  int speedRight = abs(x - y) > THRESHOLD? -(x - y): 0;
-
-  setSideSpeed(DriveSide::LEFT, speedLeft);
-  setSideSpeed(DriveSide::RIGHT, speedRight);
-}
-
-
-
-*/
 void tankDrive() {
   int l = SPEED_MULTIPLIER * (.7  * (pow(axisValue(MASTER.Axis3) / 9, 3) / 10));
   int r = SPEED_MULTIPLIER * (.7  * (pow(axisValue(MASTER.Axis2) / 9, 3) / 10));
   int speedLeft = abs(l) > THRESHOLD? l: 0;
-  int speedRight = abs(r) > THRESHOLD? -r: 0;
+  int speedRight = abs(r) > THRESHOLD? r: 0;
   setSideSpeed(DriveSide::LEFT, speedLeft);
   setSideSpeed(DriveSide::RIGHT, speedRight);
 }
@@ -80,11 +71,11 @@ void stackControl() {
 }
 
 void armUp(){
-  MOTOR_ARM.startSpinTo(2.1, rotationUnits::rev, 100, velocityUnits::pct);
+  MOTOR_ARM.startSpinTo(2.1, rotationUnits::rev, 50, velocityUnits::pct);
 }
 
 void armDown(){
-  MOTOR_ARM.startSpinTo(0.1, rotationUnits::rev, 100, velocityUnits::pct);
+  MOTOR_ARM.startSpinTo(0.1, rotationUnits::rev, 50, velocityUnits::pct);
 }
 
 void armControl(){
@@ -100,13 +91,13 @@ void armControl(){
 }
 
 void intakeIn() {
-  MOTOR_INTAKE_A.spin(directionType::fwd, 70, velocityUnits::pct);
-  MOTOR_INTAKE_B.spin(directionType::fwd, -70, velocityUnits::pct);
+  MOTOR_INTAKE_A.spin(directionType::fwd, -100, velocityUnits::pct);
+  MOTOR_INTAKE_B.spin(directionType::fwd, 100, velocityUnits::pct);
 }
 
 void intakeOut() {
-  MOTOR_INTAKE_A.spin(directionType::rev, 70, velocityUnits::pct);
-  MOTOR_INTAKE_B.spin(directionType::rev, -70, velocityUnits::pct);
+  MOTOR_INTAKE_A.spin(directionType::rev, -100, velocityUnits::pct);
+  MOTOR_INTAKE_B.spin(directionType::rev, 100, velocityUnits::pct);
 }
 
 void intakeControl() {

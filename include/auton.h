@@ -3,4 +3,8 @@
 
 void moveForward(double inches);
 
+void pivotClockwise(float degrees);
+
+void pivotCounterClockwise(float degrees);
+
 #endif
