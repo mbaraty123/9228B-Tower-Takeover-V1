@@ -62,6 +62,27 @@ void autonRedLeft(){
 }
 
 void autonRedRight(){
+  MOTOR_INTAKE_A.startRotateFor(4, rotationUnits::rev, 100, velocityUnits::pct);
+  MOTOR_INTAKE_B.startRotateFor(4, rotationUnits::rev, 100, velocityUnits::pct);
+
+  moveForward(30);
+
+  pivotClockwise(180);
+
+  moveForward(30);
+
+  pivotCounterClockwise(90);
+
+  moveForward(18);
+
+  moveStackForward();
+
+  intakeOut();
+
+  moveForward(-5);
+
+  MOTOR_INTAKE_A.stop();
+  MOTOR_INTAKE_B.stop();
 
 }
 
