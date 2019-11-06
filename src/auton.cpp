@@ -93,11 +93,12 @@ void autonRedRight(){
   4. Score cubes
   */
 void autonStart() {
-  MOTOR_ARM.rotateTo(1, rotationUnits::rev);
-  MOTOR_ARM.rotateTo(0, rotationUnits::rev);
+  MOTOR_ARM.rotateTo(3.5, rotationUnits::rev, 100, velocityUnits::pct);
+  MOTOR_STACK.rotateTo(.7, rev);
+  MOTOR_ARM.rotateTo(.3, rotationUnits::rev);
 
   MOTOR_INTAKE_A.startRotateFor(directionType::fwd, 3, rotationUnits::rev, 100, velocityUnits::pct);
   MOTOR_INTAKE_B.startRotateFor(directionType::fwd, 3, rotationUnits::rev, 100, velocityUnits::pct);
 
-  moveForward(5);
+  //moveForward(5);
 }

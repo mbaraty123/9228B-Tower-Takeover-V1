@@ -2,6 +2,7 @@
 #include "declarations.h"
 #include "auton.h"
 
+bool slowMode = false;
 
 void drive() {
   arcadeDrive();
@@ -10,7 +11,10 @@ void drive() {
   intakeControl();
 
   if(buttonIsPressed(MASTER.ButtonUp)){
-    moveForward(1);
+    if(slowMode)
+      slowMode = false;
+    if(!slowMode)
+      slowMode = true;
   }
 
 }
@@ -37,8 +41,13 @@ void arcadeDrive() {
   int speedLeft = abs(x + y) > THRESHOLD? -(x + y): 0;
   int speedRight = abs(x - y) > THRESHOLD? (x - y): 0;
 
-  setSideSpeed(DriveSide::LEFT, speedLeft);
-  setSideSpeed(DriveSide::RIGHT, speedRight);
+  if(slowMode){
+    setSideSpeed(DriveSide::LEFT, speedLeft / 3);
+     setSideSpeed(DriveSide::RIGHT, speedRight / 3);
+  } else {
+    setSideSpeed(DriveSide::LEFT, speedLeft);
+    setSideSpeed(DriveSide::RIGHT, speedRight);
+  }
 }
 
 void tankDrive() {
@@ -46,18 +55,24 @@ void tankDrive() {
   int r = SPEED_MULTIPLIER * (.7  * (pow(axisValue(MASTER.Axis2) / 9, 3) / 10));
   int speedLeft = abs(l) > THRESHOLD? l: 0;
   int speedRight = abs(r) > THRESHOLD? r: 0;
-  setSideSpeed(DriveSide::LEFT, speedLeft);
-  setSideSpeed(DriveSide::RIGHT, speedRight);
+  
+  if(slowMode){
+    setSideSpeed(DriveSide::LEFT, speedLeft / 3);
+     setSideSpeed(DriveSide::RIGHT, speedRight / 3);
+  } else {
+    setSideSpeed(DriveSide::LEFT, speedLeft);
+    setSideSpeed(DriveSide::RIGHT, speedRight);
+  }
 }
 
 void moveStackForward() {
   double final = 1.5; 
-  MOTOR_STACK.startSpinTo(final, rotationUnits::rev, 30, velocityUnits::pct);
+  MOTOR_STACK.startSpinTo(100, rotationUnits::rev, 30, velocityUnits::pct);
 }
 
 void moveStackBack() {
   double final = 0;
-  MOTOR_STACK.startSpinTo(final, rotationUnits::rev, 80, velocityUnits::pct); 
+  MOTOR_STACK.startSpinTo(-100, rotationUnits::rev, 80, velocityUnits::pct); 
 }
 
 void stackControl() {
@@ -71,11 +86,13 @@ void stackControl() {
 }
 
 void armUp(){
-  MOTOR_ARM.startSpinTo(6.6, rotationUnits::rev, 100, velocityUnits::pct);
+  MOTOR_ARM.startSpinTo(20, rotationUnits::rev, 100, velocityUnits::pct);
+  //realValue 6.6
 }
 
 void armDown(){
-  MOTOR_ARM.startSpinTo(0.0, rotationUnits::rev, 100, velocityUnits::pct);
+  MOTOR_ARM.startSpinTo(-10, rotationUnits::rev, 100, velocityUnits::pct);
+  //realValue 0
 }
 
 void armControl(){
