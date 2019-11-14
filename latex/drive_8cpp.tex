@@ -1,0 +1,270 @@
+\hypertarget{drive_8cpp}{}\subsection{src/drive.cpp File Reference}
+\label{drive_8cpp}\index{src/drive.\+cpp@{src/drive.\+cpp}}
+{\ttfamily \#include \char`\"{}drive.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}declarations.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}auton.\+h\char`\"{}}\newline
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{drive_8cpp_a928e32686c7e00c1ecde24c3da3019f7}{drive}} ()
+\item 
+void \mbox{\hyperlink{drive_8cpp_ac522da2148fe1cfd9bea8c026e64ee7b}{set\+Side\+Speed}} (\mbox{\hyperlink{drive_8h_a2771dd4b083c12b0f13d534e3d1914dc}{Drive\+Side}} side, int speed)
+\item 
+void \mbox{\hyperlink{drive_8cpp_a6ff8820b82f28a73c88a746ddacb26bb}{arcade\+Drive}} ()
+\item 
+void \mbox{\hyperlink{drive_8cpp_ab8605578ac6dddeb3e511513523e3354}{tank\+Drive}} ()
+\item 
+void \mbox{\hyperlink{drive_8cpp_a08a55986dab46203f1eeef50123cf4bd}{move\+Stack\+Forward}} ()
+\item 
+void \mbox{\hyperlink{drive_8cpp_ac153148440cec552a2824c91569e1e5a}{move\+Stack\+Back}} ()
+\item 
+void \mbox{\hyperlink{drive_8cpp_abc3819041cf96aad1093752a3a5de31c}{stack\+Control}} ()
+\item 
+void \mbox{\hyperlink{drive_8cpp_adf7b0afb3a8dcf884db533b0217b0543}{arm\+Up}} ()
+\item 
+void \mbox{\hyperlink{drive_8cpp_ab1850cc7cdb69057fe29f45eefe7ec90}{arm\+Down}} ()
+\item 
+void \mbox{\hyperlink{drive_8cpp_adde1067b42b4de65ff20afb8901f7643}{arm\+Control}} ()
+\item 
+void \mbox{\hyperlink{drive_8cpp_aa0846c73538fc48569a7c7c3689a59f0}{intake\+In}} ()
+\item 
+void \mbox{\hyperlink{drive_8cpp_aaca1ffa87592c1c5783fe6e18f9c655b}{intake\+Out}} ()
+\item 
+void \mbox{\hyperlink{drive_8cpp_a8afb2a071b21d98c49d5888a7b380ba6}{intake\+Control}} ()
+\end{DoxyCompactItemize}
+\subsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{drive_8cpp_ac84adc1c8ccd21c3c630031ad1ce5956}{slow\+Mode}} = false
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Function Documentation}
+\mbox{\Hypertarget{drive_8cpp_a6ff8820b82f28a73c88a746ddacb26bb}\label{drive_8cpp_a6ff8820b82f28a73c88a746ddacb26bb}} 
+\index{drive.\+cpp@{drive.\+cpp}!arcade\+Drive@{arcade\+Drive}}
+\index{arcade\+Drive@{arcade\+Drive}!drive.\+cpp@{drive.\+cpp}}
+\paragraph{\texorpdfstring{arcade\+Drive()}{arcadeDrive()}}
+{\footnotesize\ttfamily void arcade\+Drive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Initiates the arcade control configuration for the controller, with the left y axis for linear movement and the right x axis for pivoting \begin{DoxyAuthor}{Author}
+Michael Baraty 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/9/2019 
+\end{DoxyDate}
+
+
+Definition at line 37 of file drive.\+cpp.
+
+\mbox{\Hypertarget{drive_8cpp_adde1067b42b4de65ff20afb8901f7643}\label{drive_8cpp_adde1067b42b4de65ff20afb8901f7643}} 
+\index{drive.\+cpp@{drive.\+cpp}!arm\+Control@{arm\+Control}}
+\index{arm\+Control@{arm\+Control}!drive.\+cpp@{drive.\+cpp}}
+\paragraph{\texorpdfstring{arm\+Control()}{armControl()}}
+{\footnotesize\ttfamily void arm\+Control (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Reads the controller\textquotesingle{}s button inputs to initiate the arm lifter\textquotesingle{}s movement while the button is being pressed \begin{DoxyAuthor}{Author}
+Michael Baraty 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/9/2019 
+\end{DoxyDate}
+
+
+Definition at line 97 of file drive.\+cpp.
+
+\mbox{\Hypertarget{drive_8cpp_ab1850cc7cdb69057fe29f45eefe7ec90}\label{drive_8cpp_ab1850cc7cdb69057fe29f45eefe7ec90}} 
+\index{drive.\+cpp@{drive.\+cpp}!arm\+Down@{arm\+Down}}
+\index{arm\+Down@{arm\+Down}!drive.\+cpp@{drive.\+cpp}}
+\paragraph{\texorpdfstring{arm\+Down()}{armDown()}}
+{\footnotesize\ttfamily void arm\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Moves the intake lifter down to a specified position \begin{DoxyAuthor}{Author}
+Michael Baraty 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/9/2019 
+\end{DoxyDate}
+
+
+Definition at line 92 of file drive.\+cpp.
+
+\mbox{\Hypertarget{drive_8cpp_adf7b0afb3a8dcf884db533b0217b0543}\label{drive_8cpp_adf7b0afb3a8dcf884db533b0217b0543}} 
+\index{drive.\+cpp@{drive.\+cpp}!arm\+Up@{arm\+Up}}
+\index{arm\+Up@{arm\+Up}!drive.\+cpp@{drive.\+cpp}}
+\paragraph{\texorpdfstring{arm\+Up()}{armUp()}}
+{\footnotesize\ttfamily void arm\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Moves the intake lifter up to a specified position \begin{DoxyAuthor}{Author}
+Michael Baraty 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/9/2019 
+\end{DoxyDate}
+
+
+Definition at line 87 of file drive.\+cpp.
+
+\mbox{\Hypertarget{drive_8cpp_a928e32686c7e00c1ecde24c3da3019f7}\label{drive_8cpp_a928e32686c7e00c1ecde24c3da3019f7}} 
+\index{drive.\+cpp@{drive.\+cpp}!drive@{drive}}
+\index{drive@{drive}!drive.\+cpp@{drive.\+cpp}}
+\paragraph{\texorpdfstring{drive()}{drive()}}
+{\footnotesize\ttfamily void drive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Initiates the drive code for the entire robot \begin{DoxyAuthor}{Author}
+Michael Baraty 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/9/2019 
+\end{DoxyDate}
+
+
+Definition at line 7 of file drive.\+cpp.
+
+\mbox{\Hypertarget{drive_8cpp_a8afb2a071b21d98c49d5888a7b380ba6}\label{drive_8cpp_a8afb2a071b21d98c49d5888a7b380ba6}} 
+\index{drive.\+cpp@{drive.\+cpp}!intake\+Control@{intake\+Control}}
+\index{intake\+Control@{intake\+Control}!drive.\+cpp@{drive.\+cpp}}
+\paragraph{\texorpdfstring{intake\+Control()}{intakeControl()}}
+{\footnotesize\ttfamily void intake\+Control (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Reads the controller\textquotesingle{}s button inputs to spin the intake while the button is being pressed \begin{DoxyAuthor}{Author}
+Michael Baraty 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/9/2019 
+\end{DoxyDate}
+
+
+Definition at line 119 of file drive.\+cpp.
+
+\mbox{\Hypertarget{drive_8cpp_aa0846c73538fc48569a7c7c3689a59f0}\label{drive_8cpp_aa0846c73538fc48569a7c7c3689a59f0}} 
+\index{drive.\+cpp@{drive.\+cpp}!intake\+In@{intake\+In}}
+\index{intake\+In@{intake\+In}!drive.\+cpp@{drive.\+cpp}}
+\paragraph{\texorpdfstring{intake\+In()}{intakeIn()}}
+{\footnotesize\ttfamily void intake\+In (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Spins the intake to intake the cubes \begin{DoxyAuthor}{Author}
+Michael Baraty 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/9/2019 
+\end{DoxyDate}
+
+
+Definition at line 109 of file drive.\+cpp.
+
+\mbox{\Hypertarget{drive_8cpp_aaca1ffa87592c1c5783fe6e18f9c655b}\label{drive_8cpp_aaca1ffa87592c1c5783fe6e18f9c655b}} 
+\index{drive.\+cpp@{drive.\+cpp}!intake\+Out@{intake\+Out}}
+\index{intake\+Out@{intake\+Out}!drive.\+cpp@{drive.\+cpp}}
+\paragraph{\texorpdfstring{intake\+Out()}{intakeOut()}}
+{\footnotesize\ttfamily void intake\+Out (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Spins the intake to eject the cubes \begin{DoxyAuthor}{Author}
+Michael Baraty 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/9/2019 
+\end{DoxyDate}
+
+
+Definition at line 114 of file drive.\+cpp.
+
+\mbox{\Hypertarget{drive_8cpp_ac153148440cec552a2824c91569e1e5a}\label{drive_8cpp_ac153148440cec552a2824c91569e1e5a}} 
+\index{drive.\+cpp@{drive.\+cpp}!move\+Stack\+Back@{move\+Stack\+Back}}
+\index{move\+Stack\+Back@{move\+Stack\+Back}!drive.\+cpp@{drive.\+cpp}}
+\paragraph{\texorpdfstring{move\+Stack\+Back()}{moveStackBack()}}
+{\footnotesize\ttfamily void move\+Stack\+Back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Moves the stack backwards to a specified position \begin{DoxyAuthor}{Author}
+Michael Baraty 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/9/2019 
+\end{DoxyDate}
+
+
+Definition at line 72 of file drive.\+cpp.
+
+\mbox{\Hypertarget{drive_8cpp_a08a55986dab46203f1eeef50123cf4bd}\label{drive_8cpp_a08a55986dab46203f1eeef50123cf4bd}} 
+\index{drive.\+cpp@{drive.\+cpp}!move\+Stack\+Forward@{move\+Stack\+Forward}}
+\index{move\+Stack\+Forward@{move\+Stack\+Forward}!drive.\+cpp@{drive.\+cpp}}
+\paragraph{\texorpdfstring{move\+Stack\+Forward()}{moveStackForward()}}
+{\footnotesize\ttfamily void move\+Stack\+Forward (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Moves the stack forward to a specified position \begin{DoxyAuthor}{Author}
+Michael Baraty 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/9/2019 
+\end{DoxyDate}
+
+
+Definition at line 67 of file drive.\+cpp.
+
+\mbox{\Hypertarget{drive_8cpp_ac522da2148fe1cfd9bea8c026e64ee7b}\label{drive_8cpp_ac522da2148fe1cfd9bea8c026e64ee7b}} 
+\index{drive.\+cpp@{drive.\+cpp}!set\+Side\+Speed@{set\+Side\+Speed}}
+\index{set\+Side\+Speed@{set\+Side\+Speed}!drive.\+cpp@{drive.\+cpp}}
+\paragraph{\texorpdfstring{set\+Side\+Speed()}{setSideSpeed()}}
+{\footnotesize\ttfamily void set\+Side\+Speed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{drive_8h_a2771dd4b083c12b0f13d534e3d1914dc}{Drive\+Side}}}]{side,  }\item[{int}]{speed }\end{DoxyParamCaption})}
+
+Sets the speed of the designated drive side 
+\begin{DoxyParams}{Parameters}
+{\em side} & The Drive\+Side that is going to be powered \\
+\hline
+{\em speed} & The speed that the robot will move at between -\/100 -\/ 100 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Michael Baraty 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/9/2019 
+\end{DoxyDate}
+
+
+Definition at line 21 of file drive.\+cpp.
+
+\mbox{\Hypertarget{drive_8cpp_abc3819041cf96aad1093752a3a5de31c}\label{drive_8cpp_abc3819041cf96aad1093752a3a5de31c}} 
+\index{drive.\+cpp@{drive.\+cpp}!stack\+Control@{stack\+Control}}
+\index{stack\+Control@{stack\+Control}!drive.\+cpp@{drive.\+cpp}}
+\paragraph{\texorpdfstring{stack\+Control()}{stackControl()}}
+{\footnotesize\ttfamily void stack\+Control (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Reads the controller\textquotesingle{}s button inputs to initiate the stack mechanism\textquotesingle{}s movement while the button is being pressed \begin{DoxyAuthor}{Author}
+Michael Baraty 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/9/2019 
+\end{DoxyDate}
+
+
+Definition at line 77 of file drive.\+cpp.
+
+\mbox{\Hypertarget{drive_8cpp_ab8605578ac6dddeb3e511513523e3354}\label{drive_8cpp_ab8605578ac6dddeb3e511513523e3354}} 
+\index{drive.\+cpp@{drive.\+cpp}!tank\+Drive@{tank\+Drive}}
+\index{tank\+Drive@{tank\+Drive}!drive.\+cpp@{drive.\+cpp}}
+\paragraph{\texorpdfstring{tank\+Drive()}{tankDrive()}}
+{\footnotesize\ttfamily void tank\+Drive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Initiates the tank drive control configuration for the controller, with the left y axis for the left side and the right y axis for the right side \begin{DoxyAuthor}{Author}
+Michael Baraty 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/9/2019 
+\end{DoxyDate}
+
+
+Definition at line 52 of file drive.\+cpp.
+
+
+
+\subsubsection{Variable Documentation}
+\mbox{\Hypertarget{drive_8cpp_ac84adc1c8ccd21c3c630031ad1ce5956}\label{drive_8cpp_ac84adc1c8ccd21c3c630031ad1ce5956}} 
+\index{drive.\+cpp@{drive.\+cpp}!slow\+Mode@{slow\+Mode}}
+\index{slow\+Mode@{slow\+Mode}!drive.\+cpp@{drive.\+cpp}}
+\paragraph{\texorpdfstring{slow\+Mode}{slowMode}}
+{\footnotesize\ttfamily bool slow\+Mode = false}
+
+
+
+Definition at line 5 of file drive.\+cpp.
+

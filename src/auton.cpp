@@ -12,8 +12,8 @@ void moveForward(double inches) {
 }
 
 void pivotClockwise(float degrees) {
-  double rotations_per_360 = 1.11;
-  double rotations = rotations_per_360 * (degrees / 360);
+  double rotations_per_360 = 6.55;
+  double rotations = rotations_per_360 * (360 / degrees);
 
   MOTOR_BACK_LEFT.startRotateFor(directionType::fwd, rotations, rotationUnits::rev);
   MOTOR_BACK_RIGHT.startRotateFor(directionType::rev, rotations, rotationUnits::rev);
@@ -50,20 +50,54 @@ void auton(Side side, Color color) {
 
 
 void autonBlueLeft(){
+  MOTOR_INTAKE_A.startRotateFor(6, rotationUnits::rev, 100, velocityUnits::pct);
+  MOTOR_INTAKE_B.startRotateFor(6, rotationUnits::rev, 100, velocityUnits::pct);
 
+  moveForward(30);
+
+  pivotClockwise(180);
+
+  moveForward(30);
+
+  pivotClockwise(90);
+
+  moveForward(18);
+
+  moveStackForward();
+
+  intakeOut();
+
+  moveForward(-5);
+
+  MOTOR_INTAKE_A.stop();
+  MOTOR_INTAKE_B.stop();
 }
 
 void autonBlueRight(){
-
+  //run intakes
+  //move forward 30
+  //cut intakes
+  //180
+  //move 30
+  //90 counterclockwise
+  //forward 40
+  //drop stack somehow
 }
 
 void autonRedLeft(){
-
+  //run intakes
+  //move forward 30
+  //cut intakes
+  //180
+  //move 30
+  //90 clockwise
+  //forward 40
+  //drop stack somehow
 }
 
 void autonRedRight(){
-  MOTOR_INTAKE_A.startRotateFor(4, rotationUnits::rev, 100, velocityUnits::pct);
-  MOTOR_INTAKE_B.startRotateFor(4, rotationUnits::rev, 100, velocityUnits::pct);
+  MOTOR_INTAKE_A.startRotateFor(6, rotationUnits::rev, 100, velocityUnits::pct);
+  MOTOR_INTAKE_B.startRotateFor(6, rotationUnits::rev, 100, velocityUnits::pct);
 
   moveForward(30);
 
@@ -93,12 +127,14 @@ void autonRedRight(){
   4. Score cubes
   */
 void autonStart() {
-  MOTOR_ARM.rotateTo(3.5, rotationUnits::rev, 100, velocityUnits::pct);
-  MOTOR_STACK.rotateTo(.7, rev);
-  MOTOR_ARM.rotateTo(.3, rotationUnits::rev);
+  MOTOR_ARM.startRotateTo(3.5, rotationUnits::rev, 100, velocityUnits::pct);
+  MOTOR_INTAKE_A.startRotateFor(directionType::rev, 3, rotationUnits::rev, 100, velocityUnits::pct);
+  MOTOR_INTAKE_B.startRotateFor(directionType::rev, 3, rotationUnits::rev, 100, velocityUnits::pct);
 
-  MOTOR_INTAKE_A.startRotateFor(directionType::fwd, 3, rotationUnits::rev, 100, velocityUnits::pct);
-  MOTOR_INTAKE_B.startRotateFor(directionType::fwd, 3, rotationUnits::rev, 100, velocityUnits::pct);
+  moveForward(-6);
 
+  vexDelay(2000);
+
+  MOTOR_ARM.startRotateTo(.5, rotationUnits::rev, 100, velocityUnits::pct);
   //moveForward(5);
 }

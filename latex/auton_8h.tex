@@ -1,0 +1,277 @@
+\hypertarget{auton_8h}{}\subsection{include/auton.h File Reference}
+\label{auton_8h}\index{include/auton.\+h@{include/auton.\+h}}
+\subsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{auton_8h_a78abb31bad0fd1834c54a3ca6f8daab5}{Color}} \+: bool \{ \mbox{\hyperlink{auton_8h_a78abb31bad0fd1834c54a3ca6f8daab5a1b3e1ee9bff86431dea6b181365ba65f}{Color\+::\+B\+L\+UE}} = false, 
+\mbox{\hyperlink{auton_8h_a78abb31bad0fd1834c54a3ca6f8daab5aa2d9547b5d3dd9f05984475f7c926da0}{Color\+::\+R\+ED}} = true
+ \}
+\item 
+enum \mbox{\hyperlink{auton_8h_a702107095bd059695d57318e7338a4a7}{Side}} \+: bool \{ \mbox{\hyperlink{auton_8h_a702107095bd059695d57318e7338a4a7a684d325a7303f52e64011467ff5c5758}{Side\+::\+L\+E\+FT}} = false, 
+\mbox{\hyperlink{auton_8h_a702107095bd059695d57318e7338a4a7a21507b40c80068eda19865706fdc2403}{Side\+::\+R\+I\+G\+HT}} = true
+ \}
+\end{DoxyCompactItemize}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{auton_8h_ac132ca53625938c26d9d9104ca5c9e82}{move\+Forward}} (double inches)
+\item 
+void \mbox{\hyperlink{auton_8h_a7c81bf7b683346af95d1ff72eb60619f}{pivot\+Clockwise}} (float degrees)
+\item 
+void \mbox{\hyperlink{auton_8h_a962e4ac8747da1eb2aba6615d62e953b}{pivot\+Counter\+Clockwise}} (float degrees)
+\item 
+void \mbox{\hyperlink{auton_8h_a9c7e58a3b4bb5cdd30a6b3ed32e8f962}{auton}} (\mbox{\hyperlink{auton_8h_a702107095bd059695d57318e7338a4a7}{Side}} side, \mbox{\hyperlink{auton_8h_a78abb31bad0fd1834c54a3ca6f8daab5}{Color}} color)
+\begin{DoxyCompactList}\small\item\em the autonomous switcher \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{auton_8h_a1a25993901b668e4c162eb31fa463b52}{auton\+Start}} ()
+\item 
+void \mbox{\hyperlink{auton_8h_a5bb01d00c76862cb15431efd4090bee9}{auton\+Blue\+Left}} ()
+\item 
+void \mbox{\hyperlink{auton_8h_ab9984e9a12048995fb71a06a1c94fd31}{auton\+Blue\+Right}} ()
+\item 
+void \mbox{\hyperlink{auton_8h_aae46c4423bc7ed2947e82c4c5dd7f469}{auton\+Red\+Left}} ()
+\item 
+void \mbox{\hyperlink{auton_8h_aaf3b274e9144b7072829ca58203492a6}{auton\+Red\+Right}} ()
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{auton_8h_a78abb31bad0fd1834c54a3ca6f8daab5}\label{auton_8h_a78abb31bad0fd1834c54a3ca6f8daab5}} 
+\index{auton.\+h@{auton.\+h}!Color@{Color}}
+\index{Color@{Color}!auton.\+h@{auton.\+h}}
+\paragraph{\texorpdfstring{Color}{Color}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{auton_8h_a78abb31bad0fd1834c54a3ca6f8daab5}{Color}} \+: bool\hspace{0.3cm}{\ttfamily [strong]}}
+
+Declares the possible autonomous colors for the autonomous switcher \begin{DoxyAuthor}{Author}
+Michael Baraty 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/9/2019 
+\end{DoxyDate}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+L\+UE@{B\+L\+UE}!auton.\+h@{auton.\+h}}\index{auton.\+h@{auton.\+h}!B\+L\+UE@{B\+L\+UE}}}\mbox{\Hypertarget{auton_8h_a78abb31bad0fd1834c54a3ca6f8daab5a1b3e1ee9bff86431dea6b181365ba65f}\label{auton_8h_a78abb31bad0fd1834c54a3ca6f8daab5a1b3e1ee9bff86431dea6b181365ba65f}} 
+B\+L\+UE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+ED@{R\+ED}!auton.\+h@{auton.\+h}}\index{auton.\+h@{auton.\+h}!R\+ED@{R\+ED}}}\mbox{\Hypertarget{auton_8h_a78abb31bad0fd1834c54a3ca6f8daab5aa2d9547b5d3dd9f05984475f7c926da0}\label{auton_8h_a78abb31bad0fd1834c54a3ca6f8daab5aa2d9547b5d3dd9f05984475f7c926da0}} 
+R\+ED&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 38 of file auton.\+h.
+
+\mbox{\Hypertarget{auton_8h_a702107095bd059695d57318e7338a4a7}\label{auton_8h_a702107095bd059695d57318e7338a4a7}} 
+\index{auton.\+h@{auton.\+h}!Side@{Side}}
+\index{Side@{Side}!auton.\+h@{auton.\+h}}
+\paragraph{\texorpdfstring{Side}{Side}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{auton_8h_a702107095bd059695d57318e7338a4a7}{Side}} \+: bool\hspace{0.3cm}{\ttfamily [strong]}}
+
+Declares the possible autonomous starting side for the autonomous switcher \begin{DoxyAuthor}{Author}
+Michael Baraty 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/9/2019 
+\end{DoxyDate}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{L\+E\+FT@{L\+E\+FT}!auton.\+h@{auton.\+h}}\index{auton.\+h@{auton.\+h}!L\+E\+FT@{L\+E\+FT}}}\mbox{\Hypertarget{auton_8h_a702107095bd059695d57318e7338a4a7a684d325a7303f52e64011467ff5c5758}\label{auton_8h_a702107095bd059695d57318e7338a4a7a684d325a7303f52e64011467ff5c5758}} 
+L\+E\+FT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+I\+G\+HT@{R\+I\+G\+HT}!auton.\+h@{auton.\+h}}\index{auton.\+h@{auton.\+h}!R\+I\+G\+HT@{R\+I\+G\+HT}}}\mbox{\Hypertarget{auton_8h_a702107095bd059695d57318e7338a4a7a21507b40c80068eda19865706fdc2403}\label{auton_8h_a702107095bd059695d57318e7338a4a7a21507b40c80068eda19865706fdc2403}} 
+R\+I\+G\+HT&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 48 of file auton.\+h.
+
+
+
+\subsubsection{Function Documentation}
+\mbox{\Hypertarget{auton_8h_a9c7e58a3b4bb5cdd30a6b3ed32e8f962}\label{auton_8h_a9c7e58a3b4bb5cdd30a6b3ed32e8f962}} 
+\index{auton.\+h@{auton.\+h}!auton@{auton}}
+\index{auton@{auton}!auton.\+h@{auton.\+h}}
+\paragraph{\texorpdfstring{auton()}{auton()}}
+{\footnotesize\ttfamily void auton (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{auton_8h_a702107095bd059695d57318e7338a4a7}{Side}}}]{side,  }\item[{\mbox{\hyperlink{auton_8h_a78abb31bad0fd1834c54a3ca6f8daab5}{Color}}}]{color }\end{DoxyParamCaption})}
+
+
+
+the autonomous switcher 
+
+Initiates the specified autonomous routine 
+\begin{DoxyParams}{Parameters}
+{\em side} & The side in relastion to the zone th erobot is going ot be near \\
+\hline
+{\em color} & The color the robot is starting in \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Michael Baraty 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/9/2019
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Michael Baraty 
+\end{DoxyAuthor}
+
+
+Definition at line 38 of file auton.\+cpp.
+
+\mbox{\Hypertarget{auton_8h_a5bb01d00c76862cb15431efd4090bee9}\label{auton_8h_a5bb01d00c76862cb15431efd4090bee9}} 
+\index{auton.\+h@{auton.\+h}!auton\+Blue\+Left@{auton\+Blue\+Left}}
+\index{auton\+Blue\+Left@{auton\+Blue\+Left}!auton.\+h@{auton.\+h}}
+\paragraph{\texorpdfstring{auton\+Blue\+Left()}{autonBlueLeft()}}
+{\footnotesize\ttfamily void auton\+Blue\+Left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Initiates blue left autonomous routine \begin{DoxyAuthor}{Author}
+Michael Baraty 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/9/2019 
+\end{DoxyDate}
+
+
+Definition at line 52 of file auton.\+cpp.
+
+\mbox{\Hypertarget{auton_8h_ab9984e9a12048995fb71a06a1c94fd31}\label{auton_8h_ab9984e9a12048995fb71a06a1c94fd31}} 
+\index{auton.\+h@{auton.\+h}!auton\+Blue\+Right@{auton\+Blue\+Right}}
+\index{auton\+Blue\+Right@{auton\+Blue\+Right}!auton.\+h@{auton.\+h}}
+\paragraph{\texorpdfstring{auton\+Blue\+Right()}{autonBlueRight()}}
+{\footnotesize\ttfamily void auton\+Blue\+Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Initiates blue right autonomous routine \begin{DoxyAuthor}{Author}
+Michael Baraty 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/9/2019 
+\end{DoxyDate}
+
+
+Definition at line 56 of file auton.\+cpp.
+
+\mbox{\Hypertarget{auton_8h_aae46c4423bc7ed2947e82c4c5dd7f469}\label{auton_8h_aae46c4423bc7ed2947e82c4c5dd7f469}} 
+\index{auton.\+h@{auton.\+h}!auton\+Red\+Left@{auton\+Red\+Left}}
+\index{auton\+Red\+Left@{auton\+Red\+Left}!auton.\+h@{auton.\+h}}
+\paragraph{\texorpdfstring{auton\+Red\+Left()}{autonRedLeft()}}
+{\footnotesize\ttfamily void auton\+Red\+Left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Initiates red left autonomous routine \begin{DoxyAuthor}{Author}
+Michael Baraty 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/9/2019 
+\end{DoxyDate}
+
+
+Definition at line 60 of file auton.\+cpp.
+
+\mbox{\Hypertarget{auton_8h_aaf3b274e9144b7072829ca58203492a6}\label{auton_8h_aaf3b274e9144b7072829ca58203492a6}} 
+\index{auton.\+h@{auton.\+h}!auton\+Red\+Right@{auton\+Red\+Right}}
+\index{auton\+Red\+Right@{auton\+Red\+Right}!auton.\+h@{auton.\+h}}
+\paragraph{\texorpdfstring{auton\+Red\+Right()}{autonRedRight()}}
+{\footnotesize\ttfamily void auton\+Red\+Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Initiates red right autonomous routine \begin{DoxyAuthor}{Author}
+Michael Baraty 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/9/2019 
+\end{DoxyDate}
+
+
+Definition at line 64 of file auton.\+cpp.
+
+\mbox{\Hypertarget{auton_8h_a1a25993901b668e4c162eb31fa463b52}\label{auton_8h_a1a25993901b668e4c162eb31fa463b52}} 
+\index{auton.\+h@{auton.\+h}!auton\+Start@{auton\+Start}}
+\index{auton\+Start@{auton\+Start}!auton.\+h@{auton.\+h}}
+\paragraph{\texorpdfstring{auton\+Start()}{autonStart()}}
+{\footnotesize\ttfamily void auton\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Initiates the autonomous routine to release the mechanisms \begin{DoxyAuthor}{Author}
+Michael Baraty 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/9/2019
+\end{DoxyDate}
+
+\begin{DoxyEnumerate}
+\item Move intake up so mechanisms deploy
+\item Move intake back down
+\item Run intake and drive forward to pick up preload
+\item Score cubes 
+\end{DoxyEnumerate}
+
+Definition at line 95 of file auton.\+cpp.
+
+\mbox{\Hypertarget{auton_8h_ac132ca53625938c26d9d9104ca5c9e82}\label{auton_8h_ac132ca53625938c26d9d9104ca5c9e82}} 
+\index{auton.\+h@{auton.\+h}!move\+Forward@{move\+Forward}}
+\index{move\+Forward@{move\+Forward}!auton.\+h@{auton.\+h}}
+\paragraph{\texorpdfstring{move\+Forward()}{moveForward()}}
+{\footnotesize\ttfamily void move\+Forward (\begin{DoxyParamCaption}\item[{double}]{inches }\end{DoxyParamCaption})}
+
+Declares the autonomous functions for the robot \begin{DoxyAuthor}{Author}
+Michael Baraty 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/9/2019 Moves the robot forward for a certain distance 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em inches} & The distance to move in inches (negative for reverse) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Michael Baraty 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/9/2019 
+\end{DoxyDate}
+
+
+Definition at line 5 of file auton.\+cpp.
+
+\mbox{\Hypertarget{auton_8h_a7c81bf7b683346af95d1ff72eb60619f}\label{auton_8h_a7c81bf7b683346af95d1ff72eb60619f}} 
+\index{auton.\+h@{auton.\+h}!pivot\+Clockwise@{pivot\+Clockwise}}
+\index{pivot\+Clockwise@{pivot\+Clockwise}!auton.\+h@{auton.\+h}}
+\paragraph{\texorpdfstring{pivot\+Clockwise()}{pivotClockwise()}}
+{\footnotesize\ttfamily void pivot\+Clockwise (\begin{DoxyParamCaption}\item[{float}]{degrees }\end{DoxyParamCaption})}
+
+Pivots the robot clockwise to a certain angle 
+\begin{DoxyParams}{Parameters}
+{\em degrees} & The number of degrees to pivot the robot \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Michael Baraty 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/9/2019 
+\end{DoxyDate}
+
+
+Definition at line 14 of file auton.\+cpp.
+
+\mbox{\Hypertarget{auton_8h_a962e4ac8747da1eb2aba6615d62e953b}\label{auton_8h_a962e4ac8747da1eb2aba6615d62e953b}} 
+\index{auton.\+h@{auton.\+h}!pivot\+Counter\+Clockwise@{pivot\+Counter\+Clockwise}}
+\index{pivot\+Counter\+Clockwise@{pivot\+Counter\+Clockwise}!auton.\+h@{auton.\+h}}
+\paragraph{\texorpdfstring{pivot\+Counter\+Clockwise()}{pivotCounterClockwise()}}
+{\footnotesize\ttfamily void pivot\+Counter\+Clockwise (\begin{DoxyParamCaption}\item[{float}]{degrees }\end{DoxyParamCaption})}
+
+Pivots the robot counter-\/clockwise to a certain angle 
+\begin{DoxyParams}{Parameters}
+{\em degrees} & The number of degrees to pivot the robot \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Michael Baraty 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/9/2019 
+\end{DoxyDate}
+
+
+Definition at line 24 of file auton.\+cpp.
+

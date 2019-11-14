@@ -11,10 +11,9 @@ void drive() {
   intakeControl();
 
   if(buttonIsPressed(MASTER.ButtonUp)){
-    if(slowMode)
-      slowMode = false;
-    if(!slowMode)
-      slowMode = true;
+    slowMode = false;
+  } else if(buttonIsPressed(MASTER.ButtonDown)){
+    slowMode = true;
   }
 
 }
@@ -67,7 +66,7 @@ void tankDrive() {
 
 void moveStackForward() {
   double final = 1.5; 
-  MOTOR_STACK.startSpinTo(100, rotationUnits::rev, 30, velocityUnits::pct);
+  MOTOR_STACK.startSpinTo(100, rotationUnits::rev, 50, velocityUnits::pct);
 }
 
 void moveStackBack() {
@@ -108,13 +107,18 @@ void armControl(){
 }
 
 void intakeIn() {
-  MOTOR_INTAKE_A.spin(directionType::fwd, 100, velocityUnits::pct);
-  MOTOR_INTAKE_B.spin(directionType::fwd, 100, velocityUnits::pct);
+  if(!slowMode) {
+    MOTOR_INTAKE_A.spin(directionType::fwd, 100, velocityUnits::pct);
+    MOTOR_INTAKE_B.spin(directionType::fwd, 100, velocityUnits::pct);
+  } else {
+    MOTOR_INTAKE_A.spin(directionType::fwd, (100 / 3), velocityUnits::pct);
+    MOTOR_INTAKE_B.spin(directionType::fwd, (100 / 3), velocityUnits::pct);
+  }
 }
 
 void intakeOut() {
-  MOTOR_INTAKE_A.spin(directionType::rev, 100, velocityUnits::pct);
-  MOTOR_INTAKE_B.spin(directionType::rev, 100, velocityUnits::pct);
+  MOTOR_INTAKE_A.spin(directionType::rev, 80, velocityUnits::pct);
+  MOTOR_INTAKE_B.spin(directionType::rev, 80, velocityUnits::pct);
 }
 
 void intakeControl() {

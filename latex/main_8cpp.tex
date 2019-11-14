@@ -1,0 +1,251 @@
+\hypertarget{main_8cpp}{}\subsection{src/main.cpp File Reference}
+\label{main_8cpp}\index{src/main.\+cpp@{src/main.\+cpp}}
+{\ttfamily \#include \char`\"{}vex.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}drive.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}auton.\+h\char`\"{}}\newline
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8cpp_ac6b858ea8606cdfaee934aac6be66a96}{pre\+\_\+auton}} (void)
+\item 
+void \mbox{\hyperlink{main_8cpp_a2df3d06bc5bced154da27fce393f991f}{autonomous}} (void)
+\item 
+void \mbox{\hyperlink{main_8cpp_a0b51ae97a13db57021eefe87a9903444}{usercontrol}} (void)
+\item 
+int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+\subsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+vex\+::competition \mbox{\hyperlink{main_8cpp_ae38c1d025caf302610a55e0a7a9db5dd}{Competition}}
+\item 
+vex\+::brain \mbox{\hyperlink{main_8cpp_a4918ae1421e0a76946a52104b80cd8b8}{Brain}}
+\item 
+controller \mbox{\hyperlink{main_8cpp_ab04f8ff803f7f02c23e713402e13bf32}{M\+A\+S\+T\+ER}} = controller()
+\item 
+motor \mbox{\hyperlink{main_8cpp_ab24214b642128d0f3cb67e9b12e7d4fb}{M\+O\+T\+O\+R\+\_\+\+B\+A\+C\+K\+\_\+\+L\+E\+FT}} = motor(P\+O\+R\+T9, false)
+\item 
+motor \mbox{\hyperlink{main_8cpp_adece81dedf91c2893ba42dc05135a575}{M\+O\+T\+O\+R\+\_\+\+B\+A\+C\+K\+\_\+\+R\+I\+G\+HT}} = motor(P\+O\+R\+T3, true)
+\item 
+motor \mbox{\hyperlink{main_8cpp_a8c6f6315caf1d81bf4d4d113d0f7bffc}{M\+O\+T\+O\+R\+\_\+\+F\+R\+O\+N\+T\+\_\+\+L\+E\+FT}} = motor(P\+O\+R\+T10, false)
+\item 
+motor \mbox{\hyperlink{main_8cpp_ad6a9ea3d338421c5d709c32ae1aa42d8}{M\+O\+T\+O\+R\+\_\+\+F\+R\+O\+N\+T\+\_\+\+R\+I\+G\+HT}} = motor(P\+O\+R\+T2, true)
+\item 
+motor \mbox{\hyperlink{main_8cpp_a34de211d15bfb3c0ac450597fd96b4fc}{M\+O\+T\+O\+R\+\_\+\+I\+N\+T\+A\+K\+E\+\_\+A}} = motor(P\+O\+R\+T14, gear\+Setting\+::ratio36\+\_\+1, true)
+\item 
+motor \mbox{\hyperlink{main_8cpp_a5ae79e7ed71b0b94b3983c22c60c2eaa}{M\+O\+T\+O\+R\+\_\+\+I\+N\+T\+A\+K\+E\+\_\+B}} = motor(P\+O\+R\+T8, gear\+Setting\+::ratio36\+\_\+1, false)
+\item 
+motor \mbox{\hyperlink{main_8cpp_a212c888d64ffcd7e7b44a548fa0408a9}{M\+O\+T\+O\+R\+\_\+\+S\+T\+A\+CK}} = motor(P\+O\+R\+T16, false)
+\item 
+motor \mbox{\hyperlink{main_8cpp_a9a834f9a2c804ef0d65ed2f68c10a61a}{M\+O\+T\+O\+R\+\_\+\+A\+RM}} = motor(P\+O\+R\+T12, gear\+Setting\+::ratio36\+\_\+1, true)
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_a2df3d06bc5bced154da27fce393f991f}\label{main_8cpp_a2df3d06bc5bced154da27fce393f991f}} 
+\index{main.\+cpp@{main.\+cpp}!autonomous@{autonomous}}
+\index{autonomous@{autonomous}!main.\+cpp@{main.\+cpp}}
+\paragraph{\texorpdfstring{autonomous()}{autonomous()}}
+{\footnotesize\ttfamily void autonomous (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 58 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.\+cpp@{main.\+cpp}!main@{main}}
+\index{main@{main}!main.\+cpp@{main.\+cpp}}
+\paragraph{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 89 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_ac6b858ea8606cdfaee934aac6be66a96}\label{main_8cpp_ac6b858ea8606cdfaee934aac6be66a96}} 
+\index{main.\+cpp@{main.\+cpp}!pre\+\_\+auton@{pre\+\_\+auton}}
+\index{pre\+\_\+auton@{pre\+\_\+auton}!main.\+cpp@{main.\+cpp}}
+\paragraph{\texorpdfstring{pre\+\_\+auton()}{pre\_auton()}}
+{\footnotesize\ttfamily void pre\+\_\+auton (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 42 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a0b51ae97a13db57021eefe87a9903444}\label{main_8cpp_a0b51ae97a13db57021eefe87a9903444}} 
+\index{main.\+cpp@{main.\+cpp}!usercontrol@{usercontrol}}
+\index{usercontrol@{usercontrol}!main.\+cpp@{main.\+cpp}}
+\paragraph{\texorpdfstring{usercontrol()}{usercontrol()}}
+{\footnotesize\ttfamily void usercontrol (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 77 of file main.\+cpp.
+
+
+
+\subsubsection{Variable Documentation}
+\mbox{\Hypertarget{main_8cpp_a4918ae1421e0a76946a52104b80cd8b8}\label{main_8cpp_a4918ae1421e0a76946a52104b80cd8b8}} 
+\index{main.\+cpp@{main.\+cpp}!Brain@{Brain}}
+\index{Brain@{Brain}!main.\+cpp@{main.\+cpp}}
+\paragraph{\texorpdfstring{Brain}{Brain}}
+{\footnotesize\ttfamily vex\+::brain Brain}
+
+
+
+Definition at line 17 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_ae38c1d025caf302610a55e0a7a9db5dd}\label{main_8cpp_ae38c1d025caf302610a55e0a7a9db5dd}} 
+\index{main.\+cpp@{main.\+cpp}!Competition@{Competition}}
+\index{Competition@{Competition}!main.\+cpp@{main.\+cpp}}
+\paragraph{\texorpdfstring{Competition}{Competition}}
+{\footnotesize\ttfamily vex\+::competition Competition}
+
+
+
+Definition at line 16 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_ab04f8ff803f7f02c23e713402e13bf32}\label{main_8cpp_ab04f8ff803f7f02c23e713402e13bf32}} 
+\index{main.\+cpp@{main.\+cpp}!M\+A\+S\+T\+ER@{M\+A\+S\+T\+ER}}
+\index{M\+A\+S\+T\+ER@{M\+A\+S\+T\+ER}!main.\+cpp@{main.\+cpp}}
+\paragraph{\texorpdfstring{M\+A\+S\+T\+ER}{MASTER}}
+{\footnotesize\ttfamily controller M\+A\+S\+T\+ER = controller()}
+
+Makes the main controller accessible in other files than \mbox{\hyperlink{main_8cpp}{main.\+cpp}} \begin{DoxyAuthor}{Author}
+Michael Baraty 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/9/2019 
+\end{DoxyDate}
+
+
+Definition at line 18 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a9a834f9a2c804ef0d65ed2f68c10a61a}\label{main_8cpp_a9a834f9a2c804ef0d65ed2f68c10a61a}} 
+\index{main.\+cpp@{main.\+cpp}!M\+O\+T\+O\+R\+\_\+\+A\+RM@{M\+O\+T\+O\+R\+\_\+\+A\+RM}}
+\index{M\+O\+T\+O\+R\+\_\+\+A\+RM@{M\+O\+T\+O\+R\+\_\+\+A\+RM}!main.\+cpp@{main.\+cpp}}
+\paragraph{\texorpdfstring{M\+O\+T\+O\+R\+\_\+\+A\+RM}{MOTOR\_ARM}}
+{\footnotesize\ttfamily motor M\+O\+T\+O\+R\+\_\+\+A\+RM = motor(P\+O\+R\+T12, gear\+Setting\+::ratio36\+\_\+1, true)}
+
+Makes the intake lifter motor accessible in other files than \mbox{\hyperlink{main_8cpp}{main.\+cpp}} \begin{DoxyAuthor}{Author}
+Michael Baraty 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/9/2019 
+\end{DoxyDate}
+
+
+Definition at line 27 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_ab24214b642128d0f3cb67e9b12e7d4fb}\label{main_8cpp_ab24214b642128d0f3cb67e9b12e7d4fb}} 
+\index{main.\+cpp@{main.\+cpp}!M\+O\+T\+O\+R\+\_\+\+B\+A\+C\+K\+\_\+\+L\+E\+FT@{M\+O\+T\+O\+R\+\_\+\+B\+A\+C\+K\+\_\+\+L\+E\+FT}}
+\index{M\+O\+T\+O\+R\+\_\+\+B\+A\+C\+K\+\_\+\+L\+E\+FT@{M\+O\+T\+O\+R\+\_\+\+B\+A\+C\+K\+\_\+\+L\+E\+FT}!main.\+cpp@{main.\+cpp}}
+\paragraph{\texorpdfstring{M\+O\+T\+O\+R\+\_\+\+B\+A\+C\+K\+\_\+\+L\+E\+FT}{MOTOR\_BACK\_LEFT}}
+{\footnotesize\ttfamily motor M\+O\+T\+O\+R\+\_\+\+B\+A\+C\+K\+\_\+\+L\+E\+FT = motor(P\+O\+R\+T9, false)}
+
+Makes the back left motor accessible in other files than \mbox{\hyperlink{main_8cpp}{main.\+cpp}} \begin{DoxyAuthor}{Author}
+Michael Baraty 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/9/2019 
+\end{DoxyDate}
+
+
+Definition at line 20 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_adece81dedf91c2893ba42dc05135a575}\label{main_8cpp_adece81dedf91c2893ba42dc05135a575}} 
+\index{main.\+cpp@{main.\+cpp}!M\+O\+T\+O\+R\+\_\+\+B\+A\+C\+K\+\_\+\+R\+I\+G\+HT@{M\+O\+T\+O\+R\+\_\+\+B\+A\+C\+K\+\_\+\+R\+I\+G\+HT}}
+\index{M\+O\+T\+O\+R\+\_\+\+B\+A\+C\+K\+\_\+\+R\+I\+G\+HT@{M\+O\+T\+O\+R\+\_\+\+B\+A\+C\+K\+\_\+\+R\+I\+G\+HT}!main.\+cpp@{main.\+cpp}}
+\paragraph{\texorpdfstring{M\+O\+T\+O\+R\+\_\+\+B\+A\+C\+K\+\_\+\+R\+I\+G\+HT}{MOTOR\_BACK\_RIGHT}}
+{\footnotesize\ttfamily motor M\+O\+T\+O\+R\+\_\+\+B\+A\+C\+K\+\_\+\+R\+I\+G\+HT = motor(P\+O\+R\+T3, true)}
+
+Makes the back right motor accessible in other files than \mbox{\hyperlink{main_8cpp}{main.\+cpp}} \begin{DoxyAuthor}{Author}
+Michael Baraty 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/9/2019 
+\end{DoxyDate}
+
+
+Definition at line 21 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a8c6f6315caf1d81bf4d4d113d0f7bffc}\label{main_8cpp_a8c6f6315caf1d81bf4d4d113d0f7bffc}} 
+\index{main.\+cpp@{main.\+cpp}!M\+O\+T\+O\+R\+\_\+\+F\+R\+O\+N\+T\+\_\+\+L\+E\+FT@{M\+O\+T\+O\+R\+\_\+\+F\+R\+O\+N\+T\+\_\+\+L\+E\+FT}}
+\index{M\+O\+T\+O\+R\+\_\+\+F\+R\+O\+N\+T\+\_\+\+L\+E\+FT@{M\+O\+T\+O\+R\+\_\+\+F\+R\+O\+N\+T\+\_\+\+L\+E\+FT}!main.\+cpp@{main.\+cpp}}
+\paragraph{\texorpdfstring{M\+O\+T\+O\+R\+\_\+\+F\+R\+O\+N\+T\+\_\+\+L\+E\+FT}{MOTOR\_FRONT\_LEFT}}
+{\footnotesize\ttfamily motor M\+O\+T\+O\+R\+\_\+\+F\+R\+O\+N\+T\+\_\+\+L\+E\+FT = motor(P\+O\+R\+T10, false)}
+
+Makes the front left motor accessible in other files than \mbox{\hyperlink{main_8cpp}{main.\+cpp}} \begin{DoxyAuthor}{Author}
+Michael Baraty 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/9/2019 
+\end{DoxyDate}
+
+
+Definition at line 22 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_ad6a9ea3d338421c5d709c32ae1aa42d8}\label{main_8cpp_ad6a9ea3d338421c5d709c32ae1aa42d8}} 
+\index{main.\+cpp@{main.\+cpp}!M\+O\+T\+O\+R\+\_\+\+F\+R\+O\+N\+T\+\_\+\+R\+I\+G\+HT@{M\+O\+T\+O\+R\+\_\+\+F\+R\+O\+N\+T\+\_\+\+R\+I\+G\+HT}}
+\index{M\+O\+T\+O\+R\+\_\+\+F\+R\+O\+N\+T\+\_\+\+R\+I\+G\+HT@{M\+O\+T\+O\+R\+\_\+\+F\+R\+O\+N\+T\+\_\+\+R\+I\+G\+HT}!main.\+cpp@{main.\+cpp}}
+\paragraph{\texorpdfstring{M\+O\+T\+O\+R\+\_\+\+F\+R\+O\+N\+T\+\_\+\+R\+I\+G\+HT}{MOTOR\_FRONT\_RIGHT}}
+{\footnotesize\ttfamily motor M\+O\+T\+O\+R\+\_\+\+F\+R\+O\+N\+T\+\_\+\+R\+I\+G\+HT = motor(P\+O\+R\+T2, true)}
+
+Makes the front right motor accessible in other files than \mbox{\hyperlink{main_8cpp}{main.\+cpp}} \begin{DoxyAuthor}{Author}
+Michael Baraty 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/9/2019 
+\end{DoxyDate}
+
+
+Definition at line 23 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a34de211d15bfb3c0ac450597fd96b4fc}\label{main_8cpp_a34de211d15bfb3c0ac450597fd96b4fc}} 
+\index{main.\+cpp@{main.\+cpp}!M\+O\+T\+O\+R\+\_\+\+I\+N\+T\+A\+K\+E\+\_\+A@{M\+O\+T\+O\+R\+\_\+\+I\+N\+T\+A\+K\+E\+\_\+A}}
+\index{M\+O\+T\+O\+R\+\_\+\+I\+N\+T\+A\+K\+E\+\_\+A@{M\+O\+T\+O\+R\+\_\+\+I\+N\+T\+A\+K\+E\+\_\+A}!main.\+cpp@{main.\+cpp}}
+\paragraph{\texorpdfstring{M\+O\+T\+O\+R\+\_\+\+I\+N\+T\+A\+K\+E\+\_\+A}{MOTOR\_INTAKE\_A}}
+{\footnotesize\ttfamily motor M\+O\+T\+O\+R\+\_\+\+I\+N\+T\+A\+K\+E\+\_\+A = motor(P\+O\+R\+T14, gear\+Setting\+::ratio36\+\_\+1, true)}
+
+Makes the right intake motor accessible in other files than \mbox{\hyperlink{main_8cpp}{main.\+cpp}} \begin{DoxyAuthor}{Author}
+Michael Baraty 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/9/2019 
+\end{DoxyDate}
+
+
+Definition at line 24 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a5ae79e7ed71b0b94b3983c22c60c2eaa}\label{main_8cpp_a5ae79e7ed71b0b94b3983c22c60c2eaa}} 
+\index{main.\+cpp@{main.\+cpp}!M\+O\+T\+O\+R\+\_\+\+I\+N\+T\+A\+K\+E\+\_\+B@{M\+O\+T\+O\+R\+\_\+\+I\+N\+T\+A\+K\+E\+\_\+B}}
+\index{M\+O\+T\+O\+R\+\_\+\+I\+N\+T\+A\+K\+E\+\_\+B@{M\+O\+T\+O\+R\+\_\+\+I\+N\+T\+A\+K\+E\+\_\+B}!main.\+cpp@{main.\+cpp}}
+\paragraph{\texorpdfstring{M\+O\+T\+O\+R\+\_\+\+I\+N\+T\+A\+K\+E\+\_\+B}{MOTOR\_INTAKE\_B}}
+{\footnotesize\ttfamily motor M\+O\+T\+O\+R\+\_\+\+I\+N\+T\+A\+K\+E\+\_\+B = motor(P\+O\+R\+T8, gear\+Setting\+::ratio36\+\_\+1, false)}
+
+Makes the left intake motor accessible in other files than \mbox{\hyperlink{main_8cpp}{main.\+cpp}} \begin{DoxyAuthor}{Author}
+Michael Baraty 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/9/2019 
+\end{DoxyDate}
+
+
+Definition at line 25 of file main.\+cpp.
+
+\mbox{\Hypertarget{main_8cpp_a212c888d64ffcd7e7b44a548fa0408a9}\label{main_8cpp_a212c888d64ffcd7e7b44a548fa0408a9}} 
+\index{main.\+cpp@{main.\+cpp}!M\+O\+T\+O\+R\+\_\+\+S\+T\+A\+CK@{M\+O\+T\+O\+R\+\_\+\+S\+T\+A\+CK}}
+\index{M\+O\+T\+O\+R\+\_\+\+S\+T\+A\+CK@{M\+O\+T\+O\+R\+\_\+\+S\+T\+A\+CK}!main.\+cpp@{main.\+cpp}}
+\paragraph{\texorpdfstring{M\+O\+T\+O\+R\+\_\+\+S\+T\+A\+CK}{MOTOR\_STACK}}
+{\footnotesize\ttfamily motor M\+O\+T\+O\+R\+\_\+\+S\+T\+A\+CK = motor(P\+O\+R\+T16, false)}
+
+Makes the stack mechanism motor accessible in other files than \mbox{\hyperlink{main_8cpp}{main.\+cpp}} \begin{DoxyAuthor}{Author}
+Michael Baraty 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/9/2019 
+\end{DoxyDate}
+
+
+Definition at line 26 of file main.\+cpp.
+
