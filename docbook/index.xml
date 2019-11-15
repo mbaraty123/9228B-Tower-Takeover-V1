@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <info>
+    <title>9228B Tower Takeover Code</title>
+    </info>
+    <chapter>
+        <title>Namespace Documentation</title>
+        <xi:include href="d0/dbe/namespacevex.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    </chapter>
+    <chapter>
+        <title>File Documentation</title>
+        <xi:include href="d3/d96/auton_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="d2/dd9/controller_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="db/d40/declarations_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="da/d0b/drive_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="d8/dc0/init_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="d1/dfd/vex_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="db/ddf/auton_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="d1/d47/controller_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="de/de5/drive_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="d0/dc9/init_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="df/d0a/main_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    </chapter>
+</book>

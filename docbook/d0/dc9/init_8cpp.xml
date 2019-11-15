@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d0/dc9/init_8cpp">
+    <title>init.cpp File Reference</title>
+    <programlisting>#include &quot;init.h&quot;</programlisting>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file /Users/mbaraty/Documents/GitHub/9228B-Tower-Takeover-V1/src/init.cpp</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="d8/dc0/init_8h">init.h</link>&quot;</emphasis>
+    </computeroutput></literallayout>
+</section>

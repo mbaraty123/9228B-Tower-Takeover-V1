@@ -66,12 +66,12 @@ void tankDrive() {
 
 void moveStackForward() {
   double final = 1.5; 
-  MOTOR_STACK.startSpinTo(100, rotationUnits::rev, 50, velocityUnits::pct);
+  MOTOR_STACK.startSpinTo(10, rotationUnits::rev, 50, velocityUnits::pct);
 }
 
 void moveStackBack() {
   double final = 0;
-  MOTOR_STACK.startSpinTo(-100, rotationUnits::rev, 80, velocityUnits::pct); 
+  MOTOR_STACK.startSpinTo(-10, rotationUnits::rev, 80, velocityUnits::pct); 
 }
 
 void stackControl() {
@@ -85,7 +85,7 @@ void stackControl() {
 }
 
 void armUp(){
-  MOTOR_ARM.startSpinTo(20, rotationUnits::rev, 100, velocityUnits::pct);
+  MOTOR_ARM.startSpinTo(60.6, rotationUnits::rev, 100, velocityUnits::pct);
   //realValue 6.6
 }
 

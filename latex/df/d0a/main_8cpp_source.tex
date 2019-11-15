@@ -1,0 +1,110 @@
+\hypertarget{main_8cpp_source}{}\section{main.\+cpp}
+\label{main_8cpp_source}\index{src/main.\+cpp@{src/main.\+cpp}}
+
+\begin{DoxyCode}
+00001 \textcolor{comment}{/*----------------------------------------------------------------------------*/}
+00002 \textcolor{comment}{/*                                                                            */}
+00003 \textcolor{comment}{/*    Module:       main.cpp                                                  */}
+00004 \textcolor{comment}{/*    Author:       mbaraty                                                   */}
+00005 \textcolor{comment}{/*    Created:      Thu Sep 12 2019                                           */}
+00006 \textcolor{comment}{/*    Description:  V5 project                                                */}
+00007 \textcolor{comment}{/*                                                                            */}
+00008 \textcolor{comment}{/*----------------------------------------------------------------------------*/}
+00009 \textcolor{preprocessor}{#include "\mbox{\hyperlink{vex_8h}{vex.h}}"}
+00010 \textcolor{preprocessor}{#include "\mbox{\hyperlink{drive_8h}{drive.h}}"}
+00011 \textcolor{preprocessor}{#include "\mbox{\hyperlink{auton_8h}{auton.h}}"}
+00012 
+00013 \textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacevex}{vex}};
+00014 
+00015 \textcolor{comment}{// A global instance of vex::competition}
+\Hypertarget{main_8cpp_source_l00016}\mbox{\hyperlink{main_8cpp_ae38c1d025caf302610a55e0a7a9db5dd_ae38c1d025caf302610a55e0a7a9db5dd}{00016}} vex::competition \mbox{\hyperlink{main_8cpp_ae38c1d025caf302610a55e0a7a9db5dd_ae38c1d025caf302610a55e0a7a9db5dd}{Competition}};
+\Hypertarget{main_8cpp_source_l00017}\mbox{\hyperlink{main_8cpp_a4918ae1421e0a76946a52104b80cd8b8_a4918ae1421e0a76946a52104b80cd8b8}{00017}} vex::brain \mbox{\hyperlink{main_8cpp_a4918ae1421e0a76946a52104b80cd8b8_a4918ae1421e0a76946a52104b80cd8b8}{Brain}};
+\Hypertarget{main_8cpp_source_l00018}\mbox{\hyperlink{main_8cpp_ab04f8ff803f7f02c23e713402e13bf32_ab04f8ff803f7f02c23e713402e13bf32}{00018}} controller \mbox{\hyperlink{main_8cpp_ab04f8ff803f7f02c23e713402e13bf32_ab04f8ff803f7f02c23e713402e13bf32}{MASTER}} = controller();
+00019 
+\Hypertarget{main_8cpp_source_l00020}\mbox{\hyperlink{main_8cpp_ab24214b642128d0f3cb67e9b12e7d4fb_ab24214b642128d0f3cb67e9b12e7d4fb}{00020}} motor \mbox{\hyperlink{main_8cpp_ab24214b642128d0f3cb67e9b12e7d4fb_ab24214b642128d0f3cb67e9b12e7d4fb}{MOTOR\_BACK\_LEFT}}   = motor(PORT9, \textcolor{keyword}{false});
+\Hypertarget{main_8cpp_source_l00021}\mbox{\hyperlink{main_8cpp_adece81dedf91c2893ba42dc05135a575_adece81dedf91c2893ba42dc05135a575}{00021}} motor \mbox{\hyperlink{main_8cpp_adece81dedf91c2893ba42dc05135a575_adece81dedf91c2893ba42dc05135a575}{MOTOR\_BACK\_RIGHT}}  = motor(PORT3, \textcolor{keyword}{true});
+\Hypertarget{main_8cpp_source_l00022}\mbox{\hyperlink{main_8cpp_a8c6f6315caf1d81bf4d4d113d0f7bffc_a8c6f6315caf1d81bf4d4d113d0f7bffc}{00022}} motor \mbox{\hyperlink{main_8cpp_a8c6f6315caf1d81bf4d4d113d0f7bffc_a8c6f6315caf1d81bf4d4d113d0f7bffc}{MOTOR\_FRONT\_LEFT}}  = motor(PORT10, \textcolor{keyword}{false});
+\Hypertarget{main_8cpp_source_l00023}\mbox{\hyperlink{main_8cpp_ad6a9ea3d338421c5d709c32ae1aa42d8_ad6a9ea3d338421c5d709c32ae1aa42d8}{00023}} motor \mbox{\hyperlink{main_8cpp_ad6a9ea3d338421c5d709c32ae1aa42d8_ad6a9ea3d338421c5d709c32ae1aa42d8}{MOTOR\_FRONT\_RIGHT}} = motor(PORT2, \textcolor{keyword}{true});
+\Hypertarget{main_8cpp_source_l00024}\mbox{\hyperlink{main_8cpp_a34de211d15bfb3c0ac450597fd96b4fc_a34de211d15bfb3c0ac450597fd96b4fc}{00024}} motor \mbox{\hyperlink{main_8cpp_a34de211d15bfb3c0ac450597fd96b4fc_a34de211d15bfb3c0ac450597fd96b4fc}{MOTOR\_INTAKE\_A}}    = motor(PORT14, gearSetting::ratio36\_1, \textcolor{keyword}{true});
+\Hypertarget{main_8cpp_source_l00025}\mbox{\hyperlink{main_8cpp_a5ae79e7ed71b0b94b3983c22c60c2eaa_a5ae79e7ed71b0b94b3983c22c60c2eaa}{00025}} motor \mbox{\hyperlink{main_8cpp_a5ae79e7ed71b0b94b3983c22c60c2eaa_a5ae79e7ed71b0b94b3983c22c60c2eaa}{MOTOR\_INTAKE\_B}}    = motor(PORT8, gearSetting::ratio36\_1, \textcolor{keyword}{false});
+\Hypertarget{main_8cpp_source_l00026}\mbox{\hyperlink{main_8cpp_a212c888d64ffcd7e7b44a548fa0408a9_a212c888d64ffcd7e7b44a548fa0408a9}{00026}} motor \mbox{\hyperlink{main_8cpp_a212c888d64ffcd7e7b44a548fa0408a9_a212c888d64ffcd7e7b44a548fa0408a9}{MOTOR\_STACK}}       = motor(PORT16, \textcolor{keyword}{false});
+\Hypertarget{main_8cpp_source_l00027}\mbox{\hyperlink{main_8cpp_a9a834f9a2c804ef0d65ed2f68c10a61a_a9a834f9a2c804ef0d65ed2f68c10a61a}{00027}} motor \mbox{\hyperlink{main_8cpp_a9a834f9a2c804ef0d65ed2f68c10a61a_a9a834f9a2c804ef0d65ed2f68c10a61a}{MOTOR\_ARM}}         = motor(PORT12, gearSetting::ratio36\_1, \textcolor{keyword}{true});
+00028 
+00029 \textcolor{comment}{// define your global instances of motors and other devices here}
+00030 
+00031 
+00032 \textcolor{comment}{/*---------------------------------------------------------------------------*/}
+00033 \textcolor{comment}{/*                          Pre-Autonomous Functions                         */}
+00034 \textcolor{comment}{/*                                                                           */}
+00035 \textcolor{comment}{/*  You may want to perform some actions before the competition starts.      */}
+00036 \textcolor{comment}{/*  Do them in the following function.  You must return from this function   */}
+00037 \textcolor{comment}{/*  or the autonomous and usercontrol tasks will not be started.  This       */}
+00038 \textcolor{comment}{/*  function is only called once after the cortex has been powered on and    */} 
+00039 \textcolor{comment}{/*  not every time that the robot is disabled.                               */}
+00040 \textcolor{comment}{/*---------------------------------------------------------------------------*/}
+00041 
+\Hypertarget{main_8cpp_source_l00042}\mbox{\hyperlink{main_8cpp_ac6b858ea8606cdfaee934aac6be66a96_ac6b858ea8606cdfaee934aac6be66a96}{00042}} \textcolor{keywordtype}{void} \mbox{\hyperlink{main_8cpp_ac6b858ea8606cdfaee934aac6be66a96_ac6b858ea8606cdfaee934aac6be66a96}{pre\_auton}}( \textcolor{keywordtype}{void} ) \{
+00043   \textcolor{comment}{// All activities that occur before the competition starts}
+00044   \textcolor{comment}{// Example: clearing encoders, setting servo positions, ...}
+00045   
+00046 \}
+00047 
+00048 \textcolor{comment}{/*---------------------------------------------------------------------------*/}
+00049 \textcolor{comment}{/*                                                                           */}
+00050 \textcolor{comment}{/*                              Autonomous Task                              */}
+00051 \textcolor{comment}{/*                                                                           */}
+00052 \textcolor{comment}{/*  This task is used to control your robot during the autonomous phase of   */}
+00053 \textcolor{comment}{/*  a VEX Competition.                                                       */}
+00054 \textcolor{comment}{/*                                                                           */}
+00055 \textcolor{comment}{/*  You must modify the code to add your own robot specific commands here.   */}
+00056 \textcolor{comment}{/*---------------------------------------------------------------------------*/}
+00057 
+\Hypertarget{main_8cpp_source_l00058}\mbox{\hyperlink{main_8cpp_a2df3d06bc5bced154da27fce393f991f_a2df3d06bc5bced154da27fce393f991f}{00058}} \textcolor{keywordtype}{void} \mbox{\hyperlink{main_8cpp_a2df3d06bc5bced154da27fce393f991f_a2df3d06bc5bced154da27fce393f991f}{autonomous}}( \textcolor{keywordtype}{void} ) \{
+00059 
+00060   \textcolor{comment}{//autonStart();}
+00061   
+00062   \mbox{\hyperlink{auton_8h_a7c81bf7b683346af95d1ff72eb60619f_a7c81bf7b683346af95d1ff72eb60619f}{pivotClockwise}}(360); 
+00063   
+00064   \textcolor{comment}{// ..........................................................................}
+00065   \textcolor{comment}{// Insert autonomous user code here.}
+00066   \textcolor{comment}{// ..........................................................................}
+00067 
+00068 \}
+00069 
+00070 \textcolor{comment}{/*---------------------------------------------------------------------------*/}
+00071 \textcolor{comment}{/*                                                                           */}
+00072 \textcolor{comment}{/*                              User Control Task                            */}
+00073 \textcolor{comment}{/*                                                                           */}
+00074 \textcolor{comment}{/*  This task is used to control your robot during the user control phase of */}
+00075 \textcolor{comment}{/*  a VEX Competition.                                                       */}
+00076 \textcolor{comment}{/*                                                                           */}
+00077 \textcolor{comment}{/*  You must modify the code to add your own robot specific commands here.   */}
+00078 \textcolor{comment}{/*---------------------------------------------------------------------------*/}
+00079 
+\Hypertarget{main_8cpp_source_l00080}\mbox{\hyperlink{main_8cpp_a0b51ae97a13db57021eefe87a9903444_a0b51ae97a13db57021eefe87a9903444}{00080}} \textcolor{keywordtype}{void} \mbox{\hyperlink{main_8cpp_a0b51ae97a13db57021eefe87a9903444_a0b51ae97a13db57021eefe87a9903444}{usercontrol}}( \textcolor{keywordtype}{void} ) \{
+00081   \textcolor{comment}{// User control code here, inside the loop}
+00082 
+00083   \textcolor{keywordflow}{while} (1) \{
+00084     \mbox{\hyperlink{drive_8h_a928e32686c7e00c1ecde24c3da3019f7_a928e32686c7e00c1ecde24c3da3019f7}{drive}}();
+00085     vex::task::sleep(20); \textcolor{comment}{//Sleep the task for a short amount of time to prevent wasted resources. }
+00086   \}
+00087 \}
+00088 
+00089 \textcolor{comment}{//}
+00090 \textcolor{comment}{// Main will set up the competition functions and callbacks.}
+00091 \textcolor{comment}{//}
+\Hypertarget{main_8cpp_source_l00092}\mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_ae66f6b31b5ad750f1fe042a706a4e3d4}{00092}} \textcolor{keywordtype}{int} \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}() \{
+00093     \textcolor{comment}{//Set up callbacks for autonomous and driver control periods.}
+00094     \mbox{\hyperlink{main_8cpp_ae38c1d025caf302610a55e0a7a9db5dd_ae38c1d025caf302610a55e0a7a9db5dd}{Competition}}.autonomous( \mbox{\hyperlink{main_8cpp_a2df3d06bc5bced154da27fce393f991f_a2df3d06bc5bced154da27fce393f991f}{autonomous}} );
+00095     \mbox{\hyperlink{main_8cpp_ae38c1d025caf302610a55e0a7a9db5dd_ae38c1d025caf302610a55e0a7a9db5dd}{Competition}}.drivercontrol( \mbox{\hyperlink{main_8cpp_a0b51ae97a13db57021eefe87a9903444_a0b51ae97a13db57021eefe87a9903444}{usercontrol}} );
+00096     
+00097     \textcolor{comment}{//Run the pre-autonomous function. }
+00098     \mbox{\hyperlink{main_8cpp_ac6b858ea8606cdfaee934aac6be66a96_ac6b858ea8606cdfaee934aac6be66a96}{pre\_auton}}();
+00099        
+00100     \textcolor{comment}{//Prevent main from exiting with an infinite loop.                        }
+00101     \textcolor{keywordflow}{while}(1) \{
+00102       vex::task::sleep(100);\textcolor{comment}{//Sleep the task for a short amount of time to prevent wasted resources.}
+00103     \}    
+00104        
+00105 \}
+\end{DoxyCode}

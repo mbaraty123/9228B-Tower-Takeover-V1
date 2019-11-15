@@ -57,10 +57,12 @@ void pre_auton( void ) {
 
 void autonomous( void ) {
 
-  //autonStart();
-  
-  pivotClockwise(360); 
-  
+ //auton(Side::LEFT, Color::BLUE);
+  MOTOR_INTAKE_A.startSpinFor(10, rotationUnits::rev, 100, velocityUnits::pct);
+  MOTOR_INTAKE_A.startSpinFor(10, rotationUnits::rev, 100, velocityUnits::pct);
+  moveForward(48);
+  MOTOR_INTAKE_A.stop();
+  MOTOR_INTAKE_B.stop();
   // ..........................................................................
   // Insert autonomous user code here.
   // ..........................................................................

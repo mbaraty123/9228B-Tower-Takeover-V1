@@ -1,0 +1,137 @@
+\hypertarget{auton_8cpp_source}{}\section{auton.\+cpp}
+\label{auton_8cpp_source}\index{src/auton.\+cpp@{src/auton.\+cpp}}
+
+\begin{DoxyCode}
+00001 \textcolor{preprocessor}{#include "\mbox{\hyperlink{auton_8h}{auton.h}}"}
+00002 \textcolor{preprocessor}{#include "\mbox{\hyperlink{drive_8h}{drive.h}}"}
+00003 \textcolor{preprocessor}{#include "\mbox{\hyperlink{declarations_8h}{declarations.h}}"}
+00004 
+\Hypertarget{auton_8cpp_source_l00005}\mbox{\hyperlink{auton_8cpp_ac132ca53625938c26d9d9104ca5c9e82_ac132ca53625938c26d9d9104ca5c9e82}{00005}} \textcolor{keywordtype}{void} \mbox{\hyperlink{auton_8cpp_ac132ca53625938c26d9d9104ca5c9e82_ac132ca53625938c26d9d9104ca5c9e82}{moveForward}}(\textcolor{keywordtype}{double} inches) \{
+00006   \textcolor{keywordtype}{double} rotations = inches * \mbox{\hyperlink{declarations_8h_acfdb8ffd7cd602577173adb1c9c0f330_acfdb8ffd7cd602577173adb1c9c0f330}{ROTATIONS\_PER\_INCH}};
+00007 
+00008   \mbox{\hyperlink{declarations_8h_ab24214b642128d0f3cb67e9b12e7d4fb_ab24214b642128d0f3cb67e9b12e7d4fb}{MOTOR\_BACK\_LEFT}}.startRotateFor(directionType::fwd, rotations, rotationUnits::rev);
+00009   \mbox{\hyperlink{declarations_8h_adece81dedf91c2893ba42dc05135a575_adece81dedf91c2893ba42dc05135a575}{MOTOR\_BACK\_RIGHT}}.startRotateFor(directionType::fwd, rotations, rotationUnits::rev);
+00010   \mbox{\hyperlink{declarations_8h_a8c6f6315caf1d81bf4d4d113d0f7bffc_a8c6f6315caf1d81bf4d4d113d0f7bffc}{MOTOR\_FRONT\_LEFT}}.startRotateFor(directionType::fwd, rotations, rotationUnits::rev);
+00011   \mbox{\hyperlink{declarations_8h_ad6a9ea3d338421c5d709c32ae1aa42d8_ad6a9ea3d338421c5d709c32ae1aa42d8}{MOTOR\_FRONT\_RIGHT}}.startRotateFor(directionType::fwd, rotations, rotationUnits::rev);
+00012 \}
+00013 
+\Hypertarget{auton_8cpp_source_l00014}\mbox{\hyperlink{auton_8cpp_a7c81bf7b683346af95d1ff72eb60619f_a7c81bf7b683346af95d1ff72eb60619f}{00014}} \textcolor{keywordtype}{void} \mbox{\hyperlink{auton_8cpp_a7c81bf7b683346af95d1ff72eb60619f_a7c81bf7b683346af95d1ff72eb60619f}{pivotClockwise}}(\textcolor{keywordtype}{float} degrees) \{
+00015   \textcolor{keywordtype}{double} rotations\_per\_360 = 6.55;
+00016   \textcolor{keywordtype}{double} rotations = rotations\_per\_360 * (360 / degrees);
+00017 
+00018   \mbox{\hyperlink{declarations_8h_ab24214b642128d0f3cb67e9b12e7d4fb_ab24214b642128d0f3cb67e9b12e7d4fb}{MOTOR\_BACK\_LEFT}}.startRotateFor(directionType::fwd, rotations, rotationUnits::rev);
+00019   \mbox{\hyperlink{declarations_8h_adece81dedf91c2893ba42dc05135a575_adece81dedf91c2893ba42dc05135a575}{MOTOR\_BACK\_RIGHT}}.startRotateFor(directionType::rev, rotations, rotationUnits::rev);
+00020   \mbox{\hyperlink{declarations_8h_a8c6f6315caf1d81bf4d4d113d0f7bffc_a8c6f6315caf1d81bf4d4d113d0f7bffc}{MOTOR\_FRONT\_LEFT}}.startRotateFor(directionType::fwd, rotations, rotationUnits::rev);
+00021   \mbox{\hyperlink{declarations_8h_ad6a9ea3d338421c5d709c32ae1aa42d8_ad6a9ea3d338421c5d709c32ae1aa42d8}{MOTOR\_FRONT\_RIGHT}}.startRotateFor(directionType::rev, rotations, rotationUnits::rev);
+00022 \}
+00023 
+\Hypertarget{auton_8cpp_source_l00024}\mbox{\hyperlink{auton_8cpp_a962e4ac8747da1eb2aba6615d62e953b_a962e4ac8747da1eb2aba6615d62e953b}{00024}} \textcolor{keywordtype}{void} \mbox{\hyperlink{auton_8cpp_a962e4ac8747da1eb2aba6615d62e953b_a962e4ac8747da1eb2aba6615d62e953b}{pivotCounterClockwise}}(\textcolor{keywordtype}{float} degrees) \{
+00025   \textcolor{keywordtype}{double} rotations\_per\_360 = 1.11;
+00026   \textcolor{keywordtype}{double} rotations = rotations\_per\_360 * (degrees / 360);
+00027 
+00028   \mbox{\hyperlink{declarations_8h_ab24214b642128d0f3cb67e9b12e7d4fb_ab24214b642128d0f3cb67e9b12e7d4fb}{MOTOR\_BACK\_LEFT}}.startRotateFor(directionType::rev, rotations, rotationUnits::rev);
+00029   \mbox{\hyperlink{declarations_8h_adece81dedf91c2893ba42dc05135a575_adece81dedf91c2893ba42dc05135a575}{MOTOR\_BACK\_RIGHT}}.startRotateFor(directionType::fwd, rotations, rotationUnits::rev);
+00030   \mbox{\hyperlink{declarations_8h_a8c6f6315caf1d81bf4d4d113d0f7bffc_a8c6f6315caf1d81bf4d4d113d0f7bffc}{MOTOR\_FRONT\_LEFT}}.startRotateFor(directionType::rev, rotations, rotationUnits::rev);
+00031   \mbox{\hyperlink{declarations_8h_ad6a9ea3d338421c5d709c32ae1aa42d8_ad6a9ea3d338421c5d709c32ae1aa42d8}{MOTOR\_FRONT\_RIGHT}}.startRotateFor(directionType::fwd, rotations, rotationUnits::rev);
+00032 \}
+00033 
+\Hypertarget{auton_8cpp_source_l00038}\mbox{\hyperlink{auton_8cpp_a9c7e58a3b4bb5cdd30a6b3ed32e8f962_a9c7e58a3b4bb5cdd30a6b3ed32e8f962}{00038}} \textcolor{keywordtype}{void} \mbox{\hyperlink{auton_8cpp_a9c7e58a3b4bb5cdd30a6b3ed32e8f962_a9c7e58a3b4bb5cdd30a6b3ed32e8f962}{auton}}(\mbox{\hyperlink{auton_8h_a702107095bd059695d57318e7338a4a7_a702107095bd059695d57318e7338a4a7}{Side}} side, \mbox{\hyperlink{auton_8h_a78abb31bad0fd1834c54a3ca6f8daab5_a78abb31bad0fd1834c54a3ca6f8daab5}{Color}} color) \{
+00039   \mbox{\hyperlink{auton_8cpp_a1a25993901b668e4c162eb31fa463b52_a1a25993901b668e4c162eb31fa463b52}{autonStart}}();
+00040 
+00041   \textcolor{keywordflow}{if}(color == \mbox{\hyperlink{auton_8h_a78abb31bad0fd1834c54a3ca6f8daab5_a78abb31bad0fd1834c54a3ca6f8daab5a1b3e1ee9bff86431dea6b181365ba65f}{Color::BLUE}} && side == \mbox{\hyperlink{auton_8h_a702107095bd059695d57318e7338a4a7_a702107095bd059695d57318e7338a4a7a684d325a7303f52e64011467ff5c5758}{Side::LEFT}})
+00042     \mbox{\hyperlink{auton_8cpp_a5bb01d00c76862cb15431efd4090bee9_a5bb01d00c76862cb15431efd4090bee9}{autonBlueLeft}}();
+00043   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (color == \mbox{\hyperlink{auton_8h_a78abb31bad0fd1834c54a3ca6f8daab5_a78abb31bad0fd1834c54a3ca6f8daab5a1b3e1ee9bff86431dea6b181365ba65f}{Color::BLUE}} && side == \mbox{\hyperlink{auton_8h_a702107095bd059695d57318e7338a4a7_a702107095bd059695d57318e7338a4a7a21507b40c80068eda19865706fdc2403}{Side::RIGHT}})
+00044     \mbox{\hyperlink{auton_8cpp_a5bb01d00c76862cb15431efd4090bee9_a5bb01d00c76862cb15431efd4090bee9}{autonBlueLeft}}();
+00045   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (color == \mbox{\hyperlink{auton_8h_a78abb31bad0fd1834c54a3ca6f8daab5_a78abb31bad0fd1834c54a3ca6f8daab5aa2d9547b5d3dd9f05984475f7c926da0}{Color::RED}} && side == \mbox{\hyperlink{auton_8h_a702107095bd059695d57318e7338a4a7_a702107095bd059695d57318e7338a4a7a684d325a7303f52e64011467ff5c5758}{Side::LEFT}})
+00046     \mbox{\hyperlink{auton_8cpp_aae46c4423bc7ed2947e82c4c5dd7f469_aae46c4423bc7ed2947e82c4c5dd7f469}{autonRedLeft}}();
+00047   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (color == \mbox{\hyperlink{auton_8h_a78abb31bad0fd1834c54a3ca6f8daab5_a78abb31bad0fd1834c54a3ca6f8daab5aa2d9547b5d3dd9f05984475f7c926da0}{Color::RED}} && side == \mbox{\hyperlink{auton_8h_a702107095bd059695d57318e7338a4a7_a702107095bd059695d57318e7338a4a7a21507b40c80068eda19865706fdc2403}{Side::RIGHT}})
+00048     \mbox{\hyperlink{auton_8cpp_aaf3b274e9144b7072829ca58203492a6_aaf3b274e9144b7072829ca58203492a6}{autonRedRight}}();
+00049 \}
+00050 
+00051 
+\Hypertarget{auton_8cpp_source_l00052}\mbox{\hyperlink{auton_8cpp_a5bb01d00c76862cb15431efd4090bee9_a5bb01d00c76862cb15431efd4090bee9}{00052}} \textcolor{keywordtype}{void} \mbox{\hyperlink{auton_8cpp_a5bb01d00c76862cb15431efd4090bee9_a5bb01d00c76862cb15431efd4090bee9}{autonBlueLeft}}()\{
+00053   \mbox{\hyperlink{declarations_8h_a34de211d15bfb3c0ac450597fd96b4fc_a34de211d15bfb3c0ac450597fd96b4fc}{MOTOR\_INTAKE\_A}}.startRotateFor(6, rotationUnits::rev, 100, velocityUnits::pct);
+00054   \mbox{\hyperlink{declarations_8h_a5ae79e7ed71b0b94b3983c22c60c2eaa_a5ae79e7ed71b0b94b3983c22c60c2eaa}{MOTOR\_INTAKE\_B}}.startRotateFor(6, rotationUnits::rev, 100, velocityUnits::pct);
+00055 
+00056   \mbox{\hyperlink{auton_8cpp_ac132ca53625938c26d9d9104ca5c9e82_ac132ca53625938c26d9d9104ca5c9e82}{moveForward}}(30);
+00057 
+00058   \mbox{\hyperlink{auton_8cpp_a7c81bf7b683346af95d1ff72eb60619f_a7c81bf7b683346af95d1ff72eb60619f}{pivotClockwise}}(180);
+00059 
+00060   \mbox{\hyperlink{auton_8cpp_ac132ca53625938c26d9d9104ca5c9e82_ac132ca53625938c26d9d9104ca5c9e82}{moveForward}}(30);
+00061 
+00062   \mbox{\hyperlink{auton_8cpp_a7c81bf7b683346af95d1ff72eb60619f_a7c81bf7b683346af95d1ff72eb60619f}{pivotClockwise}}(90);
+00063 
+00064   \mbox{\hyperlink{auton_8cpp_ac132ca53625938c26d9d9104ca5c9e82_ac132ca53625938c26d9d9104ca5c9e82}{moveForward}}(18);
+00065 
+00066   \mbox{\hyperlink{drive_8h_a08a55986dab46203f1eeef50123cf4bd_a08a55986dab46203f1eeef50123cf4bd}{moveStackForward}}();
+00067 
+00068   \mbox{\hyperlink{drive_8h_aaca1ffa87592c1c5783fe6e18f9c655b_aaca1ffa87592c1c5783fe6e18f9c655b}{intakeOut}}();
+00069 
+00070   \mbox{\hyperlink{auton_8cpp_ac132ca53625938c26d9d9104ca5c9e82_ac132ca53625938c26d9d9104ca5c9e82}{moveForward}}(-5);
+00071 
+00072   \mbox{\hyperlink{declarations_8h_a34de211d15bfb3c0ac450597fd96b4fc_a34de211d15bfb3c0ac450597fd96b4fc}{MOTOR\_INTAKE\_A}}.stop();
+00073   \mbox{\hyperlink{declarations_8h_a5ae79e7ed71b0b94b3983c22c60c2eaa_a5ae79e7ed71b0b94b3983c22c60c2eaa}{MOTOR\_INTAKE\_B}}.stop();
+00074 \}
+00075 
+\Hypertarget{auton_8cpp_source_l00076}\mbox{\hyperlink{auton_8cpp_ab9984e9a12048995fb71a06a1c94fd31_ab9984e9a12048995fb71a06a1c94fd31}{00076}} \textcolor{keywordtype}{void} \mbox{\hyperlink{auton_8cpp_ab9984e9a12048995fb71a06a1c94fd31_ab9984e9a12048995fb71a06a1c94fd31}{autonBlueRight}}()\{
+00077   \textcolor{comment}{//run intakes}
+00078   \textcolor{comment}{//move forward 30}
+00079   \textcolor{comment}{//cut intakes}
+00080   \textcolor{comment}{//180}
+00081   \textcolor{comment}{//move 30}
+00082   \textcolor{comment}{//90 counterclockwise}
+00083   \textcolor{comment}{//forward 40}
+00084   \textcolor{comment}{//drop stack somehow}
+00085 \}
+00086 
+\Hypertarget{auton_8cpp_source_l00087}\mbox{\hyperlink{auton_8cpp_aae46c4423bc7ed2947e82c4c5dd7f469_aae46c4423bc7ed2947e82c4c5dd7f469}{00087}} \textcolor{keywordtype}{void} \mbox{\hyperlink{auton_8cpp_aae46c4423bc7ed2947e82c4c5dd7f469_aae46c4423bc7ed2947e82c4c5dd7f469}{autonRedLeft}}()\{
+00088   \textcolor{comment}{//run intakes}
+00089   \textcolor{comment}{//move forward 30}
+00090   \textcolor{comment}{//cut intakes}
+00091   \textcolor{comment}{//180}
+00092   \textcolor{comment}{//move 30}
+00093   \textcolor{comment}{//90 clockwise}
+00094   \textcolor{comment}{//forward 40}
+00095   \textcolor{comment}{//drop stack somehow}
+00096 \}
+00097 
+\Hypertarget{auton_8cpp_source_l00098}\mbox{\hyperlink{auton_8cpp_aaf3b274e9144b7072829ca58203492a6_aaf3b274e9144b7072829ca58203492a6}{00098}} \textcolor{keywordtype}{void} \mbox{\hyperlink{auton_8cpp_aaf3b274e9144b7072829ca58203492a6_aaf3b274e9144b7072829ca58203492a6}{autonRedRight}}()\{
+00099   \mbox{\hyperlink{declarations_8h_a34de211d15bfb3c0ac450597fd96b4fc_a34de211d15bfb3c0ac450597fd96b4fc}{MOTOR\_INTAKE\_A}}.startRotateFor(6, rotationUnits::rev, 100, velocityUnits::pct);
+00100   \mbox{\hyperlink{declarations_8h_a5ae79e7ed71b0b94b3983c22c60c2eaa_a5ae79e7ed71b0b94b3983c22c60c2eaa}{MOTOR\_INTAKE\_B}}.startRotateFor(6, rotationUnits::rev, 100, velocityUnits::pct);
+00101 
+00102   \mbox{\hyperlink{auton_8cpp_ac132ca53625938c26d9d9104ca5c9e82_ac132ca53625938c26d9d9104ca5c9e82}{moveForward}}(30);
+00103 
+00104   \mbox{\hyperlink{auton_8cpp_a7c81bf7b683346af95d1ff72eb60619f_a7c81bf7b683346af95d1ff72eb60619f}{pivotClockwise}}(180);
+00105 
+00106   \mbox{\hyperlink{auton_8cpp_ac132ca53625938c26d9d9104ca5c9e82_ac132ca53625938c26d9d9104ca5c9e82}{moveForward}}(30);
+00107 
+00108   \mbox{\hyperlink{auton_8cpp_a962e4ac8747da1eb2aba6615d62e953b_a962e4ac8747da1eb2aba6615d62e953b}{pivotCounterClockwise}}(90);
+00109 
+00110   \mbox{\hyperlink{auton_8cpp_ac132ca53625938c26d9d9104ca5c9e82_ac132ca53625938c26d9d9104ca5c9e82}{moveForward}}(18);
+00111 
+00112   \mbox{\hyperlink{drive_8h_a08a55986dab46203f1eeef50123cf4bd_a08a55986dab46203f1eeef50123cf4bd}{moveStackForward}}();
+00113 
+00114   \mbox{\hyperlink{drive_8h_aaca1ffa87592c1c5783fe6e18f9c655b_aaca1ffa87592c1c5783fe6e18f9c655b}{intakeOut}}();
+00115 
+00116   \mbox{\hyperlink{auton_8cpp_ac132ca53625938c26d9d9104ca5c9e82_ac132ca53625938c26d9d9104ca5c9e82}{moveForward}}(-5);
+00117 
+00118   \mbox{\hyperlink{declarations_8h_a34de211d15bfb3c0ac450597fd96b4fc_a34de211d15bfb3c0ac450597fd96b4fc}{MOTOR\_INTAKE\_A}}.stop();
+00119   \mbox{\hyperlink{declarations_8h_a5ae79e7ed71b0b94b3983c22c60c2eaa_a5ae79e7ed71b0b94b3983c22c60c2eaa}{MOTOR\_INTAKE\_B}}.stop();
+00120 
+00121 \}
+00122 
+\Hypertarget{auton_8cpp_source_l00129}\mbox{\hyperlink{auton_8cpp_a1a25993901b668e4c162eb31fa463b52_a1a25993901b668e4c162eb31fa463b52}{00129}} \textcolor{keywordtype}{void} \mbox{\hyperlink{auton_8cpp_a1a25993901b668e4c162eb31fa463b52_a1a25993901b668e4c162eb31fa463b52}{autonStart}}() \{
+00130   \mbox{\hyperlink{declarations_8h_a9a834f9a2c804ef0d65ed2f68c10a61a_a9a834f9a2c804ef0d65ed2f68c10a61a}{MOTOR\_ARM}}.startRotateTo(3.5, rotationUnits::rev, 100, velocityUnits::pct);
+00131   \mbox{\hyperlink{declarations_8h_a34de211d15bfb3c0ac450597fd96b4fc_a34de211d15bfb3c0ac450597fd96b4fc}{MOTOR\_INTAKE\_A}}.startRotateFor(directionType::rev, 3, rotationUnits::rev, 100, 
+      velocityUnits::pct);
+00132   \mbox{\hyperlink{declarations_8h_a5ae79e7ed71b0b94b3983c22c60c2eaa_a5ae79e7ed71b0b94b3983c22c60c2eaa}{MOTOR\_INTAKE\_B}}.startRotateFor(directionType::rev, 3, rotationUnits::rev, 100, 
+      velocityUnits::pct);
+00133 
+00134   \mbox{\hyperlink{auton_8cpp_ac132ca53625938c26d9d9104ca5c9e82_ac132ca53625938c26d9d9104ca5c9e82}{moveForward}}(-6);
+00135 
+00136   vexDelay(2000);
+00137 
+00138   \mbox{\hyperlink{declarations_8h_a9a834f9a2c804ef0d65ed2f68c10a61a_a9a834f9a2c804ef0d65ed2f68c10a61a}{MOTOR\_ARM}}.startRotateTo(.5, rotationUnits::rev, 100, velocityUnits::pct);
+00139   \textcolor{comment}{//moveForward(5);}
+00140 \}
+\end{DoxyCode}

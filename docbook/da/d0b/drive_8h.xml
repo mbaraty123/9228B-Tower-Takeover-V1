@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="da/d0b/drive_8h">
+    <title>drive.h File Reference</title>
+    <programlisting>#include &quot;controller.h&quot;</programlisting>
+        <section>
+            <title>Enumerations</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para><literallayout>enum <link linkend="da/d0b/drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_1a2771dd4b083c12b0f13d534e3d1914dc">DriveSide</link> {
+<link linkend="da/d0b/drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_1a2771dd4b083c12b0f13d534e3d1914dca684d325a7303f52e64011467ff5c5758">LEFT</link>= 0,
+<link linkend="da/d0b/drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_1a2771dd4b083c12b0f13d534e3d1914dca21507b40c80068eda19865706fdc2403">RIGHT</link>= 1,
+<link linkend="da/d0b/drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_1a2771dd4b083c12b0f13d534e3d1914dca6328e5e3186c227a021ef2ff77e40197">BOTH</link>= 2
+}</literallayout>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="da/d0b/drive_8h_a6ff8820b82f28a73c88a746ddacb26bb_1a6ff8820b82f28a73c88a746ddacb26bb">arcadeDrive</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="da/d0b/drive_8h_ab8605578ac6dddeb3e511513523e3354_1ab8605578ac6dddeb3e511513523e3354">tankDrive</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="da/d0b/drive_8h_ac522da2148fe1cfd9bea8c026e64ee7b_1ac522da2148fe1cfd9bea8c026e64ee7b">setSideSpeed</link> (
+<link linkend="da/d0b/drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_1a2771dd4b083c12b0f13d534e3d1914dc">DriveSide</link> side, int speed)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="da/d0b/drive_8h_a928e32686c7e00c1ecde24c3da3019f7_1a928e32686c7e00c1ecde24c3da3019f7">drive</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="da/d0b/drive_8h_a08a55986dab46203f1eeef50123cf4bd_1a08a55986dab46203f1eeef50123cf4bd">moveStackForward</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="da/d0b/drive_8h_ac153148440cec552a2824c91569e1e5a_1ac153148440cec552a2824c91569e1e5a">moveStackBack</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="da/d0b/drive_8h_abc3819041cf96aad1093752a3a5de31c_1abc3819041cf96aad1093752a3a5de31c">stackControl</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="da/d0b/drive_8h_adf7b0afb3a8dcf884db533b0217b0543_1adf7b0afb3a8dcf884db533b0217b0543">armUp</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="da/d0b/drive_8h_ab1850cc7cdb69057fe29f45eefe7ec90_1ab1850cc7cdb69057fe29f45eefe7ec90">armDown</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="da/d0b/drive_8h_adde1067b42b4de65ff20afb8901f7643_1adde1067b42b4de65ff20afb8901f7643">armControl</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="da/d0b/drive_8h_aa0846c73538fc48569a7c7c3689a59f0_1aa0846c73538fc48569a7c7c3689a59f0">intakeIn</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="da/d0b/drive_8h_aaca1ffa87592c1c5783fe6e18f9c655b_1aaca1ffa87592c1c5783fe6e18f9c655b">intakeOut</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="da/d0b/drive_8h_a8afb2a071b21d98c49d5888a7b380ba6_1a8afb2a071b21d98c49d5888a7b380ba6">intakeControl</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file /Users/mbaraty/Documents/GitHub/9228B-Tower-Takeover-V1/include/drive.h</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 
+6 <emphasis class="preprocessor">#ifndef&#32;DRIVE_H</emphasis>
+7 <emphasis class="preprocessor">#define&#32;DRIVE_H</emphasis>
+8 
+9 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="d2/dd9/controller_8h">controller.h</link>&quot;</emphasis>
+10 
+<link linkend="da/d0b/drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_1a2771dd4b083c12b0f13d534e3d1914dc">16 </link><emphasis class="keyword">enum&#32;class</emphasis>&#32;<link linkend="da/d0b/drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_1a2771dd4b083c12b0f13d534e3d1914dc">DriveSide</link>&#32;:&#32;int&#32;{
+17 &#32;&#32;&#32;&#32;<link linkend="d3/d96/auton_8h_a702107095bd059695d57318e7338a4a7_1a702107095bd059695d57318e7338a4a7a684d325a7303f52e64011467ff5c5758">LEFT</link>&#32;=&#32;0,
+18 &#32;&#32;&#32;&#32;<link linkend="d3/d96/auton_8h_a702107095bd059695d57318e7338a4a7_1a702107095bd059695d57318e7338a4a7a21507b40c80068eda19865706fdc2403">RIGHT</link>&#32;=&#32;1,
+19 &#32;&#32;&#32;&#32;<link linkend="da/d0b/drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_1a2771dd4b083c12b0f13d534e3d1914dca6328e5e3186c227a021ef2ff77e40197">BOTH</link>&#32;=&#32;2
+20 &#32;};
+21 
+27 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="da/d0b/drive_8h_a6ff8820b82f28a73c88a746ddacb26bb_1a6ff8820b82f28a73c88a746ddacb26bb">arcadeDrive</link>();
+28 
+34 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="da/d0b/drive_8h_ab8605578ac6dddeb3e511513523e3354_1ab8605578ac6dddeb3e511513523e3354">tankDrive</link>();
+35 
+43 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="da/d0b/drive_8h_ac522da2148fe1cfd9bea8c026e64ee7b_1ac522da2148fe1cfd9bea8c026e64ee7b">setSideSpeed</link>(<link linkend="da/d0b/drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_1a2771dd4b083c12b0f13d534e3d1914dc">DriveSide</link>&#32;side,&#32;<emphasis class="keywordtype">int</emphasis>&#32;speed);
+44 
+50 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="da/d0b/drive_8h_a928e32686c7e00c1ecde24c3da3019f7_1a928e32686c7e00c1ecde24c3da3019f7">drive</link>();
+51 
+57 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="da/d0b/drive_8h_a08a55986dab46203f1eeef50123cf4bd_1a08a55986dab46203f1eeef50123cf4bd">moveStackForward</link>();
+58 
+64 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="da/d0b/drive_8h_ac153148440cec552a2824c91569e1e5a_1ac153148440cec552a2824c91569e1e5a">moveStackBack</link>();
+65 
+71 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="da/d0b/drive_8h_abc3819041cf96aad1093752a3a5de31c_1abc3819041cf96aad1093752a3a5de31c">stackControl</link>();
+72 
+78 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="da/d0b/drive_8h_adf7b0afb3a8dcf884db533b0217b0543_1adf7b0afb3a8dcf884db533b0217b0543">armUp</link>();
+79 
+85 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="da/d0b/drive_8h_ab1850cc7cdb69057fe29f45eefe7ec90_1ab1850cc7cdb69057fe29f45eefe7ec90">armDown</link>();
+86 
+92 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="da/d0b/drive_8h_adde1067b42b4de65ff20afb8901f7643_1adde1067b42b4de65ff20afb8901f7643">armControl</link>();
+93 
+99 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="da/d0b/drive_8h_aa0846c73538fc48569a7c7c3689a59f0_1aa0846c73538fc48569a7c7c3689a59f0">intakeIn</link>();
+100 
+106 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="da/d0b/drive_8h_aaca1ffa87592c1c5783fe6e18f9c655b_1aaca1ffa87592c1c5783fe6e18f9c655b">intakeOut</link>();
+107 
+113 <emphasis class="keywordtype">void</emphasis>&#32;<link linkend="da/d0b/drive_8h_a8afb2a071b21d98c49d5888a7b380ba6_1a8afb2a071b21d98c49d5888a7b380ba6">intakeControl</link>();
+114 
+115 
+116 <emphasis class="preprocessor">#endif</emphasis>
+    </computeroutput></literallayout>
+</section>

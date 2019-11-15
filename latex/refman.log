@@ -1,9 +1,9 @@
-This is TeX, Version 3.14159265 (TeX Live 2018) (preloaded format=tex 2018.4.16)  9 NOV 2019 17:03
+This is TeX, Version 3.14159265 (TeX Live 2018) (preloaded format=tex 2018.4.16)  13 NOV 2019 20:14
 **refman.tex
 (./refman.tex
 ! Undefined control sequence.
 l.1 \documentclass
-                  [twoside]{article}
+                  [twoside]{book}
 ? r
 OK, entering \nonstopmode...
 ! Undefined control sequence.
@@ -943,7 +943,7 @@ and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
 l.79 \renewcommand
-                  {\sectionmark}[1]{%
+                  {\chaptermark}[1]{%
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -951,7 +951,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.79 \renewcommand{\sectionmark
+l.79 \renewcommand{\chaptermark
                                }[1]{%
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -960,7 +960,42 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.80   \markright
+l.80   \markboth
+                {#1}{}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.80   \markboth{#
+                  1}{}%
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Undefined control sequence.
+l.82 \renewcommand
+                  {\sectionmark}[1]{%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.82 \renewcommand{\sectionmark
+                               }[1]{%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.83   \markright
                  {\thesection\ #1}%
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -969,7 +1004,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.80   \markright{\thesection
+l.83   \markright{\thesection
                              \ #1}%
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -978,7 +1013,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! You can't use `macro parameter character #' in horizontal mode.
-l.80   \markright{\thesection\ #
+l.83   \markright{\thesection\ #
                                 1}%
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
@@ -986,7 +1021,7 @@ If you're in the wrong mode, you might be able to
 return to the right one by typing `I}' or `I$' or `I\par'.
 
 ! Undefined control sequence.
-l.84 \usepackage
+l.87 \usepackage
                 {natbib}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -995,7 +1030,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.85 \usepackage
+l.88 \usepackage
                 [titles]{tocloft}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1004,7 +1039,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.86 \setcounter
+l.89 \setcounter
                 {tocdepth}{3}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1013,7 +1048,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.87 \setcounter
+l.90 \setcounter
                 {secnumdepth}{5}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1022,7 +1057,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.88 \makeindex
+l.91 \makeindex
                
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1031,7 +1066,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.91 \usepackage
+l.94 \usepackage
                 {ifpdf}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1040,7 +1075,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.92 \ifpdf
+l.95 \ifpdf
            
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1049,7 +1084,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.93   \usepackage
+l.96   \usepackage
                   [pdftex,pagebackref=true]{hyperref}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1058,12 +1093,12 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Extra \else.
-l.94 \else
+l.97 \else
           
 I'm ignoring this; it doesn't match any \if.
 
 ! Undefined control sequence.
-l.95   \usepackage
+l.98   \usepackage
                   [ps2pdf,pagebackref=true]{hyperref}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1072,13 +1107,13 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Extra \fi.
-l.96 \fi
+l.99 \fi
         
 I'm ignoring this; it doesn't match any \if.
 
 ! Undefined control sequence.
-l.97 \hypersetup
-                {%
+l.100 \hypersetup
+                 {%
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1086,7 +1121,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (112.35745pt too wide) in paragraph at lines 91--103
+Overfull \hbox (112.35745pt too wide) in paragraph at lines 94--106
 []\tenrm ifpdf [pdf-tex,pagebackref=true]hyperref [ps2pdf,pagebackref=true]hype
 rref col-or-links=true,linkcolor=blue,citecolor=blue,unicode |
 
@@ -1099,7 +1134,7 @@ rref col-or-links=true,linkcolor=blue,citecolor=blue,unicode |
 .etc.
 
 ! Undefined control sequence.
-l.105 \newcommand
+l.108 \newcommand
                  {\clearemptydoublepage}{%
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1108,7 +1143,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.105 \newcommand{\clearemptydoublepage
+l.108 \newcommand{\clearemptydoublepage
                                        }{%
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1117,7 +1152,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.106   \newpage
+l.109   \newpage
                 {\pagestyle{empty}\cleardoublepage}%
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1126,7 +1161,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.106   \newpage{\pagestyle
+l.109   \newpage{\pagestyle
                            {empty}\cleardoublepage}%
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1135,7 +1170,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.106   \newpage{\pagestyle{empty}\cleardoublepage
+l.109   \newpage{\pagestyle{empty}\cleardoublepage
                                                   }%
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1144,7 +1179,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.109 \usepackage
+l.112 \usepackage
                  {caption}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1153,7 +1188,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.110 \captionsetup
+l.113 \captionsetup
                    {labelsep=space,justification=centering,font={bf},singlel...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1162,7 +1197,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.114 \begin
+l.117 \begin
             {document}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1171,7 +1206,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.117 \hypersetup
+l.120 \hypersetup
                  {pageanchor=false,
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1180,7 +1215,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.121 \pagenumbering
+l.124 \pagenumbering
                     {alph}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1189,7 +1224,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.122 \begin
+l.125 \begin
             {titlepage}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1198,7 +1233,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.123 \vspace
+l.126 \vspace
              *{7cm}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1207,7 +1242,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.124 \begin
+l.127 \begin
             {center}%
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1216,69 +1251,91 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.125 {\Large
-              9228B Tower Takeover V1 \\[1ex]\large 1 }\\
+l.128 {\Large
+              My Project }\\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
-
-! Argument of \\ has an extra }.
-<inserted text> 
-                \par 
-<to be read again> 
-                   }
-l.125 ...9228B Tower Takeover V1 \\[1ex]\large 1 }
-                                                  \\
-I've run across a `}' that doesn't seem to match anything.
-For example, `\def\a#1{...}' and `\a}' would produce
-this error. If you simply proceed now, the `\par' that
-I've just inserted will cause me to report a runaway
-argument that might be the root of the problem. But if
-your `}' was spurious, just type `2' and it will go away.
-
-Runaway argument?
-[1ex]\large 1 
-! Paragraph ended before \\ was complete.
-<to be read again> 
-                   \par 
-<to be read again> 
-                   }
-l.125 ...9228B Tower Takeover V1 \\[1ex]\large 1 }
-                                                  \\
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
 
 Runaway argument?
  \vspace *{1cm} {\large Generated by Doxygen 1.8.14}\\ \end {center} \ETC.
 ! Paragraph ended before \\ was complete.
 <to be read again> 
                    \par 
-l.134 
+l.139 
       
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
 ! Undefined control sequence.
-l.136 \section
-              {File Index}
+l.144 \backmatter
+                 
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-! I can't find file `{files}'.
-l.137 \input{files}
-                   
-(Press Enter to retry, or Control-D to exit)
-Please type another input file name
+! Undefined control sequence.
+l.145 \newpage
+              
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.146 \phantomsection
+                     
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.147 \clearemptydoublepage
+                           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.148 \addcontentsline
+                      {toc}{chapter}{Index}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.149 \printindex
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! You can't use `\end' in internal vertical mode.
+l.151 \end
+          {document}
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+)
 ! Emergency stop.
-l.137 \input{files}
-                   
-*** (job aborted, file error in nonstop mode)
+<*> refman.tex
+              
+*** (job aborted, no legal \end found)
 
 No pages of output.

@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d8/dc0/init_8h">
+    <title>init.h File Reference</title>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file /Users/mbaraty/Documents/GitHub/9228B-Tower-Takeover-V1/include/init.h</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 
+6 <emphasis class="preprocessor">#ifndef&#32;INIT_H</emphasis>
+7 <emphasis class="preprocessor">#define&#32;INIT_H</emphasis>
+8 
+9 
+10 <emphasis class="preprocessor">#endif</emphasis>
+    </computeroutput></literallayout>
+</section>

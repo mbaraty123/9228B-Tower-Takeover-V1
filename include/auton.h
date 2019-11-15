@@ -12,7 +12,7 @@
   * @author Michael Baraty
   * @date 11/9/2019
   */
-void moveForward(double inches);
+bool moveForward(double inches);
 
 /**
   * Pivots the robot clockwise to a certain angle
@@ -20,7 +20,7 @@ void moveForward(double inches);
   * @author Michael Baraty
   * @date 11/9/2019
   */
-void pivotClockwise(float degrees);
+bool pivotClockwise(float degrees);
 
 /**
   * Pivots the robot counter-clockwise to a certain angle
@@ -28,7 +28,7 @@ void pivotClockwise(float degrees);
   * @author Michael Baraty
   * @date 11/9/2019
   */
-void pivotCounterClockwise(float degrees);
+bool pivotCounterClockwise(float degrees);
 
 /**
   * Declares the possible autonomous colors for the autonomous switcher

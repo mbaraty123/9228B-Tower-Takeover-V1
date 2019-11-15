@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d2/dd9/controller_8h">
+    <title>controller.h File Reference</title>
+    <programlisting>#include &quot;vex.h&quot;</programlisting>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d0/dbe/namespacevex">vex</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="d2/dd9/controller_8h_a73be3a8649e7d561a68cd816420efbd9_1a73be3a8649e7d561a68cd816420efbd9">axisValue</link> (
+controller::axis Axis)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="d2/dd9/controller_8h_aff3b02388de758f0fe6d98930ea57626_1aff3b02388de758f0fe6d98930ea57626">buttonIsPressed</link> (
+controller::button Button)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file /Users/mbaraty/Documents/GitHub/9228B-Tower-Takeover-V1/include/controller.h</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 
+6 <emphasis class="preprocessor">#ifndef&#32;CONTROLLER_H</emphasis>
+7 <emphasis class="preprocessor">#define&#32;CONTROLLER_H</emphasis>
+8 
+9 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="d1/dfd/vex_8h">vex.h</link>&quot;</emphasis>
+10 
+11 <emphasis class="keyword">using&#32;namespace&#32;</emphasis><link linkend="d0/dbe/namespacevex">vex</link>;
+12 
+19 <emphasis class="keywordtype">int</emphasis>&#32;<link linkend="d2/dd9/controller_8h_a73be3a8649e7d561a68cd816420efbd9_1a73be3a8649e7d561a68cd816420efbd9">axisValue</link>&#32;(controller::axis&#32;Axis);
+20 
+27 <emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="d2/dd9/controller_8h_aff3b02388de758f0fe6d98930ea57626_1aff3b02388de758f0fe6d98930ea57626">buttonIsPressed</link>&#32;(controller::button&#32;Button);
+28 
+29 <emphasis class="preprocessor">#endif</emphasis>
+    </computeroutput></literallayout>
+</section>
