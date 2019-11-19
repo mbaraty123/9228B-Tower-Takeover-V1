@@ -21,7 +21,7 @@ motor MOTOR_BACK_LEFT   = motor(PORT9, false);
 motor MOTOR_BACK_RIGHT  = motor(PORT3, true);
 motor MOTOR_FRONT_LEFT  = motor(PORT10, false);
 motor MOTOR_FRONT_RIGHT = motor(PORT2, true);
-motor MOTOR_INTAKE_A    = motor(PORT14, gearSetting::ratio36_1, true);
+motor MOTOR_INTAKE_A    = motor(PORT15, gearSetting::ratio36_1, true);
 motor MOTOR_INTAKE_B    = motor(PORT8, gearSetting::ratio36_1, false);
 motor MOTOR_STACK       = motor(PORT16, false);
 motor MOTOR_ARM         = motor(PORT12, gearSetting::ratio36_1, true);
@@ -57,12 +57,8 @@ void pre_auton( void ) {
 
 void autonomous( void ) {
 
- //auton(Side::LEFT, Color::BLUE);
-  MOTOR_INTAKE_A.startSpinFor(10, rotationUnits::rev, 100, velocityUnits::pct);
-  MOTOR_INTAKE_A.startSpinFor(10, rotationUnits::rev, 100, velocityUnits::pct);
-  moveForward(48);
-  MOTOR_INTAKE_A.stop();
-  MOTOR_INTAKE_B.stop();
+  auton(Side::RIGHT, Color::RED);
+
   // ..........................................................................
   // Insert autonomous user code here.
   // ..........................................................................

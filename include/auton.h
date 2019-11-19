@@ -12,7 +12,7 @@
   * @author Michael Baraty
   * @date 11/9/2019
   */
-bool moveForward(double inches);
+bool moveForward(double inches, double speed);
 
 /**
   * Pivots the robot clockwise to a certain angle
@@ -64,7 +64,7 @@ void auton(Side side, Color color);
   * @author Michael Baraty
   * @date 11/9/2019
   */
-void autonStart();
+bool autonStart();
 
 /**
   * Initiates blue left autonomous routine
