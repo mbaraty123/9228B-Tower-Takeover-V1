@@ -12,7 +12,7 @@
   * @author Michael Baraty
   * @date 11/9/2019
   */
-bool moveForward(double inches, double speed);
+bool moveForward(double inches, double speed, bool blocking);
 
 /**
   * Pivots the robot clockwise to a certain angle
