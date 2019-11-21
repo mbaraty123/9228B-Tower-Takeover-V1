@@ -111,8 +111,8 @@ void intakeIn() {
     MOTOR_INTAKE_A.spin(directionType::fwd, 100, velocityUnits::pct);
     MOTOR_INTAKE_B.spin(directionType::fwd, 100, velocityUnits::pct);
   } else {
-    MOTOR_INTAKE_A.spin(directionType::fwd, (100 / 3), velocityUnits::pct);
-    MOTOR_INTAKE_B.spin(directionType::fwd, (100 / 3), velocityUnits::pct);
+    MOTOR_INTAKE_A.spin(directionType::fwd, (100), velocityUnits::pct);
+    MOTOR_INTAKE_B.spin(directionType::fwd, (100), velocityUnits::pct);
   }
 }
 

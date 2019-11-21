@@ -24,10 +24,10 @@ bool pivotClockwise(float degrees) {
   double rotations_per_360 = 6.5;
   double rotations = rotations_per_360 * (degrees / 360);
 
-  MOTOR_BACK_LEFT.startRotateFor(directionType::fwd, rotations, rotationUnits::rev);
-  MOTOR_BACK_RIGHT.startRotateFor(directionType::rev, rotations, rotationUnits::rev);
-  MOTOR_FRONT_LEFT.startRotateFor(directionType::fwd, rotations, rotationUnits::rev);
-  MOTOR_FRONT_RIGHT.rotateFor(directionType::rev, rotations, rotationUnits::rev);
+  MOTOR_BACK_LEFT.startRotateFor(rotations, rotationUnits::rev, 80, velocityUnits::pct);
+  MOTOR_BACK_RIGHT.startRotateFor(-rotations, rotationUnits::rev, 80, velocityUnits::pct);
+  MOTOR_FRONT_LEFT.startRotateFor(rotations, rotationUnits::rev, 80, velocityUnits::pct);
+  MOTOR_FRONT_RIGHT.rotateFor(-rotations, rotationUnits::rev, 80, velocityUnits::pct);
 
   return true;
 }
@@ -123,8 +123,8 @@ void autonRedRight(){
 
   autonStart();
 
-  MOTOR_INTAKE_A.startRotateFor(10, rotationUnits::rev, 100, velocityUnits::pct);
-  MOTOR_INTAKE_B.startRotateFor(10, rotationUnits::rev, 100, velocityUnits::pct);
+  MOTOR_INTAKE_A.startRotateFor(7, rotationUnits::rev, 100, velocityUnits::pct);
+  MOTOR_INTAKE_B.startRotateFor(7, rotationUnits::rev, 100, velocityUnits::pct);
 
   
   moveForward(35, 33);
@@ -143,8 +143,8 @@ void autonRedRight(){
 
   moveForward(5, 30, false);
 
-  MOTOR_INTAKE_A.startRotateFor(-1, rotationUnits::rev, 100, velocityUnits::pct);
-  MOTOR_INTAKE_B.startRotateFor(-1, rotationUnits::rev, 100, velocityUnits::pct);
+  MOTOR_INTAKE_A.startRotateFor(-.5, rotationUnits::rev, 100, velocityUnits::pct);
+  MOTOR_INTAKE_B.startRotateFor(-.5, rotationUnits::rev, 100, velocityUnits::pct);
 
   MOTOR_STACK.rotateFor(2, rev);
 
@@ -172,7 +172,7 @@ bool autonStart() {
 
   MOTOR_STACK.startRotateTo(1.5, rev);
 
-  MOTOR_ARM.rotateTo(3.4, rotationUnits::rev, 100, velocityUnits::pct);
+  MOTOR_ARM.rotateTo(3.6, rotationUnits::rev, 100, velocityUnits::pct);
 
 
   moveForward(3);

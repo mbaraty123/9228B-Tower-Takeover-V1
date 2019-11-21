@@ -80,6 +80,13 @@ void usercontrol( void ) {
 
   while (1) {
     drive();
+
+    Brain.Screen.print("%2.2f \nBACK LEFT:   ", MOTOR_BACK_LEFT.temperature(temperatureUnits::celsius));
+    Brain.Screen.print("%2.2f \nBACK RIGHT:  ", MOTOR_BACK_RIGHT.temperature(temperatureUnits::celsius));
+    Brain.Screen.print("%2.2f \nFRONT LEFT:  ", MOTOR_FRONT_LEFT.temperature(temperatureUnits::celsius));
+    Brain.Screen.print("%2.2f \nFRONT RIGHT: ", MOTOR_FRONT_RIGHT.temperature(temperatureUnits::celsius));
+    Brain.Screen.clearScreen();
+    
     vex::task::sleep(20); //Sleep the task for a short amount of time to prevent wasted resources. 
   }
 }
