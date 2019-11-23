@@ -17,16 +17,34 @@ vex::competition Competition;
 vex::brain Brain;
 controller MASTER = controller();
 
+task printTask;
+
 motor MOTOR_BACK_LEFT   = motor(PORT9, false);
 motor MOTOR_BACK_RIGHT  = motor(PORT3, true);
 motor MOTOR_FRONT_LEFT  = motor(PORT10, false);
 motor MOTOR_FRONT_RIGHT = motor(PORT2, true);
 motor MOTOR_INTAKE_A    = motor(PORT15, gearSetting::ratio36_1, true);
-motor MOTOR_INTAKE_B    = motor(PORT8, gearSetting::ratio36_1, false);
-motor MOTOR_STACK       = motor(PORT16, false);
+motor MOTOR_INTAKE_B    = motor(PORT16, gearSetting::ratio36_1, false);
+motor MOTOR_STACK       = motor(PORT17, false);
 motor MOTOR_ARM         = motor(PORT12, gearSetting::ratio36_1, true);
 
 // define your global instances of motors and other devices here
+
+int printDisplay() {
+  while(true){
+    printf("%2.2f\n BACK LEFT:   ", MOTOR_BACK_LEFT.temperature(temperatureUnits::celsius));
+    printf("%2.2f\n BACK RIGHT:  ", MOTOR_BACK_RIGHT.temperature(temperatureUnits::celsius));
+    printf("%2.2f\n FRONT LEFT:  ", MOTOR_FRONT_LEFT.temperature(temperatureUnits::celsius));
+    printf("%2.2f\n FRONT RIGHT: ", MOTOR_FRONT_RIGHT.temperature(temperatureUnits::celsius));
+    printf("%2.2f\n INTAKE A:    ", MOTOR_INTAKE_A.temperature(temperatureUnits::celsius));
+    printf("%2.2f\n INTAKE B:    ", MOTOR_INTAKE_B.temperature(temperatureUnits::celsius));
+    printf("%2.2f\n ARM:         ", MOTOR_ARM.temperature(temperatureUnits::celsius));
+    printf("%2.2f\n MAGAZINE:    ", MOTOR_STACK.temperature(temperatureUnits::celsius));
+
+    
+    task::sleep(1000);
+  }
+}
 
 
 /*---------------------------------------------------------------------------*/
@@ -57,7 +75,9 @@ void pre_auton( void ) {
 
 void autonomous( void ) {
 
-  auton(Side::RIGHT, Color::RED);
+  //printDisplay();
+
+  auton(Side::LEFT, Color::RED);
 
   // ..........................................................................
   // Insert autonomous user code here.
@@ -78,18 +98,15 @@ void autonomous( void ) {
 void usercontrol( void ) {
   // User control code here, inside the loop
 
+  //printDisplay();
+
   while (1) {
     drive();
 
-    Brain.Screen.print("%2.2f \nBACK LEFT:   ", MOTOR_BACK_LEFT.temperature(temperatureUnits::celsius));
-    Brain.Screen.print("%2.2f \nBACK RIGHT:  ", MOTOR_BACK_RIGHT.temperature(temperatureUnits::celsius));
-    Brain.Screen.print("%2.2f \nFRONT LEFT:  ", MOTOR_FRONT_LEFT.temperature(temperatureUnits::celsius));
-    Brain.Screen.print("%2.2f \nFRONT RIGHT: ", MOTOR_FRONT_RIGHT.temperature(temperatureUnits::celsius));
-    Brain.Screen.clearScreen();
-    
     vex::task::sleep(20); //Sleep the task for a short amount of time to prevent wasted resources. 
   }
 }
+
 
 //
 // Main will set up the competition functions and callbacks.
@@ -101,9 +118,11 @@ int main() {
     
     //Run the pre-autonomous function. 
     pre_auton();
-       
+
+    
     //Prevent main from exiting with an infinite loop.                        
     while(1) {
+      printTask = task(printDisplay);
       vex::task::sleep(100);//Sleep the task for a short amount of time to prevent wasted resources.
     }    
        

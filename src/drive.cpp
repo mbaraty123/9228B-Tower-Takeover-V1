@@ -66,7 +66,7 @@ void tankDrive() {
 
 void moveStackForward() {
   double final = 1.5; 
-  MOTOR_STACK.startSpinTo(10, rotationUnits::rev, 50, velocityUnits::pct);
+  MOTOR_STACK.startSpinTo(10, rotationUnits::rev, 30, velocityUnits::pct);
 }
 
 void moveStackBack() {
@@ -117,8 +117,13 @@ void intakeIn() {
 }
 
 void intakeOut() {
-  MOTOR_INTAKE_A.spin(directionType::rev, 80, velocityUnits::pct);
-  MOTOR_INTAKE_B.spin(directionType::rev, 80, velocityUnits::pct);
+   if(!slowMode) {
+    MOTOR_INTAKE_A.spin(directionType::rev, 100, velocityUnits::pct);
+    MOTOR_INTAKE_B.spin(directionType::rev, 100, velocityUnits::pct);
+  } else {
+    MOTOR_INTAKE_A.spin(directionType::rev, .5*(100), velocityUnits::pct);
+    MOTOR_INTAKE_B.spin(directionType::rev, .5*(100), velocityUnits::pct);
+  }
 }
 
 void intakeControl() {

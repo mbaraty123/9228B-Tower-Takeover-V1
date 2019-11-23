@@ -94,4 +94,14 @@ void autonRedLeft();
   */
 void autonRedRight();
 
+void badAuton(Side side, Color color);
+
+void badAutonBlueLeft();
+
+void badAutonBlueRight();
+
+void badAutonRedLeft();
+
+void badAutonRedRight();
+
 #endif

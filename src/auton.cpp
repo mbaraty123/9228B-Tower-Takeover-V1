@@ -36,11 +36,11 @@ bool pivotCounterClockwise(float degrees) {
   double rotations_per_360 = 6.5;
   double rotations = rotations_per_360 * (degrees / 360);
 
-  MOTOR_BACK_LEFT.startRotateFor(directionType::rev, rotations, rotationUnits::rev);
-  MOTOR_BACK_RIGHT.startRotateFor(directionType::fwd, rotations, rotationUnits::rev);
-  MOTOR_FRONT_LEFT.startRotateFor(directionType::rev, rotations, rotationUnits::rev);
-  MOTOR_FRONT_RIGHT.rotateFor(directionType::fwd, rotations, rotationUnits::rev);
-
+  
+  MOTOR_BACK_LEFT.startRotateFor(-rotations, rotationUnits::rev, 80, velocityUnits::pct);
+  MOTOR_BACK_RIGHT.startRotateFor(rotations, rotationUnits::rev, 80, velocityUnits::pct);
+  MOTOR_FRONT_LEFT.startRotateFor(-rotations, rotationUnits::rev, 80, velocityUnits::pct);
+  MOTOR_FRONT_RIGHT.rotateFor(rotations, rotationUnits::rev, 80, velocityUnits::pct);
   return true;
 }
 
@@ -49,7 +49,7 @@ bool pivotCounterClockwise(float degrees) {
   * @author Michael Baraty
   */
 void auton(Side side, Color color) {
-  //autonStart();
+  autonStart();
 
   if(color == Color::BLUE && side == Side::LEFT)
     autonBlueLeft();
@@ -63,99 +63,81 @@ void auton(Side side, Color color) {
 
 
 void autonBlueLeft(){
-  autonStart();
-
-  MOTOR_INTAKE_A.startRotateFor(20, rotationUnits::rev, 100, velocityUnits::pct);
-  MOTOR_INTAKE_B.startRotateFor(20, rotationUnits::rev, 100, velocityUnits::pct);
-
-  
+  MOTOR_INTAKE_A.startRotateFor(7, rotationUnits::rev, 100, velocityUnits::pct);
+  MOTOR_INTAKE_B.startRotateFor(7, rotationUnits::rev, 100, velocityUnits::pct);
   moveForward(35, 33);
-
   /*pivotClockwise(190);
-
   moveForward(24);
-
   pivotCounterClockwise(45);*/
-
   moveForward(-24, 60);
-
-  pivotCounterClockwise(145);
-
-  moveForward(12);
-
-  MOTOR_INTAKE_A.rotateFor(-1.5, rotationUnits::rev, 100, velocityUnits::pct);
-  MOTOR_INTAKE_B.rotateFor(-1.5, rotationUnits::rev, 100, velocityUnits::pct);
-
-  MOTOR_STACK.rotateTo(4, rev);
-
+  pivotCounterClockwise(135);
+  moveForward(10);
+  moveForward(5, 30, false);
+  MOTOR_INTAKE_A.startRotateFor(-.5, rotationUnits::rev, 100, velocityUnits::pct);
+  MOTOR_INTAKE_B.startRotateFor(-.5, rotationUnits::rev, 100, velocityUnits::pct);
+  MOTOR_STACK.rotateFor(2, rev);
   MOTOR_INTAKE_A.startRotateFor(-20, rotationUnits::rev, 100, velocityUnits::pct);
   MOTOR_INTAKE_B.startRotateFor(-20, rotationUnits::rev, 100, velocityUnits::pct);
-
-  moveForward(-20);
-
+  moveForward(-20, 33);
   MOTOR_INTAKE_A.stop();
   MOTOR_INTAKE_B.stop();
 }
 
 void autonBlueRight(){
-  //run intakes
-  //move forward 30
-  //cut intakes
-  //180
-  //move 30
-  //90 counterclockwise
-  //forward 40
-  //drop stack somehow
+  intakeIn();
+  moveForward(25, 70);
+  moveForward(12, 40);
+  vexDelay(1000);
+  MOTOR_INTAKE_A.stop(hold);
+  MOTOR_INTAKE_B.stop(hold);
+  moveForward(-28, 80);
+  pivotClockwise(130);
+  moveForward(27, 50);
+  MOTOR_INTAKE_A.rotateFor(-.25, rotationUnits::rev, 100, velocityUnits::pct);
+  MOTOR_INTAKE_B.rotateFor(-.25, rotationUnits::rev, 100, velocityUnits::pct);
+  MOTOR_STACK.startRotateTo(2.9, rotationUnits::rev);
+  vexDelay(1500);
+  intakeOut();
+  moveForward(-13, 33, false);
 }
 
 void autonRedLeft(){
-  //run intakes
-  //move forward 30
-  //cut intakes
-  //180
-  //move 30
-  //90 clockwise
-  //forward 40
-  //drop stack somehow
+  intakeIn();
+  moveForward(25, 70);
+  moveForward(12, 40);
+  vexDelay(1000);
+  MOTOR_INTAKE_A.stop(hold);
+  MOTOR_INTAKE_B.stop(hold);
+  moveForward(-28, 80);
+  pivotCounterClockwise(130);
+  moveForward(27, 50);
+  MOTOR_INTAKE_A.rotateFor(-.25, rotationUnits::rev, 100, velocityUnits::pct);
+  MOTOR_INTAKE_B.rotateFor(-.25, rotationUnits::rev, 100, velocityUnits::pct);
+  MOTOR_STACK.startRotateTo(2.9, rotationUnits::rev);
+  vexDelay(1500);
+  intakeOut();
+  moveForward(-13, 33, false);
 }
 
 void autonRedRight(){
-
-  autonStart();
-
   MOTOR_INTAKE_A.startRotateFor(7, rotationUnits::rev, 100, velocityUnits::pct);
   MOTOR_INTAKE_B.startRotateFor(7, rotationUnits::rev, 100, velocityUnits::pct);
-
-  
   moveForward(35, 33);
-
   /*pivotClockwise(190);
-
   moveForward(24);
-
   pivotCounterClockwise(45);*/
-
   moveForward(-24, 60);
-
   pivotClockwise(135);
-
   moveForward(10);
-
   moveForward(5, 30, false);
-
   MOTOR_INTAKE_A.startRotateFor(-.5, rotationUnits::rev, 100, velocityUnits::pct);
   MOTOR_INTAKE_B.startRotateFor(-.5, rotationUnits::rev, 100, velocityUnits::pct);
-
   MOTOR_STACK.rotateFor(2, rev);
-
   MOTOR_INTAKE_A.startRotateFor(-20, rotationUnits::rev, 100, velocityUnits::pct);
   MOTOR_INTAKE_B.startRotateFor(-20, rotationUnits::rev, 100, velocityUnits::pct);
-
   moveForward(-20, 33);
-
   MOTOR_INTAKE_A.stop();
   MOTOR_INTAKE_B.stop();
-
 }
 
 /**
@@ -172,7 +154,7 @@ bool autonStart() {
 
   MOTOR_STACK.startRotateTo(1.5, rev);
 
-  MOTOR_ARM.rotateTo(3.6, rotationUnits::rev, 100, velocityUnits::pct);
+  MOTOR_ARM.rotateTo(3.9, rotationUnits::rev, 100, velocityUnits::pct);
 
 
   moveForward(3);
@@ -185,4 +167,34 @@ bool autonStart() {
   moveForward(-15, 80);
 
   return true;
+}
+
+
+void badAuton(Side side, Color color) {
+
+  if(color == Color::BLUE && side == Side::LEFT)
+    badAutonBlueLeft();
+  else if (color == Color::BLUE && side == Side::RIGHT)
+    badAutonBlueRight();
+  else if (color == Color::RED && side == Side::LEFT)
+    badAutonRedLeft();
+  else if (color == Color::RED && side == Side::RIGHT)
+    badAutonRedRight();
+}
+
+
+void badAutonBlueLeft(){
+  
+}
+
+void badAutonBlueRight(){
+
+}
+
+void badAutonRedLeft(){
+
+}
+
+void badAutonRedRight(){
+
 }
