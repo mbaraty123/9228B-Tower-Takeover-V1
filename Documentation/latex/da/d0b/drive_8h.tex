@@ -1,0 +1,469 @@
+\hypertarget{drive_8h}{}\subsection{include/drive.h File Reference}
+\label{drive_8h}\index{include/drive.\+h@{include/drive.\+h}}
+{\ttfamily \#include \char`\"{}controller.\+h\char`\"{}}\newline
+\subsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_a2771dd4b083c12b0f13d534e3d1914dc}{Drive\+Side}} \+: int \{ \mbox{\hyperlink{drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_a2771dd4b083c12b0f13d534e3d1914dca684d325a7303f52e64011467ff5c5758}{Drive\+Side\+::\+L\+E\+FT}} = 0, 
+\mbox{\hyperlink{drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_a2771dd4b083c12b0f13d534e3d1914dca21507b40c80068eda19865706fdc2403}{Drive\+Side\+::\+R\+I\+G\+HT}} = 1, 
+\mbox{\hyperlink{drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_a2771dd4b083c12b0f13d534e3d1914dca6328e5e3186c227a021ef2ff77e40197}{Drive\+Side\+::\+B\+O\+TH}} = 2
+ \}
+\end{DoxyCompactItemize}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{drive_8h_a6ff8820b82f28a73c88a746ddacb26bb_a6ff8820b82f28a73c88a746ddacb26bb}{arcade\+Drive}} ()
+\item 
+void \mbox{\hyperlink{drive_8h_ab8605578ac6dddeb3e511513523e3354_ab8605578ac6dddeb3e511513523e3354}{tank\+Drive}} ()
+\item 
+void \mbox{\hyperlink{drive_8h_ac522da2148fe1cfd9bea8c026e64ee7b_ac522da2148fe1cfd9bea8c026e64ee7b}{set\+Side\+Speed}} (\mbox{\hyperlink{drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_a2771dd4b083c12b0f13d534e3d1914dc}{Drive\+Side}} side, int speed)
+\item 
+void \mbox{\hyperlink{drive_8h_a928e32686c7e00c1ecde24c3da3019f7_a928e32686c7e00c1ecde24c3da3019f7}{drive}} ()
+\item 
+void \mbox{\hyperlink{drive_8h_a08a55986dab46203f1eeef50123cf4bd_a08a55986dab46203f1eeef50123cf4bd}{move\+Stack\+Forward}} ()
+\item 
+void \mbox{\hyperlink{drive_8h_ac153148440cec552a2824c91569e1e5a_ac153148440cec552a2824c91569e1e5a}{move\+Stack\+Back}} ()
+\item 
+void \mbox{\hyperlink{drive_8h_abc3819041cf96aad1093752a3a5de31c_abc3819041cf96aad1093752a3a5de31c}{stack\+Control}} ()
+\item 
+void \mbox{\hyperlink{drive_8h_adf7b0afb3a8dcf884db533b0217b0543_adf7b0afb3a8dcf884db533b0217b0543}{arm\+Up}} ()
+\item 
+void \mbox{\hyperlink{drive_8h_ab1850cc7cdb69057fe29f45eefe7ec90_ab1850cc7cdb69057fe29f45eefe7ec90}{arm\+Down}} ()
+\item 
+void \mbox{\hyperlink{drive_8h_adde1067b42b4de65ff20afb8901f7643_adde1067b42b4de65ff20afb8901f7643}{arm\+Control}} ()
+\item 
+void \mbox{\hyperlink{drive_8h_aa0846c73538fc48569a7c7c3689a59f0_aa0846c73538fc48569a7c7c3689a59f0}{intake\+In}} ()
+\item 
+void \mbox{\hyperlink{drive_8h_aaca1ffa87592c1c5783fe6e18f9c655b_aaca1ffa87592c1c5783fe6e18f9c655b}{intake\+Out}} ()
+\item 
+void \mbox{\hyperlink{drive_8h_a8afb2a071b21d98c49d5888a7b380ba6_a8afb2a071b21d98c49d5888a7b380ba6}{intake\+Control}} ()
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_a2771dd4b083c12b0f13d534e3d1914dc}\label{drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_a2771dd4b083c12b0f13d534e3d1914dc}} 
+\index{drive.\+h@{drive.\+h}!Drive\+Side@{Drive\+Side}}
+\index{Drive\+Side@{Drive\+Side}!drive.\+h@{drive.\+h}}
+\paragraph{\texorpdfstring{Drive\+Side}{DriveSide}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_a2771dd4b083c12b0f13d534e3d1914dc}{Drive\+Side}} \+: int\hspace{0.3cm}{\ttfamily [strong]}}
+
+Declares all the basic movement functions for the robot \begin{DoxyAuthor}{Author}
+Michael Baraty 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/9/2019 Declares the different possible motor combinations to drive the robot 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Michael Baraty 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/9/2019 
+\end{DoxyDate}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{L\+E\+FT@{L\+E\+FT}!drive.\+h@{drive.\+h}}\index{drive.\+h@{drive.\+h}!L\+E\+FT@{L\+E\+FT}}}\mbox{\Hypertarget{drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_a2771dd4b083c12b0f13d534e3d1914dca684d325a7303f52e64011467ff5c5758}\label{drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_a2771dd4b083c12b0f13d534e3d1914dca684d325a7303f52e64011467ff5c5758}} 
+L\+E\+FT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+I\+G\+HT@{R\+I\+G\+HT}!drive.\+h@{drive.\+h}}\index{drive.\+h@{drive.\+h}!R\+I\+G\+HT@{R\+I\+G\+HT}}}\mbox{\Hypertarget{drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_a2771dd4b083c12b0f13d534e3d1914dca21507b40c80068eda19865706fdc2403}\label{drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_a2771dd4b083c12b0f13d534e3d1914dca21507b40c80068eda19865706fdc2403}} 
+R\+I\+G\+HT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+O\+TH@{B\+O\+TH}!drive.\+h@{drive.\+h}}\index{drive.\+h@{drive.\+h}!B\+O\+TH@{B\+O\+TH}}}\mbox{\Hypertarget{drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_a2771dd4b083c12b0f13d534e3d1914dca6328e5e3186c227a021ef2ff77e40197}\label{drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_a2771dd4b083c12b0f13d534e3d1914dca6328e5e3186c227a021ef2ff77e40197}} 
+B\+O\+TH&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{drive_8h_source_l00016}{16}} of file \mbox{\hyperlink{drive_8h_source}{drive.\+h}}.
+
+
+\begin{DoxyCode}
+00016                      : \textcolor{keywordtype}{int} \{
+00017     \mbox{\hyperlink{auton_8h_a702107095bd059695d57318e7338a4a7_a702107095bd059695d57318e7338a4a7a684d325a7303f52e64011467ff5c5758}{LEFT}} = 0,
+00018     \mbox{\hyperlink{auton_8h_a702107095bd059695d57318e7338a4a7_a702107095bd059695d57318e7338a4a7a21507b40c80068eda19865706fdc2403}{RIGHT}} = 1,
+00019     \mbox{\hyperlink{drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_a2771dd4b083c12b0f13d534e3d1914dca6328e5e3186c227a021ef2ff77e40197}{BOTH}} = 2
+00020  \};
+\end{DoxyCode}
+
+
+\subsubsection{Function Documentation}
+\mbox{\Hypertarget{drive_8h_a6ff8820b82f28a73c88a746ddacb26bb_a6ff8820b82f28a73c88a746ddacb26bb}\label{drive_8h_a6ff8820b82f28a73c88a746ddacb26bb_a6ff8820b82f28a73c88a746ddacb26bb}} 
+\index{drive.\+h@{drive.\+h}!arcade\+Drive@{arcade\+Drive}}
+\index{arcade\+Drive@{arcade\+Drive}!drive.\+h@{drive.\+h}}
+\paragraph{\texorpdfstring{arcade\+Drive()}{arcadeDrive()}}
+{\footnotesize\ttfamily void arcade\+Drive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Initiates the arcade control configuration for the controller, with the left y axis for linear movement and the right x axis for pivoting \begin{DoxyAuthor}{Author}
+Michael Baraty 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/9/2019 
+\end{DoxyDate}
+
+
+Definition at line \mbox{\hyperlink{drive_8cpp_source_l00037}{37}} of file \mbox{\hyperlink{drive_8cpp_source}{drive.\+cpp}}.
+
+
+\begin{DoxyCode}
+00037                    \{
+00038   \textcolor{keywordtype}{int} x = \mbox{\hyperlink{declarations_8h_afb49f22bdd1e93218d02bb25e513e8a0_afb49f22bdd1e93218d02bb25e513e8a0}{SPEED\_MULTIPLIER}}  * -\mbox{\hyperlink{controller_8h_a73be3a8649e7d561a68cd816420efbd9_a73be3a8649e7d561a68cd816420efbd9}{axisValue}}(\mbox{\hyperlink{declarations_8h_ab04f8ff803f7f02c23e713402e13bf32_ab04f8ff803f7f02c23e713402e13bf32}{MASTER}}.Axis1);
+00039   \textcolor{keywordtype}{int} y = \mbox{\hyperlink{declarations_8h_afb49f22bdd1e93218d02bb25e513e8a0_afb49f22bdd1e93218d02bb25e513e8a0}{SPEED\_MULTIPLIER}} * (.7  * (pow(-\mbox{\hyperlink{controller_8h_a73be3a8649e7d561a68cd816420efbd9_a73be3a8649e7d561a68cd816420efbd9}{axisValue}}(
+      \mbox{\hyperlink{declarations_8h_ab04f8ff803f7f02c23e713402e13bf32_ab04f8ff803f7f02c23e713402e13bf32}{MASTER}}.Axis3) / 9, 3) / 10));
+00040   \textcolor{keywordtype}{int} speedLeft = abs(x + y) > \mbox{\hyperlink{declarations_8h_adceb947873623dd2a87f7f69e81fbd38_adceb947873623dd2a87f7f69e81fbd38}{THRESHOLD}}? -(x + y): 0;
+00041   \textcolor{keywordtype}{int} speedRight = abs(x - y) > \mbox{\hyperlink{declarations_8h_adceb947873623dd2a87f7f69e81fbd38_adceb947873623dd2a87f7f69e81fbd38}{THRESHOLD}}? (x - y): 0;
+00042 
+00043   \textcolor{keywordflow}{if}(\mbox{\hyperlink{drive_8cpp_ac84adc1c8ccd21c3c630031ad1ce5956_ac84adc1c8ccd21c3c630031ad1ce5956}{slowMode}})\{
+00044     \mbox{\hyperlink{drive_8cpp_ac522da2148fe1cfd9bea8c026e64ee7b_ac522da2148fe1cfd9bea8c026e64ee7b}{setSideSpeed}}(\mbox{\hyperlink{drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_a2771dd4b083c12b0f13d534e3d1914dca684d325a7303f52e64011467ff5c5758}{DriveSide::LEFT}}, speedLeft / 3);
+00045      \mbox{\hyperlink{drive_8cpp_ac522da2148fe1cfd9bea8c026e64ee7b_ac522da2148fe1cfd9bea8c026e64ee7b}{setSideSpeed}}(\mbox{\hyperlink{drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_a2771dd4b083c12b0f13d534e3d1914dca21507b40c80068eda19865706fdc2403}{DriveSide::RIGHT}}, speedRight / 3);
+00046   \} \textcolor{keywordflow}{else} \{
+00047     \mbox{\hyperlink{drive_8cpp_ac522da2148fe1cfd9bea8c026e64ee7b_ac522da2148fe1cfd9bea8c026e64ee7b}{setSideSpeed}}(\mbox{\hyperlink{drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_a2771dd4b083c12b0f13d534e3d1914dca684d325a7303f52e64011467ff5c5758}{DriveSide::LEFT}}, speedLeft);
+00048     \mbox{\hyperlink{drive_8cpp_ac522da2148fe1cfd9bea8c026e64ee7b_ac522da2148fe1cfd9bea8c026e64ee7b}{setSideSpeed}}(\mbox{\hyperlink{drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_a2771dd4b083c12b0f13d534e3d1914dca21507b40c80068eda19865706fdc2403}{DriveSide::RIGHT}}, speedRight);
+00049   \}
+00050 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{drive_8h_adde1067b42b4de65ff20afb8901f7643_adde1067b42b4de65ff20afb8901f7643}\label{drive_8h_adde1067b42b4de65ff20afb8901f7643_adde1067b42b4de65ff20afb8901f7643}} 
+\index{drive.\+h@{drive.\+h}!arm\+Control@{arm\+Control}}
+\index{arm\+Control@{arm\+Control}!drive.\+h@{drive.\+h}}
+\paragraph{\texorpdfstring{arm\+Control()}{armControl()}}
+{\footnotesize\ttfamily void arm\+Control (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Reads the controller\textquotesingle{}s button inputs to initiate the arm lifter\textquotesingle{}s movement while the button is being pressed \begin{DoxyAuthor}{Author}
+Michael Baraty 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/9/2019 
+\end{DoxyDate}
+
+
+Definition at line \mbox{\hyperlink{drive_8cpp_source_l00097}{97}} of file \mbox{\hyperlink{drive_8cpp_source}{drive.\+cpp}}.
+
+
+\begin{DoxyCode}
+00097                  \{
+00098   \textcolor{keywordflow}{if}(\mbox{\hyperlink{controller_8h_aff3b02388de758f0fe6d98930ea57626_aff3b02388de758f0fe6d98930ea57626}{buttonIsPressed}}(\mbox{\hyperlink{declarations_8h_ab04f8ff803f7f02c23e713402e13bf32_ab04f8ff803f7f02c23e713402e13bf32}{MASTER}}.ButtonR1))\{
+00099     \mbox{\hyperlink{drive_8cpp_adf7b0afb3a8dcf884db533b0217b0543_adf7b0afb3a8dcf884db533b0217b0543}{armUp}}();
+00100   \}
+00101   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{controller_8h_aff3b02388de758f0fe6d98930ea57626_aff3b02388de758f0fe6d98930ea57626}{buttonIsPressed}}(\mbox{\hyperlink{declarations_8h_ab04f8ff803f7f02c23e713402e13bf32_ab04f8ff803f7f02c23e713402e13bf32}{MASTER}}.ButtonR2)) \{
+00102     \mbox{\hyperlink{drive_8cpp_ab1850cc7cdb69057fe29f45eefe7ec90_ab1850cc7cdb69057fe29f45eefe7ec90}{armDown}}();
+00103   \}
+00104   \textcolor{keywordflow}{else} \{
+00105     \mbox{\hyperlink{declarations_8h_a9a834f9a2c804ef0d65ed2f68c10a61a_a9a834f9a2c804ef0d65ed2f68c10a61a}{MOTOR\_ARM}}.stop(brakeType::hold);
+00106   \}
+00107 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{drive_8h_ab1850cc7cdb69057fe29f45eefe7ec90_ab1850cc7cdb69057fe29f45eefe7ec90}\label{drive_8h_ab1850cc7cdb69057fe29f45eefe7ec90_ab1850cc7cdb69057fe29f45eefe7ec90}} 
+\index{drive.\+h@{drive.\+h}!arm\+Down@{arm\+Down}}
+\index{arm\+Down@{arm\+Down}!drive.\+h@{drive.\+h}}
+\paragraph{\texorpdfstring{arm\+Down()}{armDown()}}
+{\footnotesize\ttfamily void arm\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Moves the intake lifter down to a specified position \begin{DoxyAuthor}{Author}
+Michael Baraty 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/9/2019 
+\end{DoxyDate}
+
+
+Definition at line \mbox{\hyperlink{drive_8cpp_source_l00092}{92}} of file \mbox{\hyperlink{drive_8cpp_source}{drive.\+cpp}}.
+
+
+\begin{DoxyCode}
+00092               \{
+00093   \mbox{\hyperlink{declarations_8h_a9a834f9a2c804ef0d65ed2f68c10a61a_a9a834f9a2c804ef0d65ed2f68c10a61a}{MOTOR\_ARM}}.startSpinTo(-10, rotationUnits::rev, 100, velocityUnits::pct);
+00094   \textcolor{comment}{//realValue 0}
+00095 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{drive_8h_adf7b0afb3a8dcf884db533b0217b0543_adf7b0afb3a8dcf884db533b0217b0543}\label{drive_8h_adf7b0afb3a8dcf884db533b0217b0543_adf7b0afb3a8dcf884db533b0217b0543}} 
+\index{drive.\+h@{drive.\+h}!arm\+Up@{arm\+Up}}
+\index{arm\+Up@{arm\+Up}!drive.\+h@{drive.\+h}}
+\paragraph{\texorpdfstring{arm\+Up()}{armUp()}}
+{\footnotesize\ttfamily void arm\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Moves the intake lifter up to a specified position \begin{DoxyAuthor}{Author}
+Michael Baraty 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/9/2019 
+\end{DoxyDate}
+
+
+Definition at line \mbox{\hyperlink{drive_8cpp_source_l00087}{87}} of file \mbox{\hyperlink{drive_8cpp_source}{drive.\+cpp}}.
+
+
+\begin{DoxyCode}
+00087             \{
+00088   \mbox{\hyperlink{declarations_8h_a9a834f9a2c804ef0d65ed2f68c10a61a_a9a834f9a2c804ef0d65ed2f68c10a61a}{MOTOR\_ARM}}.startSpinTo(60.6, rotationUnits::rev, 100, velocityUnits::pct);
+00089   \textcolor{comment}{//realValue 6.6}
+00090 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{drive_8h_a928e32686c7e00c1ecde24c3da3019f7_a928e32686c7e00c1ecde24c3da3019f7}\label{drive_8h_a928e32686c7e00c1ecde24c3da3019f7_a928e32686c7e00c1ecde24c3da3019f7}} 
+\index{drive.\+h@{drive.\+h}!drive@{drive}}
+\index{drive@{drive}!drive.\+h@{drive.\+h}}
+\paragraph{\texorpdfstring{drive()}{drive()}}
+{\footnotesize\ttfamily void drive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Initiates the drive code for the entire robot \begin{DoxyAuthor}{Author}
+Michael Baraty 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/9/2019 
+\end{DoxyDate}
+
+
+Definition at line \mbox{\hyperlink{drive_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{drive_8cpp_source}{drive.\+cpp}}.
+
+
+\begin{DoxyCode}
+00007              \{
+00008   \mbox{\hyperlink{drive_8cpp_a6ff8820b82f28a73c88a746ddacb26bb_a6ff8820b82f28a73c88a746ddacb26bb}{arcadeDrive}}();
+00009   \mbox{\hyperlink{drive_8cpp_abc3819041cf96aad1093752a3a5de31c_abc3819041cf96aad1093752a3a5de31c}{stackControl}}();
+00010   \mbox{\hyperlink{drive_8cpp_adde1067b42b4de65ff20afb8901f7643_adde1067b42b4de65ff20afb8901f7643}{armControl}}();
+00011   \mbox{\hyperlink{drive_8cpp_a8afb2a071b21d98c49d5888a7b380ba6_a8afb2a071b21d98c49d5888a7b380ba6}{intakeControl}}();
+00012 
+00013   \textcolor{keywordflow}{if}(\mbox{\hyperlink{controller_8h_aff3b02388de758f0fe6d98930ea57626_aff3b02388de758f0fe6d98930ea57626}{buttonIsPressed}}(\mbox{\hyperlink{declarations_8h_ab04f8ff803f7f02c23e713402e13bf32_ab04f8ff803f7f02c23e713402e13bf32}{MASTER}}.ButtonUp))\{
+00014     \mbox{\hyperlink{drive_8cpp_ac84adc1c8ccd21c3c630031ad1ce5956_ac84adc1c8ccd21c3c630031ad1ce5956}{slowMode}} = \textcolor{keyword}{false};
+00015   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{controller_8h_aff3b02388de758f0fe6d98930ea57626_aff3b02388de758f0fe6d98930ea57626}{buttonIsPressed}}(\mbox{\hyperlink{declarations_8h_ab04f8ff803f7f02c23e713402e13bf32_ab04f8ff803f7f02c23e713402e13bf32}{MASTER}}.ButtonDown))\{
+00016     \mbox{\hyperlink{drive_8cpp_ac84adc1c8ccd21c3c630031ad1ce5956_ac84adc1c8ccd21c3c630031ad1ce5956}{slowMode}} = \textcolor{keyword}{true};
+00017   \}
+00018 
+00019 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{drive_8h_a8afb2a071b21d98c49d5888a7b380ba6_a8afb2a071b21d98c49d5888a7b380ba6}\label{drive_8h_a8afb2a071b21d98c49d5888a7b380ba6_a8afb2a071b21d98c49d5888a7b380ba6}} 
+\index{drive.\+h@{drive.\+h}!intake\+Control@{intake\+Control}}
+\index{intake\+Control@{intake\+Control}!drive.\+h@{drive.\+h}}
+\paragraph{\texorpdfstring{intake\+Control()}{intakeControl()}}
+{\footnotesize\ttfamily void intake\+Control (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Reads the controller\textquotesingle{}s button inputs to spin the intake while the button is being pressed \begin{DoxyAuthor}{Author}
+Michael Baraty 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/9/2019 
+\end{DoxyDate}
+
+
+Definition at line \mbox{\hyperlink{drive_8cpp_source_l00129}{129}} of file \mbox{\hyperlink{drive_8cpp_source}{drive.\+cpp}}.
+
+
+\begin{DoxyCode}
+00129                      \{
+00130   \textcolor{keywordflow}{if}(\mbox{\hyperlink{controller_8h_aff3b02388de758f0fe6d98930ea57626_aff3b02388de758f0fe6d98930ea57626}{buttonIsPressed}}(\mbox{\hyperlink{declarations_8h_ab04f8ff803f7f02c23e713402e13bf32_ab04f8ff803f7f02c23e713402e13bf32}{MASTER}}.ButtonL1))\{
+00131     \mbox{\hyperlink{drive_8cpp_aa0846c73538fc48569a7c7c3689a59f0_aa0846c73538fc48569a7c7c3689a59f0}{intakeIn}}();
+00132   \}
+00133   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{controller_8h_aff3b02388de758f0fe6d98930ea57626_aff3b02388de758f0fe6d98930ea57626}{buttonIsPressed}}(\mbox{\hyperlink{declarations_8h_ab04f8ff803f7f02c23e713402e13bf32_ab04f8ff803f7f02c23e713402e13bf32}{MASTER}}.ButtonL2)) \{
+00134     \mbox{\hyperlink{drive_8cpp_aaca1ffa87592c1c5783fe6e18f9c655b_aaca1ffa87592c1c5783fe6e18f9c655b}{intakeOut}}();
+00135   \}
+00136   \textcolor{keywordflow}{else} \{
+00137     \mbox{\hyperlink{declarations_8h_a34de211d15bfb3c0ac450597fd96b4fc_a34de211d15bfb3c0ac450597fd96b4fc}{MOTOR\_INTAKE\_A}}.stop(brakeType::hold);
+00138     \mbox{\hyperlink{declarations_8h_a5ae79e7ed71b0b94b3983c22c60c2eaa_a5ae79e7ed71b0b94b3983c22c60c2eaa}{MOTOR\_INTAKE\_B}}.stop(brakeType::hold);
+00139   \}
+00140 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{drive_8h_aa0846c73538fc48569a7c7c3689a59f0_aa0846c73538fc48569a7c7c3689a59f0}\label{drive_8h_aa0846c73538fc48569a7c7c3689a59f0_aa0846c73538fc48569a7c7c3689a59f0}} 
+\index{drive.\+h@{drive.\+h}!intake\+In@{intake\+In}}
+\index{intake\+In@{intake\+In}!drive.\+h@{drive.\+h}}
+\paragraph{\texorpdfstring{intake\+In()}{intakeIn()}}
+{\footnotesize\ttfamily void intake\+In (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Spins the intake to intake the cubes \begin{DoxyAuthor}{Author}
+Michael Baraty 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/9/2019 
+\end{DoxyDate}
+
+
+Definition at line \mbox{\hyperlink{drive_8cpp_source_l00109}{109}} of file \mbox{\hyperlink{drive_8cpp_source}{drive.\+cpp}}.
+
+
+\begin{DoxyCode}
+00109                 \{
+00110   \textcolor{keywordflow}{if}(!\mbox{\hyperlink{drive_8cpp_ac84adc1c8ccd21c3c630031ad1ce5956_ac84adc1c8ccd21c3c630031ad1ce5956}{slowMode}}) \{
+00111     \mbox{\hyperlink{declarations_8h_a34de211d15bfb3c0ac450597fd96b4fc_a34de211d15bfb3c0ac450597fd96b4fc}{MOTOR\_INTAKE\_A}}.spin(directionType::fwd, 100, velocityUnits::pct);
+00112     \mbox{\hyperlink{declarations_8h_a5ae79e7ed71b0b94b3983c22c60c2eaa_a5ae79e7ed71b0b94b3983c22c60c2eaa}{MOTOR\_INTAKE\_B}}.spin(directionType::fwd, 100, velocityUnits::pct);
+00113   \} \textcolor{keywordflow}{else} \{
+00114     \mbox{\hyperlink{declarations_8h_a34de211d15bfb3c0ac450597fd96b4fc_a34de211d15bfb3c0ac450597fd96b4fc}{MOTOR\_INTAKE\_A}}.spin(directionType::fwd, (100), velocityUnits::pct);
+00115     \mbox{\hyperlink{declarations_8h_a5ae79e7ed71b0b94b3983c22c60c2eaa_a5ae79e7ed71b0b94b3983c22c60c2eaa}{MOTOR\_INTAKE\_B}}.spin(directionType::fwd, (100), velocityUnits::pct);
+00116   \}
+00117 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{drive_8h_aaca1ffa87592c1c5783fe6e18f9c655b_aaca1ffa87592c1c5783fe6e18f9c655b}\label{drive_8h_aaca1ffa87592c1c5783fe6e18f9c655b_aaca1ffa87592c1c5783fe6e18f9c655b}} 
+\index{drive.\+h@{drive.\+h}!intake\+Out@{intake\+Out}}
+\index{intake\+Out@{intake\+Out}!drive.\+h@{drive.\+h}}
+\paragraph{\texorpdfstring{intake\+Out()}{intakeOut()}}
+{\footnotesize\ttfamily void intake\+Out (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Spins the intake to eject the cubes \begin{DoxyAuthor}{Author}
+Michael Baraty 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/9/2019 
+\end{DoxyDate}
+
+
+Definition at line \mbox{\hyperlink{drive_8cpp_source_l00119}{119}} of file \mbox{\hyperlink{drive_8cpp_source}{drive.\+cpp}}.
+
+
+\begin{DoxyCode}
+00119                  \{
+00120    \textcolor{keywordflow}{if}(!\mbox{\hyperlink{drive_8cpp_ac84adc1c8ccd21c3c630031ad1ce5956_ac84adc1c8ccd21c3c630031ad1ce5956}{slowMode}}) \{
+00121     \mbox{\hyperlink{declarations_8h_a34de211d15bfb3c0ac450597fd96b4fc_a34de211d15bfb3c0ac450597fd96b4fc}{MOTOR\_INTAKE\_A}}.spin(directionType::rev, 100, velocityUnits::pct);
+00122     \mbox{\hyperlink{declarations_8h_a5ae79e7ed71b0b94b3983c22c60c2eaa_a5ae79e7ed71b0b94b3983c22c60c2eaa}{MOTOR\_INTAKE\_B}}.spin(directionType::rev, 100, velocityUnits::pct);
+00123   \} \textcolor{keywordflow}{else} \{
+00124     \mbox{\hyperlink{declarations_8h_a34de211d15bfb3c0ac450597fd96b4fc_a34de211d15bfb3c0ac450597fd96b4fc}{MOTOR\_INTAKE\_A}}.spin(directionType::rev, .5*(100), velocityUnits::pct);
+00125     \mbox{\hyperlink{declarations_8h_a5ae79e7ed71b0b94b3983c22c60c2eaa_a5ae79e7ed71b0b94b3983c22c60c2eaa}{MOTOR\_INTAKE\_B}}.spin(directionType::rev, .5*(100), velocityUnits::pct);
+00126   \}
+00127 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{drive_8h_ac153148440cec552a2824c91569e1e5a_ac153148440cec552a2824c91569e1e5a}\label{drive_8h_ac153148440cec552a2824c91569e1e5a_ac153148440cec552a2824c91569e1e5a}} 
+\index{drive.\+h@{drive.\+h}!move\+Stack\+Back@{move\+Stack\+Back}}
+\index{move\+Stack\+Back@{move\+Stack\+Back}!drive.\+h@{drive.\+h}}
+\paragraph{\texorpdfstring{move\+Stack\+Back()}{moveStackBack()}}
+{\footnotesize\ttfamily void move\+Stack\+Back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Moves the stack backwards to a specified position \begin{DoxyAuthor}{Author}
+Michael Baraty 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/9/2019 
+\end{DoxyDate}
+
+
+Definition at line \mbox{\hyperlink{drive_8cpp_source_l00072}{72}} of file \mbox{\hyperlink{drive_8cpp_source}{drive.\+cpp}}.
+
+
+\begin{DoxyCode}
+00072                      \{
+00073   \textcolor{keywordtype}{double} \textcolor{keyword}{final} = 0;
+00074   \mbox{\hyperlink{declarations_8h_a212c888d64ffcd7e7b44a548fa0408a9_a212c888d64ffcd7e7b44a548fa0408a9}{MOTOR\_STACK}}.startSpinTo(-10, rotationUnits::rev, 80, velocityUnits::pct); 
+00075 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{drive_8h_a08a55986dab46203f1eeef50123cf4bd_a08a55986dab46203f1eeef50123cf4bd}\label{drive_8h_a08a55986dab46203f1eeef50123cf4bd_a08a55986dab46203f1eeef50123cf4bd}} 
+\index{drive.\+h@{drive.\+h}!move\+Stack\+Forward@{move\+Stack\+Forward}}
+\index{move\+Stack\+Forward@{move\+Stack\+Forward}!drive.\+h@{drive.\+h}}
+\paragraph{\texorpdfstring{move\+Stack\+Forward()}{moveStackForward()}}
+{\footnotesize\ttfamily void move\+Stack\+Forward (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Moves the stack forward to a specified position \begin{DoxyAuthor}{Author}
+Michael Baraty 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/9/2019 
+\end{DoxyDate}
+
+
+Definition at line \mbox{\hyperlink{drive_8cpp_source_l00067}{67}} of file \mbox{\hyperlink{drive_8cpp_source}{drive.\+cpp}}.
+
+
+\begin{DoxyCode}
+00067                         \{
+00068   \textcolor{keywordtype}{double} \textcolor{keyword}{final} = 1.5; 
+00069   \mbox{\hyperlink{declarations_8h_a212c888d64ffcd7e7b44a548fa0408a9_a212c888d64ffcd7e7b44a548fa0408a9}{MOTOR\_STACK}}.startSpinTo(10, rotationUnits::rev, 30, velocityUnits::pct);
+00070 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{drive_8h_ac522da2148fe1cfd9bea8c026e64ee7b_ac522da2148fe1cfd9bea8c026e64ee7b}\label{drive_8h_ac522da2148fe1cfd9bea8c026e64ee7b_ac522da2148fe1cfd9bea8c026e64ee7b}} 
+\index{drive.\+h@{drive.\+h}!set\+Side\+Speed@{set\+Side\+Speed}}
+\index{set\+Side\+Speed@{set\+Side\+Speed}!drive.\+h@{drive.\+h}}
+\paragraph{\texorpdfstring{set\+Side\+Speed()}{setSideSpeed()}}
+{\footnotesize\ttfamily void set\+Side\+Speed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_a2771dd4b083c12b0f13d534e3d1914dc}{Drive\+Side}}}]{side,  }\item[{int}]{speed }\end{DoxyParamCaption})}
+
+Sets the speed of the designated drive side 
+\begin{DoxyParams}{Parameters}
+{\em side} & The Drive\+Side that is going to be powered \\
+\hline
+{\em speed} & The speed that the robot will move at between -\/100 -\/ 100 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Michael Baraty 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/9/2019 
+\end{DoxyDate}
+
+
+Definition at line \mbox{\hyperlink{drive_8cpp_source_l00021}{21}} of file \mbox{\hyperlink{drive_8cpp_source}{drive.\+cpp}}.
+
+
+\begin{DoxyCode}
+00021                                              \{
+00022   \textcolor{keywordflow}{if}(side == \mbox{\hyperlink{drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_a2771dd4b083c12b0f13d534e3d1914dca684d325a7303f52e64011467ff5c5758}{DriveSide::LEFT}}) \{
+00023     \mbox{\hyperlink{declarations_8h_ab24214b642128d0f3cb67e9b12e7d4fb_ab24214b642128d0f3cb67e9b12e7d4fb}{MOTOR\_BACK\_LEFT}}.spin(directionType::fwd, speed, velocityUnits::pct);
+00024     \mbox{\hyperlink{declarations_8h_a8c6f6315caf1d81bf4d4d113d0f7bffc_a8c6f6315caf1d81bf4d4d113d0f7bffc}{MOTOR\_FRONT\_LEFT}}.spin(directionType::fwd, speed, velocityUnits::pct);
+00025   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (side == \mbox{\hyperlink{drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_a2771dd4b083c12b0f13d534e3d1914dca21507b40c80068eda19865706fdc2403}{DriveSide::RIGHT}}) \{
+00026     \mbox{\hyperlink{declarations_8h_adece81dedf91c2893ba42dc05135a575_adece81dedf91c2893ba42dc05135a575}{MOTOR\_BACK\_RIGHT}}.spin(directionType::fwd, speed, velocityUnits::pct);
+00027     \mbox{\hyperlink{declarations_8h_ad6a9ea3d338421c5d709c32ae1aa42d8_ad6a9ea3d338421c5d709c32ae1aa42d8}{MOTOR\_FRONT\_RIGHT}}.spin(directionType::fwd, speed, velocityUnits::pct);
+00028   \}
+00029   \textcolor{keywordflow}{else} \{
+00030     \mbox{\hyperlink{declarations_8h_a8c6f6315caf1d81bf4d4d113d0f7bffc_a8c6f6315caf1d81bf4d4d113d0f7bffc}{MOTOR\_FRONT\_LEFT}}.spin(directionType::fwd, speed, velocityUnits::pct);
+00031     \mbox{\hyperlink{declarations_8h_ad6a9ea3d338421c5d709c32ae1aa42d8_ad6a9ea3d338421c5d709c32ae1aa42d8}{MOTOR\_FRONT\_RIGHT}}.spin(directionType::fwd, speed, velocityUnits::pct);
+00032     \mbox{\hyperlink{declarations_8h_adece81dedf91c2893ba42dc05135a575_adece81dedf91c2893ba42dc05135a575}{MOTOR\_BACK\_RIGHT}}.spin(directionType::fwd, speed, velocityUnits::pct);
+00033     \mbox{\hyperlink{declarations_8h_ab24214b642128d0f3cb67e9b12e7d4fb_ab24214b642128d0f3cb67e9b12e7d4fb}{MOTOR\_BACK\_LEFT}}.spin(directionType::fwd, speed, velocityUnits::pct);
+00034   \}
+00035 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{drive_8h_abc3819041cf96aad1093752a3a5de31c_abc3819041cf96aad1093752a3a5de31c}\label{drive_8h_abc3819041cf96aad1093752a3a5de31c_abc3819041cf96aad1093752a3a5de31c}} 
+\index{drive.\+h@{drive.\+h}!stack\+Control@{stack\+Control}}
+\index{stack\+Control@{stack\+Control}!drive.\+h@{drive.\+h}}
+\paragraph{\texorpdfstring{stack\+Control()}{stackControl()}}
+{\footnotesize\ttfamily void stack\+Control (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Reads the controller\textquotesingle{}s button inputs to initiate the stack mechanism\textquotesingle{}s movement while the button is being pressed \begin{DoxyAuthor}{Author}
+Michael Baraty 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/9/2019 
+\end{DoxyDate}
+
+
+Definition at line \mbox{\hyperlink{drive_8cpp_source_l00077}{77}} of file \mbox{\hyperlink{drive_8cpp_source}{drive.\+cpp}}.
+
+
+\begin{DoxyCode}
+00077                     \{
+00078   \textcolor{keywordflow}{if}(\mbox{\hyperlink{controller_8h_aff3b02388de758f0fe6d98930ea57626_aff3b02388de758f0fe6d98930ea57626}{buttonIsPressed}}(\mbox{\hyperlink{declarations_8h_ab04f8ff803f7f02c23e713402e13bf32_ab04f8ff803f7f02c23e713402e13bf32}{MASTER}}.ButtonX)) 
+00079     \mbox{\hyperlink{drive_8cpp_a08a55986dab46203f1eeef50123cf4bd_a08a55986dab46203f1eeef50123cf4bd}{moveStackForward}}();
+00080   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{controller_8h_aff3b02388de758f0fe6d98930ea57626_aff3b02388de758f0fe6d98930ea57626}{buttonIsPressed}}(\mbox{\hyperlink{declarations_8h_ab04f8ff803f7f02c23e713402e13bf32_ab04f8ff803f7f02c23e713402e13bf32}{MASTER}}.ButtonA))
+00081     \mbox{\hyperlink{drive_8cpp_ac153148440cec552a2824c91569e1e5a_ac153148440cec552a2824c91569e1e5a}{moveStackBack}}();
+00082   \textcolor{keywordflow}{else}\{
+00083     \mbox{\hyperlink{declarations_8h_a212c888d64ffcd7e7b44a548fa0408a9_a212c888d64ffcd7e7b44a548fa0408a9}{MOTOR\_STACK}}.stop(brakeType::brake);
+00084   \}
+00085 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{drive_8h_ab8605578ac6dddeb3e511513523e3354_ab8605578ac6dddeb3e511513523e3354}\label{drive_8h_ab8605578ac6dddeb3e511513523e3354_ab8605578ac6dddeb3e511513523e3354}} 
+\index{drive.\+h@{drive.\+h}!tank\+Drive@{tank\+Drive}}
+\index{tank\+Drive@{tank\+Drive}!drive.\+h@{drive.\+h}}
+\paragraph{\texorpdfstring{tank\+Drive()}{tankDrive()}}
+{\footnotesize\ttfamily void tank\+Drive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Initiates the tank drive control configuration for the controller, with the left y axis for the left side and the right y axis for the right side \begin{DoxyAuthor}{Author}
+Michael Baraty 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/9/2019 
+\end{DoxyDate}
+
+
+Definition at line \mbox{\hyperlink{drive_8cpp_source_l00052}{52}} of file \mbox{\hyperlink{drive_8cpp_source}{drive.\+cpp}}.
+
+
+\begin{DoxyCode}
+00052                  \{
+00053   \textcolor{keywordtype}{int} l = \mbox{\hyperlink{declarations_8h_afb49f22bdd1e93218d02bb25e513e8a0_afb49f22bdd1e93218d02bb25e513e8a0}{SPEED\_MULTIPLIER}} * (.7  * (pow(\mbox{\hyperlink{controller_8h_a73be3a8649e7d561a68cd816420efbd9_a73be3a8649e7d561a68cd816420efbd9}{axisValue}}(
+      \mbox{\hyperlink{declarations_8h_ab04f8ff803f7f02c23e713402e13bf32_ab04f8ff803f7f02c23e713402e13bf32}{MASTER}}.Axis3) / 9, 3) / 10));
+00054   \textcolor{keywordtype}{int} r = \mbox{\hyperlink{declarations_8h_afb49f22bdd1e93218d02bb25e513e8a0_afb49f22bdd1e93218d02bb25e513e8a0}{SPEED\_MULTIPLIER}} * (.7  * (pow(\mbox{\hyperlink{controller_8h_a73be3a8649e7d561a68cd816420efbd9_a73be3a8649e7d561a68cd816420efbd9}{axisValue}}(
+      \mbox{\hyperlink{declarations_8h_ab04f8ff803f7f02c23e713402e13bf32_ab04f8ff803f7f02c23e713402e13bf32}{MASTER}}.Axis2) / 9, 3) / 10));
+00055   \textcolor{keywordtype}{int} speedLeft = abs(l) > \mbox{\hyperlink{declarations_8h_adceb947873623dd2a87f7f69e81fbd38_adceb947873623dd2a87f7f69e81fbd38}{THRESHOLD}}? l: 0;
+00056   \textcolor{keywordtype}{int} speedRight = abs(r) > \mbox{\hyperlink{declarations_8h_adceb947873623dd2a87f7f69e81fbd38_adceb947873623dd2a87f7f69e81fbd38}{THRESHOLD}}? r: 0;
+00057   
+00058   \textcolor{keywordflow}{if}(\mbox{\hyperlink{drive_8cpp_ac84adc1c8ccd21c3c630031ad1ce5956_ac84adc1c8ccd21c3c630031ad1ce5956}{slowMode}})\{
+00059     \mbox{\hyperlink{drive_8cpp_ac522da2148fe1cfd9bea8c026e64ee7b_ac522da2148fe1cfd9bea8c026e64ee7b}{setSideSpeed}}(\mbox{\hyperlink{drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_a2771dd4b083c12b0f13d534e3d1914dca684d325a7303f52e64011467ff5c5758}{DriveSide::LEFT}}, speedLeft / 3);
+00060      \mbox{\hyperlink{drive_8cpp_ac522da2148fe1cfd9bea8c026e64ee7b_ac522da2148fe1cfd9bea8c026e64ee7b}{setSideSpeed}}(\mbox{\hyperlink{drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_a2771dd4b083c12b0f13d534e3d1914dca21507b40c80068eda19865706fdc2403}{DriveSide::RIGHT}}, speedRight / 3);
+00061   \} \textcolor{keywordflow}{else} \{
+00062     \mbox{\hyperlink{drive_8cpp_ac522da2148fe1cfd9bea8c026e64ee7b_ac522da2148fe1cfd9bea8c026e64ee7b}{setSideSpeed}}(\mbox{\hyperlink{drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_a2771dd4b083c12b0f13d534e3d1914dca684d325a7303f52e64011467ff5c5758}{DriveSide::LEFT}}, speedLeft);
+00063     \mbox{\hyperlink{drive_8cpp_ac522da2148fe1cfd9bea8c026e64ee7b_ac522da2148fe1cfd9bea8c026e64ee7b}{setSideSpeed}}(\mbox{\hyperlink{drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_a2771dd4b083c12b0f13d534e3d1914dca21507b40c80068eda19865706fdc2403}{DriveSide::RIGHT}}, speedRight);
+00064   \}
+00065 \}
+\end{DoxyCode}

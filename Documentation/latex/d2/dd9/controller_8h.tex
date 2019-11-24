@@ -1,0 +1,67 @@
+\hypertarget{controller_8h}{}\subsection{include/controller.h File Reference}
+\label{controller_8h}\index{include/controller.\+h@{include/controller.\+h}}
+{\ttfamily \#include \char`\"{}vex.\+h\char`\"{}}\newline
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{controller_8h_a73be3a8649e7d561a68cd816420efbd9_a73be3a8649e7d561a68cd816420efbd9}{axis\+Value}} (controller\+::axis Axis)
+\item 
+bool \mbox{\hyperlink{controller_8h_aff3b02388de758f0fe6d98930ea57626_aff3b02388de758f0fe6d98930ea57626}{button\+Is\+Pressed}} (controller\+::button Button)
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Function Documentation}
+\mbox{\Hypertarget{controller_8h_a73be3a8649e7d561a68cd816420efbd9_a73be3a8649e7d561a68cd816420efbd9}\label{controller_8h_a73be3a8649e7d561a68cd816420efbd9_a73be3a8649e7d561a68cd816420efbd9}} 
+\index{controller.\+h@{controller.\+h}!axis\+Value@{axis\+Value}}
+\index{axis\+Value@{axis\+Value}!controller.\+h@{controller.\+h}}
+\paragraph{\texorpdfstring{axis\+Value()}{axisValue()}}
+{\footnotesize\ttfamily int axis\+Value (\begin{DoxyParamCaption}\item[{controller\+::axis}]{Axis }\end{DoxyParamCaption})}
+
+Returns an axis value of the controller in a -\/100 -\/ 100 scale, designed to be used with motor speeds in percent 
+\begin{DoxyParams}{Parameters}
+{\em Axis} & the axis on the controller that will be read (Ex. \mbox{[}controller\mbox{]}.axis3 for the left x axis) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Michael Baraty 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/9/2019 
+\end{DoxyDate}
+
+
+Definition at line \mbox{\hyperlink{controller_8cpp_source_l00004}{4}} of file \mbox{\hyperlink{controller_8cpp_source}{controller.\+cpp}}.
+
+
+\begin{DoxyCode}
+00004                                    \{
+00005   \textcolor{keywordflow}{return} Axis.position();
+00006 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{controller_8h_aff3b02388de758f0fe6d98930ea57626_aff3b02388de758f0fe6d98930ea57626}\label{controller_8h_aff3b02388de758f0fe6d98930ea57626_aff3b02388de758f0fe6d98930ea57626}} 
+\index{controller.\+h@{controller.\+h}!button\+Is\+Pressed@{button\+Is\+Pressed}}
+\index{button\+Is\+Pressed@{button\+Is\+Pressed}!controller.\+h@{controller.\+h}}
+\paragraph{\texorpdfstring{button\+Is\+Pressed()}{buttonIsPressed()}}
+{\footnotesize\ttfamily bool button\+Is\+Pressed (\begin{DoxyParamCaption}\item[{controller\+::button}]{Button }\end{DoxyParamCaption})}
+
+Returns a boolean for whether a designated button is being pressed 
+\begin{DoxyParams}{Parameters}
+{\em Button} & the button on the controller that will be read (Ex. \mbox{[}controller\mbox{]}.buttonA for the A button) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Michael Baraty 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/9/2019 
+\end{DoxyDate}
+
+
+Definition at line \mbox{\hyperlink{controller_8cpp_source_l00008}{8}} of file \mbox{\hyperlink{controller_8cpp_source}{controller.\+cpp}}.
+
+
+\begin{DoxyCode}
+00008                                               \{
+00009   \textcolor{keywordflow}{return} Button.pressing();
+00010 \}
+\end{DoxyCode}

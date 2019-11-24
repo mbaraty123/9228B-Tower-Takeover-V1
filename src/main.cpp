@@ -30,17 +30,21 @@ motor MOTOR_ARM         = motor(PORT12, gearSetting::ratio36_1, true);
 
 // define your global instances of motors and other devices here
 
+int i = 0;
+
 int printDisplay() {
   while(true){
-    printf("%2.2f\n BACK LEFT:   ", MOTOR_BACK_LEFT.temperature(temperatureUnits::celsius));
-    printf("%2.2f\n BACK RIGHT:  ", MOTOR_BACK_RIGHT.temperature(temperatureUnits::celsius));
-    printf("%2.2f\n FRONT LEFT:  ", MOTOR_FRONT_LEFT.temperature(temperatureUnits::celsius));
-    printf("%2.2f\n FRONT RIGHT: ", MOTOR_FRONT_RIGHT.temperature(temperatureUnits::celsius));
-    printf("%2.2f\n INTAKE A:    ", MOTOR_INTAKE_A.temperature(temperatureUnits::celsius));
-    printf("%2.2f\n INTAKE B:    ", MOTOR_INTAKE_B.temperature(temperatureUnits::celsius));
-    printf("%2.2f\n ARM:         ", MOTOR_ARM.temperature(temperatureUnits::celsius));
-    printf("%2.2f\n MAGAZINE:    ", MOTOR_STACK.temperature(temperatureUnits::celsius));
+    Brain.Screen.printAt(0, 20, "%2.2f\n..>BACK LEFT", MOTOR_BACK_LEFT.temperature(temperatureUnits::celsius));
+    Brain.Screen.printAt(0, 50, "%2.2f\n..>BACK RIGHT", MOTOR_BACK_RIGHT.temperature(temperatureUnits::celsius));
+    Brain.Screen.printAt(0, 80, "%2.2f\n..>FRONT LEFT", MOTOR_FRONT_LEFT.temperature(temperatureUnits::celsius));
+    Brain.Screen.printAt(0, 110, "%2.2f\n..>FRONT RIGHT", MOTOR_FRONT_RIGHT.temperature(temperatureUnits::celsius));
+    Brain.Screen.printAt(0, 140, "%2.2f\n..>INTAKE A", MOTOR_INTAKE_A.temperature(temperatureUnits::celsius));
+    Brain.Screen.printAt(0, 170, "%2.2f\n..>INTAKE B", MOTOR_INTAKE_B.temperature(temperatureUnits::celsius));
+    Brain.Screen.printAt(0, 200, "%2.2f\n..>ARM", MOTOR_ARM.temperature(temperatureUnits::celsius));
+    Brain.Screen.printAt(0, 230, "%2.2f\n..>MAGAZINE", MOTOR_STACK.temperature(temperatureUnits::celsius));
 
+  printf("%d\n", i);
+  i++;
     
     task::sleep(1000);
   }
@@ -98,9 +102,10 @@ void autonomous( void ) {
 void usercontrol( void ) {
   // User control code here, inside the loop
 
-  //printDisplay();
-
+  //auton(Side::RIGHT, Color::BLUE);
   while (1) {
+
+
     drive();
 
     vex::task::sleep(20); //Sleep the task for a short amount of time to prevent wasted resources. 

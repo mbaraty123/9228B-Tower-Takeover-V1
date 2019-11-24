@@ -1,0 +1,272 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="de/de5/drive_8cpp">
+    <title>drive.cpp File Reference</title>
+    <programlisting>#include &quot;drive.h&quot;</programlisting>
+    <programlisting>#include &quot;declarations.h&quot;</programlisting>
+    <programlisting>#include &quot;auton.h&quot;</programlisting>
+        <section>
+            <title>Variables</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="de/de5/drive_8cpp_ac84adc1c8ccd21c3c630031ad1ce5956_1ac84adc1c8ccd21c3c630031ad1ce5956">slowMode</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="de/de5/drive_8cpp_a928e32686c7e00c1ecde24c3da3019f7_1a928e32686c7e00c1ecde24c3da3019f7">drive</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="de/de5/drive_8cpp_ac522da2148fe1cfd9bea8c026e64ee7b_1ac522da2148fe1cfd9bea8c026e64ee7b">setSideSpeed</link> (
+<link linkend="da/d0b/drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_1a2771dd4b083c12b0f13d534e3d1914dc">DriveSide</link> side, int speed)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="de/de5/drive_8cpp_a6ff8820b82f28a73c88a746ddacb26bb_1a6ff8820b82f28a73c88a746ddacb26bb">arcadeDrive</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="de/de5/drive_8cpp_ab8605578ac6dddeb3e511513523e3354_1ab8605578ac6dddeb3e511513523e3354">tankDrive</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="de/de5/drive_8cpp_a08a55986dab46203f1eeef50123cf4bd_1a08a55986dab46203f1eeef50123cf4bd">moveStackForward</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="de/de5/drive_8cpp_ac153148440cec552a2824c91569e1e5a_1ac153148440cec552a2824c91569e1e5a">moveStackBack</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="de/de5/drive_8cpp_abc3819041cf96aad1093752a3a5de31c_1abc3819041cf96aad1093752a3a5de31c">stackControl</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="de/de5/drive_8cpp_adf7b0afb3a8dcf884db533b0217b0543_1adf7b0afb3a8dcf884db533b0217b0543">armUp</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="de/de5/drive_8cpp_ab1850cc7cdb69057fe29f45eefe7ec90_1ab1850cc7cdb69057fe29f45eefe7ec90">armDown</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="de/de5/drive_8cpp_adde1067b42b4de65ff20afb8901f7643_1adde1067b42b4de65ff20afb8901f7643">armControl</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="de/de5/drive_8cpp_aa0846c73538fc48569a7c7c3689a59f0_1aa0846c73538fc48569a7c7c3689a59f0">intakeIn</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="de/de5/drive_8cpp_aaca1ffa87592c1c5783fe6e18f9c655b_1aaca1ffa87592c1c5783fe6e18f9c655b">intakeOut</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="de/de5/drive_8cpp_a8afb2a071b21d98c49d5888a7b380ba6_1a8afb2a071b21d98c49d5888a7b380ba6">intakeControl</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file /Users/mbaraty/Documents/GitHub/9228B-Tower-Takeover-V1/src/drive.cpp</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="da/d0b/drive_8h">drive.h</link>&quot;</emphasis>
+2 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="db/d40/declarations_8h">declarations.h</link>&quot;</emphasis>
+3 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="d3/d96/auton_8h">auton.h</link>&quot;</emphasis>
+4 
+<link linkend="de/de5/drive_8cpp_ac84adc1c8ccd21c3c630031ad1ce5956_1ac84adc1c8ccd21c3c630031ad1ce5956">5 </link><emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="de/de5/drive_8cpp_ac84adc1c8ccd21c3c630031ad1ce5956_1ac84adc1c8ccd21c3c630031ad1ce5956">slowMode</link>&#32;=&#32;<emphasis class="keyword">false</emphasis>;
+6 
+<link linkend="de/de5/drive_8cpp_a928e32686c7e00c1ecde24c3da3019f7_1a928e32686c7e00c1ecde24c3da3019f7">7 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="de/de5/drive_8cpp_a928e32686c7e00c1ecde24c3da3019f7_1a928e32686c7e00c1ecde24c3da3019f7">drive</link>()&#32;{
+8 &#32;&#32;<link linkend="de/de5/drive_8cpp_a6ff8820b82f28a73c88a746ddacb26bb_1a6ff8820b82f28a73c88a746ddacb26bb">arcadeDrive</link>();
+9 &#32;&#32;<link linkend="de/de5/drive_8cpp_abc3819041cf96aad1093752a3a5de31c_1abc3819041cf96aad1093752a3a5de31c">stackControl</link>();
+10 &#32;&#32;<link linkend="de/de5/drive_8cpp_adde1067b42b4de65ff20afb8901f7643_1adde1067b42b4de65ff20afb8901f7643">armControl</link>();
+11 &#32;&#32;<link linkend="de/de5/drive_8cpp_a8afb2a071b21d98c49d5888a7b380ba6_1a8afb2a071b21d98c49d5888a7b380ba6">intakeControl</link>();
+12 
+13 &#32;&#32;<emphasis class="keywordflow">if</emphasis>(<link linkend="d2/dd9/controller_8h_aff3b02388de758f0fe6d98930ea57626_1aff3b02388de758f0fe6d98930ea57626">buttonIsPressed</link>(<link linkend="db/d40/declarations_8h_ab04f8ff803f7f02c23e713402e13bf32_1ab04f8ff803f7f02c23e713402e13bf32">MASTER</link>.ButtonUp)){
+14 &#32;&#32;&#32;&#32;<link linkend="de/de5/drive_8cpp_ac84adc1c8ccd21c3c630031ad1ce5956_1ac84adc1c8ccd21c3c630031ad1ce5956">slowMode</link>&#32;=&#32;<emphasis class="keyword">false</emphasis>;
+15 &#32;&#32;}&#32;<emphasis class="keywordflow">else</emphasis>&#32;<emphasis class="keywordflow">if</emphasis>(<link linkend="d2/dd9/controller_8h_aff3b02388de758f0fe6d98930ea57626_1aff3b02388de758f0fe6d98930ea57626">buttonIsPressed</link>(<link linkend="db/d40/declarations_8h_ab04f8ff803f7f02c23e713402e13bf32_1ab04f8ff803f7f02c23e713402e13bf32">MASTER</link>.ButtonDown)){
+16 &#32;&#32;&#32;&#32;<link linkend="de/de5/drive_8cpp_ac84adc1c8ccd21c3c630031ad1ce5956_1ac84adc1c8ccd21c3c630031ad1ce5956">slowMode</link>&#32;=&#32;<emphasis class="keyword">true</emphasis>;
+17 &#32;&#32;}
+18 
+19 }
+20 
+<link linkend="de/de5/drive_8cpp_ac522da2148fe1cfd9bea8c026e64ee7b_1ac522da2148fe1cfd9bea8c026e64ee7b">21 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="de/de5/drive_8cpp_ac522da2148fe1cfd9bea8c026e64ee7b_1ac522da2148fe1cfd9bea8c026e64ee7b">setSideSpeed</link>(<link linkend="da/d0b/drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_1a2771dd4b083c12b0f13d534e3d1914dc">DriveSide</link>&#32;side,&#32;<emphasis class="keywordtype">int</emphasis>&#32;speed)&#32;{
+22 &#32;&#32;<emphasis class="keywordflow">if</emphasis>(side&#32;==&#32;<link linkend="da/d0b/drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_1a2771dd4b083c12b0f13d534e3d1914dca684d325a7303f52e64011467ff5c5758">DriveSide::LEFT</link>)&#32;{
+23 &#32;&#32;&#32;&#32;<link linkend="db/d40/declarations_8h_ab24214b642128d0f3cb67e9b12e7d4fb_1ab24214b642128d0f3cb67e9b12e7d4fb">MOTOR_BACK_LEFT</link>.spin(directionType::fwd,&#32;speed,&#32;velocityUnits::pct);
+24 &#32;&#32;&#32;&#32;<link linkend="db/d40/declarations_8h_a8c6f6315caf1d81bf4d4d113d0f7bffc_1a8c6f6315caf1d81bf4d4d113d0f7bffc">MOTOR_FRONT_LEFT</link>.spin(directionType::fwd,&#32;speed,&#32;velocityUnits::pct);
+25 &#32;&#32;}&#32;<emphasis class="keywordflow">else</emphasis>&#32;<emphasis class="keywordflow">if</emphasis>&#32;(side&#32;==&#32;<link linkend="da/d0b/drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_1a2771dd4b083c12b0f13d534e3d1914dca21507b40c80068eda19865706fdc2403">DriveSide::RIGHT</link>)&#32;{
+26 &#32;&#32;&#32;&#32;<link linkend="db/d40/declarations_8h_adece81dedf91c2893ba42dc05135a575_1adece81dedf91c2893ba42dc05135a575">MOTOR_BACK_RIGHT</link>.spin(directionType::fwd,&#32;speed,&#32;velocityUnits::pct);
+27 &#32;&#32;&#32;&#32;<link linkend="db/d40/declarations_8h_ad6a9ea3d338421c5d709c32ae1aa42d8_1ad6a9ea3d338421c5d709c32ae1aa42d8">MOTOR_FRONT_RIGHT</link>.spin(directionType::fwd,&#32;speed,&#32;velocityUnits::pct);
+28 &#32;&#32;}
+29 &#32;&#32;<emphasis class="keywordflow">else</emphasis>&#32;{
+30 &#32;&#32;&#32;&#32;<link linkend="db/d40/declarations_8h_a8c6f6315caf1d81bf4d4d113d0f7bffc_1a8c6f6315caf1d81bf4d4d113d0f7bffc">MOTOR_FRONT_LEFT</link>.spin(directionType::fwd,&#32;speed,&#32;velocityUnits::pct);
+31 &#32;&#32;&#32;&#32;<link linkend="db/d40/declarations_8h_ad6a9ea3d338421c5d709c32ae1aa42d8_1ad6a9ea3d338421c5d709c32ae1aa42d8">MOTOR_FRONT_RIGHT</link>.spin(directionType::fwd,&#32;speed,&#32;velocityUnits::pct);
+32 &#32;&#32;&#32;&#32;<link linkend="db/d40/declarations_8h_adece81dedf91c2893ba42dc05135a575_1adece81dedf91c2893ba42dc05135a575">MOTOR_BACK_RIGHT</link>.spin(directionType::fwd,&#32;speed,&#32;velocityUnits::pct);
+33 &#32;&#32;&#32;&#32;<link linkend="db/d40/declarations_8h_ab24214b642128d0f3cb67e9b12e7d4fb_1ab24214b642128d0f3cb67e9b12e7d4fb">MOTOR_BACK_LEFT</link>.spin(directionType::fwd,&#32;speed,&#32;velocityUnits::pct);
+34 &#32;&#32;}
+35 }
+36 
+<link linkend="de/de5/drive_8cpp_a6ff8820b82f28a73c88a746ddacb26bb_1a6ff8820b82f28a73c88a746ddacb26bb">37 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="de/de5/drive_8cpp_a6ff8820b82f28a73c88a746ddacb26bb_1a6ff8820b82f28a73c88a746ddacb26bb">arcadeDrive</link>()&#32;{
+38 &#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;x&#32;=&#32;<link linkend="db/d40/declarations_8h_afb49f22bdd1e93218d02bb25e513e8a0_1afb49f22bdd1e93218d02bb25e513e8a0">SPEED_MULTIPLIER</link>&#32;&#32;*&#32;-<link linkend="d2/dd9/controller_8h_a73be3a8649e7d561a68cd816420efbd9_1a73be3a8649e7d561a68cd816420efbd9">axisValue</link>(<link linkend="db/d40/declarations_8h_ab04f8ff803f7f02c23e713402e13bf32_1ab04f8ff803f7f02c23e713402e13bf32">MASTER</link>.Axis1);
+39 &#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;y&#32;=&#32;<link linkend="db/d40/declarations_8h_afb49f22bdd1e93218d02bb25e513e8a0_1afb49f22bdd1e93218d02bb25e513e8a0">SPEED_MULTIPLIER</link>&#32;*&#32;(.7&#32;&#32;*&#32;(pow(-<link linkend="d2/dd9/controller_8h_a73be3a8649e7d561a68cd816420efbd9_1a73be3a8649e7d561a68cd816420efbd9">axisValue</link>(<link linkend="db/d40/declarations_8h_ab04f8ff803f7f02c23e713402e13bf32_1ab04f8ff803f7f02c23e713402e13bf32">MASTER</link>.Axis3)&#32;/&#32;9,&#32;3)&#32;/&#32;10));
+40 &#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;speedLeft&#32;=&#32;abs(x&#32;+&#32;y)&#32;&gt;&#32;<link linkend="db/d40/declarations_8h_adceb947873623dd2a87f7f69e81fbd38_1adceb947873623dd2a87f7f69e81fbd38">THRESHOLD</link>?&#32;-(x&#32;+&#32;y):&#32;0;
+41 &#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;speedRight&#32;=&#32;abs(x&#32;-&#32;y)&#32;&gt;&#32;<link linkend="db/d40/declarations_8h_adceb947873623dd2a87f7f69e81fbd38_1adceb947873623dd2a87f7f69e81fbd38">THRESHOLD</link>?&#32;(x&#32;-&#32;y):&#32;0;
+42 
+43 &#32;&#32;<emphasis class="keywordflow">if</emphasis>(<link linkend="de/de5/drive_8cpp_ac84adc1c8ccd21c3c630031ad1ce5956_1ac84adc1c8ccd21c3c630031ad1ce5956">slowMode</link>){
+44 &#32;&#32;&#32;&#32;<link linkend="de/de5/drive_8cpp_ac522da2148fe1cfd9bea8c026e64ee7b_1ac522da2148fe1cfd9bea8c026e64ee7b">setSideSpeed</link>(<link linkend="da/d0b/drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_1a2771dd4b083c12b0f13d534e3d1914dca684d325a7303f52e64011467ff5c5758">DriveSide::LEFT</link>,&#32;speedLeft&#32;/&#32;3);
+45 &#32;&#32;&#32;&#32;&#32;<link linkend="de/de5/drive_8cpp_ac522da2148fe1cfd9bea8c026e64ee7b_1ac522da2148fe1cfd9bea8c026e64ee7b">setSideSpeed</link>(<link linkend="da/d0b/drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_1a2771dd4b083c12b0f13d534e3d1914dca21507b40c80068eda19865706fdc2403">DriveSide::RIGHT</link>,&#32;speedRight&#32;/&#32;3);
+46 &#32;&#32;}&#32;<emphasis class="keywordflow">else</emphasis>&#32;{
+47 &#32;&#32;&#32;&#32;<link linkend="de/de5/drive_8cpp_ac522da2148fe1cfd9bea8c026e64ee7b_1ac522da2148fe1cfd9bea8c026e64ee7b">setSideSpeed</link>(<link linkend="da/d0b/drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_1a2771dd4b083c12b0f13d534e3d1914dca684d325a7303f52e64011467ff5c5758">DriveSide::LEFT</link>,&#32;speedLeft);
+48 &#32;&#32;&#32;&#32;<link linkend="de/de5/drive_8cpp_ac522da2148fe1cfd9bea8c026e64ee7b_1ac522da2148fe1cfd9bea8c026e64ee7b">setSideSpeed</link>(<link linkend="da/d0b/drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_1a2771dd4b083c12b0f13d534e3d1914dca21507b40c80068eda19865706fdc2403">DriveSide::RIGHT</link>,&#32;speedRight);
+49 &#32;&#32;}
+50 }
+51 
+<link linkend="de/de5/drive_8cpp_ab8605578ac6dddeb3e511513523e3354_1ab8605578ac6dddeb3e511513523e3354">52 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="de/de5/drive_8cpp_ab8605578ac6dddeb3e511513523e3354_1ab8605578ac6dddeb3e511513523e3354">tankDrive</link>()&#32;{
+53 &#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;l&#32;=&#32;<link linkend="db/d40/declarations_8h_afb49f22bdd1e93218d02bb25e513e8a0_1afb49f22bdd1e93218d02bb25e513e8a0">SPEED_MULTIPLIER</link>&#32;*&#32;(.7&#32;&#32;*&#32;(pow(<link linkend="d2/dd9/controller_8h_a73be3a8649e7d561a68cd816420efbd9_1a73be3a8649e7d561a68cd816420efbd9">axisValue</link>(<link linkend="db/d40/declarations_8h_ab04f8ff803f7f02c23e713402e13bf32_1ab04f8ff803f7f02c23e713402e13bf32">MASTER</link>.Axis3)&#32;/&#32;9,&#32;3)&#32;/&#32;10));
+54 &#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;r&#32;=&#32;<link linkend="db/d40/declarations_8h_afb49f22bdd1e93218d02bb25e513e8a0_1afb49f22bdd1e93218d02bb25e513e8a0">SPEED_MULTIPLIER</link>&#32;*&#32;(.7&#32;&#32;*&#32;(pow(<link linkend="d2/dd9/controller_8h_a73be3a8649e7d561a68cd816420efbd9_1a73be3a8649e7d561a68cd816420efbd9">axisValue</link>(<link linkend="db/d40/declarations_8h_ab04f8ff803f7f02c23e713402e13bf32_1ab04f8ff803f7f02c23e713402e13bf32">MASTER</link>.Axis2)&#32;/&#32;9,&#32;3)&#32;/&#32;10));
+55 &#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;speedLeft&#32;=&#32;abs(l)&#32;&gt;&#32;<link linkend="db/d40/declarations_8h_adceb947873623dd2a87f7f69e81fbd38_1adceb947873623dd2a87f7f69e81fbd38">THRESHOLD</link>?&#32;l:&#32;0;
+56 &#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;speedRight&#32;=&#32;abs(r)&#32;&gt;&#32;<link linkend="db/d40/declarations_8h_adceb947873623dd2a87f7f69e81fbd38_1adceb947873623dd2a87f7f69e81fbd38">THRESHOLD</link>?&#32;r:&#32;0;
+57 &#32;&#32;
+58 &#32;&#32;<emphasis class="keywordflow">if</emphasis>(<link linkend="de/de5/drive_8cpp_ac84adc1c8ccd21c3c630031ad1ce5956_1ac84adc1c8ccd21c3c630031ad1ce5956">slowMode</link>){
+59 &#32;&#32;&#32;&#32;<link linkend="de/de5/drive_8cpp_ac522da2148fe1cfd9bea8c026e64ee7b_1ac522da2148fe1cfd9bea8c026e64ee7b">setSideSpeed</link>(<link linkend="da/d0b/drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_1a2771dd4b083c12b0f13d534e3d1914dca684d325a7303f52e64011467ff5c5758">DriveSide::LEFT</link>,&#32;speedLeft&#32;/&#32;3);
+60 &#32;&#32;&#32;&#32;&#32;<link linkend="de/de5/drive_8cpp_ac522da2148fe1cfd9bea8c026e64ee7b_1ac522da2148fe1cfd9bea8c026e64ee7b">setSideSpeed</link>(<link linkend="da/d0b/drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_1a2771dd4b083c12b0f13d534e3d1914dca21507b40c80068eda19865706fdc2403">DriveSide::RIGHT</link>,&#32;speedRight&#32;/&#32;3);
+61 &#32;&#32;}&#32;<emphasis class="keywordflow">else</emphasis>&#32;{
+62 &#32;&#32;&#32;&#32;<link linkend="de/de5/drive_8cpp_ac522da2148fe1cfd9bea8c026e64ee7b_1ac522da2148fe1cfd9bea8c026e64ee7b">setSideSpeed</link>(<link linkend="da/d0b/drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_1a2771dd4b083c12b0f13d534e3d1914dca684d325a7303f52e64011467ff5c5758">DriveSide::LEFT</link>,&#32;speedLeft);
+63 &#32;&#32;&#32;&#32;<link linkend="de/de5/drive_8cpp_ac522da2148fe1cfd9bea8c026e64ee7b_1ac522da2148fe1cfd9bea8c026e64ee7b">setSideSpeed</link>(<link linkend="da/d0b/drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_1a2771dd4b083c12b0f13d534e3d1914dca21507b40c80068eda19865706fdc2403">DriveSide::RIGHT</link>,&#32;speedRight);
+64 &#32;&#32;}
+65 }
+66 
+<link linkend="de/de5/drive_8cpp_a08a55986dab46203f1eeef50123cf4bd_1a08a55986dab46203f1eeef50123cf4bd">67 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="de/de5/drive_8cpp_a08a55986dab46203f1eeef50123cf4bd_1a08a55986dab46203f1eeef50123cf4bd">moveStackForward</link>()&#32;{
+68 &#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;<emphasis class="keyword">final</emphasis>&#32;=&#32;1.5;&#32;
+69 &#32;&#32;<link linkend="db/d40/declarations_8h_a212c888d64ffcd7e7b44a548fa0408a9_1a212c888d64ffcd7e7b44a548fa0408a9">MOTOR_STACK</link>.startSpinTo(10,&#32;rotationUnits::rev,&#32;30,&#32;velocityUnits::pct);
+70 }
+71 
+<link linkend="de/de5/drive_8cpp_ac153148440cec552a2824c91569e1e5a_1ac153148440cec552a2824c91569e1e5a">72 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="de/de5/drive_8cpp_ac153148440cec552a2824c91569e1e5a_1ac153148440cec552a2824c91569e1e5a">moveStackBack</link>()&#32;{
+73 &#32;&#32;<emphasis class="keywordtype">double</emphasis>&#32;<emphasis class="keyword">final</emphasis>&#32;=&#32;0;
+74 &#32;&#32;<link linkend="db/d40/declarations_8h_a212c888d64ffcd7e7b44a548fa0408a9_1a212c888d64ffcd7e7b44a548fa0408a9">MOTOR_STACK</link>.startSpinTo(-10,&#32;rotationUnits::rev,&#32;80,&#32;velocityUnits::pct);&#32;
+75 }
+76 
+<link linkend="de/de5/drive_8cpp_abc3819041cf96aad1093752a3a5de31c_1abc3819041cf96aad1093752a3a5de31c">77 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="de/de5/drive_8cpp_abc3819041cf96aad1093752a3a5de31c_1abc3819041cf96aad1093752a3a5de31c">stackControl</link>()&#32;{
+78 &#32;&#32;<emphasis class="keywordflow">if</emphasis>(<link linkend="d2/dd9/controller_8h_aff3b02388de758f0fe6d98930ea57626_1aff3b02388de758f0fe6d98930ea57626">buttonIsPressed</link>(<link linkend="db/d40/declarations_8h_ab04f8ff803f7f02c23e713402e13bf32_1ab04f8ff803f7f02c23e713402e13bf32">MASTER</link>.ButtonX))&#32;
+79 &#32;&#32;&#32;&#32;<link linkend="de/de5/drive_8cpp_a08a55986dab46203f1eeef50123cf4bd_1a08a55986dab46203f1eeef50123cf4bd">moveStackForward</link>();
+80 &#32;&#32;<emphasis class="keywordflow">else</emphasis>&#32;<emphasis class="keywordflow">if</emphasis>(<link linkend="d2/dd9/controller_8h_aff3b02388de758f0fe6d98930ea57626_1aff3b02388de758f0fe6d98930ea57626">buttonIsPressed</link>(<link linkend="db/d40/declarations_8h_ab04f8ff803f7f02c23e713402e13bf32_1ab04f8ff803f7f02c23e713402e13bf32">MASTER</link>.ButtonA))
+81 &#32;&#32;&#32;&#32;<link linkend="de/de5/drive_8cpp_ac153148440cec552a2824c91569e1e5a_1ac153148440cec552a2824c91569e1e5a">moveStackBack</link>();
+82 &#32;&#32;<emphasis class="keywordflow">else</emphasis>{
+83 &#32;&#32;&#32;&#32;<link linkend="db/d40/declarations_8h_a212c888d64ffcd7e7b44a548fa0408a9_1a212c888d64ffcd7e7b44a548fa0408a9">MOTOR_STACK</link>.stop(brakeType::brake);
+84 &#32;&#32;}
+85 }
+86 
+<link linkend="de/de5/drive_8cpp_adf7b0afb3a8dcf884db533b0217b0543_1adf7b0afb3a8dcf884db533b0217b0543">87 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="de/de5/drive_8cpp_adf7b0afb3a8dcf884db533b0217b0543_1adf7b0afb3a8dcf884db533b0217b0543">armUp</link>(){
+88 &#32;&#32;<link linkend="db/d40/declarations_8h_a9a834f9a2c804ef0d65ed2f68c10a61a_1a9a834f9a2c804ef0d65ed2f68c10a61a">MOTOR_ARM</link>.startSpinTo(60.6,&#32;rotationUnits::rev,&#32;100,&#32;velocityUnits::pct);
+89 &#32;&#32;<emphasis class="comment">//realValue&#32;6.6</emphasis>
+90 }
+91 
+<link linkend="de/de5/drive_8cpp_ab1850cc7cdb69057fe29f45eefe7ec90_1ab1850cc7cdb69057fe29f45eefe7ec90">92 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="de/de5/drive_8cpp_ab1850cc7cdb69057fe29f45eefe7ec90_1ab1850cc7cdb69057fe29f45eefe7ec90">armDown</link>(){
+93 &#32;&#32;<link linkend="db/d40/declarations_8h_a9a834f9a2c804ef0d65ed2f68c10a61a_1a9a834f9a2c804ef0d65ed2f68c10a61a">MOTOR_ARM</link>.startSpinTo(-10,&#32;rotationUnits::rev,&#32;100,&#32;velocityUnits::pct);
+94 &#32;&#32;<emphasis class="comment">//realValue&#32;0</emphasis>
+95 }
+96 
+<link linkend="de/de5/drive_8cpp_adde1067b42b4de65ff20afb8901f7643_1adde1067b42b4de65ff20afb8901f7643">97 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="de/de5/drive_8cpp_adde1067b42b4de65ff20afb8901f7643_1adde1067b42b4de65ff20afb8901f7643">armControl</link>(){
+98 &#32;&#32;<emphasis class="keywordflow">if</emphasis>(<link linkend="d2/dd9/controller_8h_aff3b02388de758f0fe6d98930ea57626_1aff3b02388de758f0fe6d98930ea57626">buttonIsPressed</link>(<link linkend="db/d40/declarations_8h_ab04f8ff803f7f02c23e713402e13bf32_1ab04f8ff803f7f02c23e713402e13bf32">MASTER</link>.ButtonR1)){
+99 &#32;&#32;&#32;&#32;<link linkend="de/de5/drive_8cpp_adf7b0afb3a8dcf884db533b0217b0543_1adf7b0afb3a8dcf884db533b0217b0543">armUp</link>();
+100 &#32;&#32;}
+101 &#32;&#32;<emphasis class="keywordflow">else</emphasis>&#32;<emphasis class="keywordflow">if</emphasis>&#32;(<link linkend="d2/dd9/controller_8h_aff3b02388de758f0fe6d98930ea57626_1aff3b02388de758f0fe6d98930ea57626">buttonIsPressed</link>(<link linkend="db/d40/declarations_8h_ab04f8ff803f7f02c23e713402e13bf32_1ab04f8ff803f7f02c23e713402e13bf32">MASTER</link>.ButtonR2))&#32;{
+102 &#32;&#32;&#32;&#32;<link linkend="de/de5/drive_8cpp_ab1850cc7cdb69057fe29f45eefe7ec90_1ab1850cc7cdb69057fe29f45eefe7ec90">armDown</link>();
+103 &#32;&#32;}
+104 &#32;&#32;<emphasis class="keywordflow">else</emphasis>&#32;{
+105 &#32;&#32;&#32;&#32;<link linkend="db/d40/declarations_8h_a9a834f9a2c804ef0d65ed2f68c10a61a_1a9a834f9a2c804ef0d65ed2f68c10a61a">MOTOR_ARM</link>.stop(brakeType::hold);
+106 &#32;&#32;}
+107 }
+108 
+<link linkend="de/de5/drive_8cpp_aa0846c73538fc48569a7c7c3689a59f0_1aa0846c73538fc48569a7c7c3689a59f0">109 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="de/de5/drive_8cpp_aa0846c73538fc48569a7c7c3689a59f0_1aa0846c73538fc48569a7c7c3689a59f0">intakeIn</link>()&#32;{
+110 &#32;&#32;<emphasis class="keywordflow">if</emphasis>(!<link linkend="de/de5/drive_8cpp_ac84adc1c8ccd21c3c630031ad1ce5956_1ac84adc1c8ccd21c3c630031ad1ce5956">slowMode</link>)&#32;{
+111 &#32;&#32;&#32;&#32;<link linkend="db/d40/declarations_8h_a34de211d15bfb3c0ac450597fd96b4fc_1a34de211d15bfb3c0ac450597fd96b4fc">MOTOR_INTAKE_A</link>.spin(directionType::fwd,&#32;100,&#32;velocityUnits::pct);
+112 &#32;&#32;&#32;&#32;<link linkend="db/d40/declarations_8h_a5ae79e7ed71b0b94b3983c22c60c2eaa_1a5ae79e7ed71b0b94b3983c22c60c2eaa">MOTOR_INTAKE_B</link>.spin(directionType::fwd,&#32;100,&#32;velocityUnits::pct);
+113 &#32;&#32;}&#32;<emphasis class="keywordflow">else</emphasis>&#32;{
+114 &#32;&#32;&#32;&#32;<link linkend="db/d40/declarations_8h_a34de211d15bfb3c0ac450597fd96b4fc_1a34de211d15bfb3c0ac450597fd96b4fc">MOTOR_INTAKE_A</link>.spin(directionType::fwd,&#32;(100),&#32;velocityUnits::pct);
+115 &#32;&#32;&#32;&#32;<link linkend="db/d40/declarations_8h_a5ae79e7ed71b0b94b3983c22c60c2eaa_1a5ae79e7ed71b0b94b3983c22c60c2eaa">MOTOR_INTAKE_B</link>.spin(directionType::fwd,&#32;(100),&#32;velocityUnits::pct);
+116 &#32;&#32;}
+117 }
+118 
+<link linkend="de/de5/drive_8cpp_aaca1ffa87592c1c5783fe6e18f9c655b_1aaca1ffa87592c1c5783fe6e18f9c655b">119 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="de/de5/drive_8cpp_aaca1ffa87592c1c5783fe6e18f9c655b_1aaca1ffa87592c1c5783fe6e18f9c655b">intakeOut</link>()&#32;{
+120 &#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>(!<link linkend="de/de5/drive_8cpp_ac84adc1c8ccd21c3c630031ad1ce5956_1ac84adc1c8ccd21c3c630031ad1ce5956">slowMode</link>)&#32;{
+121 &#32;&#32;&#32;&#32;<link linkend="db/d40/declarations_8h_a34de211d15bfb3c0ac450597fd96b4fc_1a34de211d15bfb3c0ac450597fd96b4fc">MOTOR_INTAKE_A</link>.spin(directionType::rev,&#32;100,&#32;velocityUnits::pct);
+122 &#32;&#32;&#32;&#32;<link linkend="db/d40/declarations_8h_a5ae79e7ed71b0b94b3983c22c60c2eaa_1a5ae79e7ed71b0b94b3983c22c60c2eaa">MOTOR_INTAKE_B</link>.spin(directionType::rev,&#32;100,&#32;velocityUnits::pct);
+123 &#32;&#32;}&#32;<emphasis class="keywordflow">else</emphasis>&#32;{
+124 &#32;&#32;&#32;&#32;<link linkend="db/d40/declarations_8h_a34de211d15bfb3c0ac450597fd96b4fc_1a34de211d15bfb3c0ac450597fd96b4fc">MOTOR_INTAKE_A</link>.spin(directionType::rev,&#32;.5*(100),&#32;velocityUnits::pct);
+125 &#32;&#32;&#32;&#32;<link linkend="db/d40/declarations_8h_a5ae79e7ed71b0b94b3983c22c60c2eaa_1a5ae79e7ed71b0b94b3983c22c60c2eaa">MOTOR_INTAKE_B</link>.spin(directionType::rev,&#32;.5*(100),&#32;velocityUnits::pct);
+126 &#32;&#32;}
+127 }
+128 
+<link linkend="de/de5/drive_8cpp_a8afb2a071b21d98c49d5888a7b380ba6_1a8afb2a071b21d98c49d5888a7b380ba6">129 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="de/de5/drive_8cpp_a8afb2a071b21d98c49d5888a7b380ba6_1a8afb2a071b21d98c49d5888a7b380ba6">intakeControl</link>()&#32;{
+130 &#32;&#32;<emphasis class="keywordflow">if</emphasis>(<link linkend="d2/dd9/controller_8h_aff3b02388de758f0fe6d98930ea57626_1aff3b02388de758f0fe6d98930ea57626">buttonIsPressed</link>(<link linkend="db/d40/declarations_8h_ab04f8ff803f7f02c23e713402e13bf32_1ab04f8ff803f7f02c23e713402e13bf32">MASTER</link>.ButtonL1)){
+131 &#32;&#32;&#32;&#32;<link linkend="de/de5/drive_8cpp_aa0846c73538fc48569a7c7c3689a59f0_1aa0846c73538fc48569a7c7c3689a59f0">intakeIn</link>();
+132 &#32;&#32;}
+133 &#32;&#32;<emphasis class="keywordflow">else</emphasis>&#32;<emphasis class="keywordflow">if</emphasis>&#32;(<link linkend="d2/dd9/controller_8h_aff3b02388de758f0fe6d98930ea57626_1aff3b02388de758f0fe6d98930ea57626">buttonIsPressed</link>(<link linkend="db/d40/declarations_8h_ab04f8ff803f7f02c23e713402e13bf32_1ab04f8ff803f7f02c23e713402e13bf32">MASTER</link>.ButtonL2))&#32;{
+134 &#32;&#32;&#32;&#32;<link linkend="de/de5/drive_8cpp_aaca1ffa87592c1c5783fe6e18f9c655b_1aaca1ffa87592c1c5783fe6e18f9c655b">intakeOut</link>();
+135 &#32;&#32;}
+136 &#32;&#32;<emphasis class="keywordflow">else</emphasis>&#32;{
+137 &#32;&#32;&#32;&#32;<link linkend="db/d40/declarations_8h_a34de211d15bfb3c0ac450597fd96b4fc_1a34de211d15bfb3c0ac450597fd96b4fc">MOTOR_INTAKE_A</link>.stop(brakeType::hold);
+138 &#32;&#32;&#32;&#32;<link linkend="db/d40/declarations_8h_a5ae79e7ed71b0b94b3983c22c60c2eaa_1a5ae79e7ed71b0b94b3983c22c60c2eaa">MOTOR_INTAKE_B</link>.stop(brakeType::hold);
+139 &#32;&#32;}
+140 }
+141 
+142 
+    </computeroutput></literallayout>
+</section>

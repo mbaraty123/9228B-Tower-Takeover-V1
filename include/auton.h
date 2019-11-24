@@ -20,7 +20,7 @@ bool moveForward(double inches, double speed, bool blocking);
   * @author Michael Baraty
   * @date 11/9/2019
   */
-bool pivotClockwise(float degrees);
+bool pivotClockwise(float degrees, bool blocking);
 
 /**
   * Pivots the robot counter-clockwise to a certain angle
@@ -28,7 +28,7 @@ bool pivotClockwise(float degrees);
   * @author Michael Baraty
   * @date 11/9/2019
   */
-bool pivotCounterClockwise(float degrees);
+bool pivotCounterClockwise(float degrees, bool blocking);
 
 /**
   * Declares the possible autonomous colors for the autonomous switcher

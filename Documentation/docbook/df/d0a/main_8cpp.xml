@@ -1,0 +1,284 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="df/d0a/main_8cpp">
+    <title>main.cpp File Reference</title>
+    <programlisting>#include &quot;vex.h&quot;</programlisting>
+    <programlisting>#include &quot;drive.h&quot;</programlisting>
+    <programlisting>#include &quot;auton.h&quot;</programlisting>
+        <section>
+            <title>Variables</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>vex::competition <link linkend="df/d0a/main_8cpp_ae38c1d025caf302610a55e0a7a9db5dd_1ae38c1d025caf302610a55e0a7a9db5dd">Competition</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>vex::brain <link linkend="df/d0a/main_8cpp_a4918ae1421e0a76946a52104b80cd8b8_1a4918ae1421e0a76946a52104b80cd8b8">Brain</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>controller <link linkend="df/d0a/main_8cpp_ab04f8ff803f7f02c23e713402e13bf32_1ab04f8ff803f7f02c23e713402e13bf32">MASTER</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>task <link linkend="df/d0a/main_8cpp_aa8d8e260e2268c61bbbf2017f3f6ad92_1aa8d8e260e2268c61bbbf2017f3f6ad92">printTask</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>motor <link linkend="df/d0a/main_8cpp_ab24214b642128d0f3cb67e9b12e7d4fb_1ab24214b642128d0f3cb67e9b12e7d4fb">MOTOR_BACK_LEFT</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>motor <link linkend="df/d0a/main_8cpp_adece81dedf91c2893ba42dc05135a575_1adece81dedf91c2893ba42dc05135a575">MOTOR_BACK_RIGHT</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>motor <link linkend="df/d0a/main_8cpp_a8c6f6315caf1d81bf4d4d113d0f7bffc_1a8c6f6315caf1d81bf4d4d113d0f7bffc">MOTOR_FRONT_LEFT</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>motor <link linkend="df/d0a/main_8cpp_ad6a9ea3d338421c5d709c32ae1aa42d8_1ad6a9ea3d338421c5d709c32ae1aa42d8">MOTOR_FRONT_RIGHT</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>motor <link linkend="df/d0a/main_8cpp_a34de211d15bfb3c0ac450597fd96b4fc_1a34de211d15bfb3c0ac450597fd96b4fc">MOTOR_INTAKE_A</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>motor <link linkend="df/d0a/main_8cpp_a5ae79e7ed71b0b94b3983c22c60c2eaa_1a5ae79e7ed71b0b94b3983c22c60c2eaa">MOTOR_INTAKE_B</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>motor <link linkend="df/d0a/main_8cpp_a212c888d64ffcd7e7b44a548fa0408a9_1a212c888d64ffcd7e7b44a548fa0408a9">MOTOR_STACK</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>motor <link linkend="df/d0a/main_8cpp_a9a834f9a2c804ef0d65ed2f68c10a61a_1a9a834f9a2c804ef0d65ed2f68c10a61a">MOTOR_ARM</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="df/d0a/main_8cpp_acb559820d9ca11295b4500f179ef6392_1acb559820d9ca11295b4500f179ef6392">i</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="df/d0a/main_8cpp_ae1455c81426fba02cdaa271e742cee67_1ae1455c81426fba02cdaa271e742cee67">printDisplay</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="df/d0a/main_8cpp_ac6b858ea8606cdfaee934aac6be66a96_1ac6b858ea8606cdfaee934aac6be66a96">pre_auton</link> (
+void )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="df/d0a/main_8cpp_a2df3d06bc5bced154da27fce393f991f_1a2df3d06bc5bced154da27fce393f991f">autonomous</link> (
+void )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="df/d0a/main_8cpp_a0b51ae97a13db57021eefe87a9903444_1a0b51ae97a13db57021eefe87a9903444">usercontrol</link> (
+void )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="df/d0a/main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_1ae66f6b31b5ad750f1fe042a706a4e3d4">main</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file /Users/mbaraty/Documents/GitHub/9228B-Tower-Takeover-V1/src/main.cpp</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 <emphasis class="comment">/*----------------------------------------------------------------------------*/</emphasis>
+2 <emphasis class="comment">/*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+3 <emphasis class="comment">/*&#32;&#32;&#32;&#32;Module:&#32;&#32;&#32;&#32;&#32;&#32;&#32;main.cpp&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+4 <emphasis class="comment">/*&#32;&#32;&#32;&#32;Author:&#32;&#32;&#32;&#32;&#32;&#32;&#32;mbaraty&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+5 <emphasis class="comment">/*&#32;&#32;&#32;&#32;Created:&#32;&#32;&#32;&#32;&#32;&#32;Thu&#32;Sep&#32;12&#32;2019&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+6 <emphasis class="comment">/*&#32;&#32;&#32;&#32;Description:&#32;&#32;V5&#32;project&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+7 <emphasis class="comment">/*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+8 <emphasis class="comment">/*----------------------------------------------------------------------------*/</emphasis>
+9 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="d1/dfd/vex_8h">vex.h</link>&quot;</emphasis>
+10 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="da/d0b/drive_8h">drive.h</link>&quot;</emphasis>
+11 <emphasis class="preprocessor">#include&#32;&quot;<link linkend="d3/d96/auton_8h">auton.h</link>&quot;</emphasis>
+12 
+13 <emphasis class="keyword">using&#32;namespace&#32;</emphasis><link linkend="d0/dbe/namespacevex">vex</link>;
+14 
+15 <emphasis class="comment">//&#32;A&#32;global&#32;instance&#32;of&#32;vex::competition</emphasis>
+<link linkend="df/d0a/main_8cpp_ae38c1d025caf302610a55e0a7a9db5dd_1ae38c1d025caf302610a55e0a7a9db5dd">16 </link>vex::competition&#32;<link linkend="df/d0a/main_8cpp_ae38c1d025caf302610a55e0a7a9db5dd_1ae38c1d025caf302610a55e0a7a9db5dd">Competition</link>;
+<link linkend="df/d0a/main_8cpp_a4918ae1421e0a76946a52104b80cd8b8_1a4918ae1421e0a76946a52104b80cd8b8">17 </link>vex::brain&#32;<link linkend="df/d0a/main_8cpp_a4918ae1421e0a76946a52104b80cd8b8_1a4918ae1421e0a76946a52104b80cd8b8">Brain</link>;
+<link linkend="df/d0a/main_8cpp_ab04f8ff803f7f02c23e713402e13bf32_1ab04f8ff803f7f02c23e713402e13bf32">18 </link>controller&#32;<link linkend="df/d0a/main_8cpp_ab04f8ff803f7f02c23e713402e13bf32_1ab04f8ff803f7f02c23e713402e13bf32">MASTER</link>&#32;=&#32;controller();
+19 
+<link linkend="df/d0a/main_8cpp_aa8d8e260e2268c61bbbf2017f3f6ad92_1aa8d8e260e2268c61bbbf2017f3f6ad92">20 </link>task&#32;<link linkend="df/d0a/main_8cpp_aa8d8e260e2268c61bbbf2017f3f6ad92_1aa8d8e260e2268c61bbbf2017f3f6ad92">printTask</link>;
+21 
+<link linkend="df/d0a/main_8cpp_ab24214b642128d0f3cb67e9b12e7d4fb_1ab24214b642128d0f3cb67e9b12e7d4fb">22 </link>motor&#32;<link linkend="df/d0a/main_8cpp_ab24214b642128d0f3cb67e9b12e7d4fb_1ab24214b642128d0f3cb67e9b12e7d4fb">MOTOR_BACK_LEFT</link>&#32;&#32;&#32;=&#32;motor(PORT9,&#32;<emphasis class="keyword">false</emphasis>);
+<link linkend="df/d0a/main_8cpp_adece81dedf91c2893ba42dc05135a575_1adece81dedf91c2893ba42dc05135a575">23 </link>motor&#32;<link linkend="df/d0a/main_8cpp_adece81dedf91c2893ba42dc05135a575_1adece81dedf91c2893ba42dc05135a575">MOTOR_BACK_RIGHT</link>&#32;&#32;=&#32;motor(PORT3,&#32;<emphasis class="keyword">true</emphasis>);
+<link linkend="df/d0a/main_8cpp_a8c6f6315caf1d81bf4d4d113d0f7bffc_1a8c6f6315caf1d81bf4d4d113d0f7bffc">24 </link>motor&#32;<link linkend="df/d0a/main_8cpp_a8c6f6315caf1d81bf4d4d113d0f7bffc_1a8c6f6315caf1d81bf4d4d113d0f7bffc">MOTOR_FRONT_LEFT</link>&#32;&#32;=&#32;motor(PORT10,&#32;<emphasis class="keyword">false</emphasis>);
+<link linkend="df/d0a/main_8cpp_ad6a9ea3d338421c5d709c32ae1aa42d8_1ad6a9ea3d338421c5d709c32ae1aa42d8">25 </link>motor&#32;<link linkend="df/d0a/main_8cpp_ad6a9ea3d338421c5d709c32ae1aa42d8_1ad6a9ea3d338421c5d709c32ae1aa42d8">MOTOR_FRONT_RIGHT</link>&#32;=&#32;motor(PORT2,&#32;<emphasis class="keyword">true</emphasis>);
+<link linkend="df/d0a/main_8cpp_a34de211d15bfb3c0ac450597fd96b4fc_1a34de211d15bfb3c0ac450597fd96b4fc">26 </link>motor&#32;<link linkend="df/d0a/main_8cpp_a34de211d15bfb3c0ac450597fd96b4fc_1a34de211d15bfb3c0ac450597fd96b4fc">MOTOR_INTAKE_A</link>&#32;&#32;&#32;&#32;=&#32;motor(PORT15,&#32;gearSetting::ratio36_1,&#32;<emphasis class="keyword">true</emphasis>);
+<link linkend="df/d0a/main_8cpp_a5ae79e7ed71b0b94b3983c22c60c2eaa_1a5ae79e7ed71b0b94b3983c22c60c2eaa">27 </link>motor&#32;<link linkend="df/d0a/main_8cpp_a5ae79e7ed71b0b94b3983c22c60c2eaa_1a5ae79e7ed71b0b94b3983c22c60c2eaa">MOTOR_INTAKE_B</link>&#32;&#32;&#32;&#32;=&#32;motor(PORT16,&#32;gearSetting::ratio36_1,&#32;<emphasis class="keyword">false</emphasis>);
+<link linkend="df/d0a/main_8cpp_a212c888d64ffcd7e7b44a548fa0408a9_1a212c888d64ffcd7e7b44a548fa0408a9">28 </link>motor&#32;<link linkend="df/d0a/main_8cpp_a212c888d64ffcd7e7b44a548fa0408a9_1a212c888d64ffcd7e7b44a548fa0408a9">MOTOR_STACK</link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;motor(PORT17,&#32;<emphasis class="keyword">false</emphasis>);
+<link linkend="df/d0a/main_8cpp_a9a834f9a2c804ef0d65ed2f68c10a61a_1a9a834f9a2c804ef0d65ed2f68c10a61a">29 </link>motor&#32;<link linkend="df/d0a/main_8cpp_a9a834f9a2c804ef0d65ed2f68c10a61a_1a9a834f9a2c804ef0d65ed2f68c10a61a">MOTOR_ARM</link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;motor(PORT12,&#32;gearSetting::ratio36_1,&#32;<emphasis class="keyword">true</emphasis>);
+30 
+31 <emphasis class="comment">//&#32;define&#32;your&#32;global&#32;instances&#32;of&#32;motors&#32;and&#32;other&#32;devices&#32;here</emphasis>
+32 
+<link linkend="df/d0a/main_8cpp_acb559820d9ca11295b4500f179ef6392_1acb559820d9ca11295b4500f179ef6392">33 </link><emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d0a/main_8cpp_acb559820d9ca11295b4500f179ef6392_1acb559820d9ca11295b4500f179ef6392">i</link>&#32;=&#32;0;
+34 
+<link linkend="df/d0a/main_8cpp_ae1455c81426fba02cdaa271e742cee67_1ae1455c81426fba02cdaa271e742cee67">35 </link><emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d0a/main_8cpp_ae1455c81426fba02cdaa271e742cee67_1ae1455c81426fba02cdaa271e742cee67">printDisplay</link>()&#32;{
+36 &#32;&#32;<emphasis class="keywordflow">while</emphasis>(<emphasis class="keyword">true</emphasis>){
+37 &#32;&#32;&#32;&#32;<link linkend="df/d0a/main_8cpp_a4918ae1421e0a76946a52104b80cd8b8_1a4918ae1421e0a76946a52104b80cd8b8">Brain</link>.Screen.printAt(0,&#32;20,&#32;<emphasis class="stringliteral">&quot;%2.2f\n..&gt;BACK&#32;LEFT&quot;</emphasis>,&#32;<link linkend="df/d0a/main_8cpp_ab24214b642128d0f3cb67e9b12e7d4fb_1ab24214b642128d0f3cb67e9b12e7d4fb">MOTOR_BACK_LEFT</link>.temperature(temperatureUnits::celsius));
+38 &#32;&#32;&#32;&#32;<link linkend="df/d0a/main_8cpp_a4918ae1421e0a76946a52104b80cd8b8_1a4918ae1421e0a76946a52104b80cd8b8">Brain</link>.Screen.printAt(0,&#32;50,&#32;<emphasis class="stringliteral">&quot;%2.2f\n..&gt;BACK&#32;RIGHT&quot;</emphasis>,&#32;<link linkend="df/d0a/main_8cpp_adece81dedf91c2893ba42dc05135a575_1adece81dedf91c2893ba42dc05135a575">MOTOR_BACK_RIGHT</link>.temperature(temperatureUnits::celsius));
+39 &#32;&#32;&#32;&#32;<link linkend="df/d0a/main_8cpp_a4918ae1421e0a76946a52104b80cd8b8_1a4918ae1421e0a76946a52104b80cd8b8">Brain</link>.Screen.printAt(0,&#32;80,&#32;<emphasis class="stringliteral">&quot;%2.2f\n..&gt;FRONT&#32;LEFT&quot;</emphasis>,&#32;<link linkend="df/d0a/main_8cpp_a8c6f6315caf1d81bf4d4d113d0f7bffc_1a8c6f6315caf1d81bf4d4d113d0f7bffc">MOTOR_FRONT_LEFT</link>.temperature(temperatureUnits::celsius));
+40 &#32;&#32;&#32;&#32;<link linkend="df/d0a/main_8cpp_a4918ae1421e0a76946a52104b80cd8b8_1a4918ae1421e0a76946a52104b80cd8b8">Brain</link>.Screen.printAt(0,&#32;110,&#32;<emphasis class="stringliteral">&quot;%2.2f\n..&gt;FRONT&#32;RIGHT&quot;</emphasis>,&#32;<link linkend="df/d0a/main_8cpp_ad6a9ea3d338421c5d709c32ae1aa42d8_1ad6a9ea3d338421c5d709c32ae1aa42d8">MOTOR_FRONT_RIGHT</link>.temperature(temperatureUnits::celsius));
+41 &#32;&#32;&#32;&#32;<link linkend="df/d0a/main_8cpp_a4918ae1421e0a76946a52104b80cd8b8_1a4918ae1421e0a76946a52104b80cd8b8">Brain</link>.Screen.printAt(0,&#32;140,&#32;<emphasis class="stringliteral">&quot;%2.2f\n..&gt;INTAKE&#32;A&quot;</emphasis>,&#32;<link linkend="df/d0a/main_8cpp_a34de211d15bfb3c0ac450597fd96b4fc_1a34de211d15bfb3c0ac450597fd96b4fc">MOTOR_INTAKE_A</link>.temperature(temperatureUnits::celsius));
+42 &#32;&#32;&#32;&#32;<link linkend="df/d0a/main_8cpp_a4918ae1421e0a76946a52104b80cd8b8_1a4918ae1421e0a76946a52104b80cd8b8">Brain</link>.Screen.printAt(0,&#32;170,&#32;<emphasis class="stringliteral">&quot;%2.2f\n..&gt;INTAKE&#32;B&quot;</emphasis>,&#32;<link linkend="df/d0a/main_8cpp_a5ae79e7ed71b0b94b3983c22c60c2eaa_1a5ae79e7ed71b0b94b3983c22c60c2eaa">MOTOR_INTAKE_B</link>.temperature(temperatureUnits::celsius));
+43 &#32;&#32;&#32;&#32;<link linkend="df/d0a/main_8cpp_a4918ae1421e0a76946a52104b80cd8b8_1a4918ae1421e0a76946a52104b80cd8b8">Brain</link>.Screen.printAt(0,&#32;200,&#32;<emphasis class="stringliteral">&quot;%2.2f\n..&gt;ARM&quot;</emphasis>,&#32;<link linkend="df/d0a/main_8cpp_a9a834f9a2c804ef0d65ed2f68c10a61a_1a9a834f9a2c804ef0d65ed2f68c10a61a">MOTOR_ARM</link>.temperature(temperatureUnits::celsius));
+44 &#32;&#32;&#32;&#32;<link linkend="df/d0a/main_8cpp_a4918ae1421e0a76946a52104b80cd8b8_1a4918ae1421e0a76946a52104b80cd8b8">Brain</link>.Screen.printAt(0,&#32;230,&#32;<emphasis class="stringliteral">&quot;%2.2f\n..&gt;MAGAZINE&quot;</emphasis>,&#32;<link linkend="df/d0a/main_8cpp_a212c888d64ffcd7e7b44a548fa0408a9_1a212c888d64ffcd7e7b44a548fa0408a9">MOTOR_STACK</link>.temperature(temperatureUnits::celsius));
+45 
+46 &#32;&#32;printf(<emphasis class="stringliteral">&quot;%d\n&quot;</emphasis>,&#32;<link linkend="df/d0a/main_8cpp_acb559820d9ca11295b4500f179ef6392_1acb559820d9ca11295b4500f179ef6392">i</link>);
+47 &#32;&#32;<link linkend="df/d0a/main_8cpp_acb559820d9ca11295b4500f179ef6392_1acb559820d9ca11295b4500f179ef6392">i</link>++;
+48 &#32;&#32;&#32;&#32;
+49 &#32;&#32;&#32;&#32;task::sleep(1000);
+50 &#32;&#32;}
+51 }
+52 
+53 
+54 <emphasis class="comment">/*---------------------------------------------------------------------------*/</emphasis>
+55 <emphasis class="comment">/*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Pre-Autonomous&#32;Functions&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+56 <emphasis class="comment">/*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+57 <emphasis class="comment">/*&#32;&#32;You&#32;may&#32;want&#32;to&#32;perform&#32;some&#32;actions&#32;before&#32;the&#32;competition&#32;starts.&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+58 <emphasis class="comment">/*&#32;&#32;Do&#32;them&#32;in&#32;the&#32;following&#32;function.&#32;&#32;You&#32;must&#32;return&#32;from&#32;this&#32;function&#32;&#32;&#32;*/</emphasis>
+59 <emphasis class="comment">/*&#32;&#32;or&#32;the&#32;autonomous&#32;and&#32;usercontrol&#32;tasks&#32;will&#32;not&#32;be&#32;started.&#32;&#32;This&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+60 <emphasis class="comment">/*&#32;&#32;function&#32;is&#32;only&#32;called&#32;once&#32;after&#32;the&#32;cortex&#32;has&#32;been&#32;powered&#32;on&#32;and&#32;&#32;&#32;&#32;*/</emphasis>&#32;
+61 <emphasis class="comment">/*&#32;&#32;not&#32;every&#32;time&#32;that&#32;the&#32;robot&#32;is&#32;disabled.&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+62 <emphasis class="comment">/*---------------------------------------------------------------------------*/</emphasis>
+63 
+<link linkend="df/d0a/main_8cpp_ac6b858ea8606cdfaee934aac6be66a96_1ac6b858ea8606cdfaee934aac6be66a96">64 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="df/d0a/main_8cpp_ac6b858ea8606cdfaee934aac6be66a96_1ac6b858ea8606cdfaee934aac6be66a96">pre_auton</link>(&#32;<emphasis class="keywordtype">void</emphasis>&#32;)&#32;{
+65 &#32;&#32;<emphasis class="comment">//&#32;All&#32;activities&#32;that&#32;occur&#32;before&#32;the&#32;competition&#32;starts</emphasis>
+66 &#32;&#32;<emphasis class="comment">//&#32;Example:&#32;clearing&#32;encoders,&#32;setting&#32;servo&#32;positions,&#32;...</emphasis>
+67 &#32;&#32;
+68 }
+69 
+70 <emphasis class="comment">/*---------------------------------------------------------------------------*/</emphasis>
+71 <emphasis class="comment">/*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+72 <emphasis class="comment">/*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Autonomous&#32;Task&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+73 <emphasis class="comment">/*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+74 <emphasis class="comment">/*&#32;&#32;This&#32;task&#32;is&#32;used&#32;to&#32;control&#32;your&#32;robot&#32;during&#32;the&#32;autonomous&#32;phase&#32;of&#32;&#32;&#32;*/</emphasis>
+75 <emphasis class="comment">/*&#32;&#32;a&#32;VEX&#32;Competition.&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+76 <emphasis class="comment">/*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+77 <emphasis class="comment">/*&#32;&#32;You&#32;must&#32;modify&#32;the&#32;code&#32;to&#32;add&#32;your&#32;own&#32;robot&#32;specific&#32;commands&#32;here.&#32;&#32;&#32;*/</emphasis>
+78 <emphasis class="comment">/*---------------------------------------------------------------------------*/</emphasis>
+79 
+<link linkend="df/d0a/main_8cpp_a2df3d06bc5bced154da27fce393f991f_1a2df3d06bc5bced154da27fce393f991f">80 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="df/d0a/main_8cpp_a2df3d06bc5bced154da27fce393f991f_1a2df3d06bc5bced154da27fce393f991f">autonomous</link>(&#32;<emphasis class="keywordtype">void</emphasis>&#32;)&#32;{
+81 
+82 &#32;&#32;<emphasis class="comment">//printDisplay();</emphasis>
+83 
+84 &#32;&#32;<link linkend="d3/d96/auton_8h_a9c7e58a3b4bb5cdd30a6b3ed32e8f962_1a9c7e58a3b4bb5cdd30a6b3ed32e8f962">auton</link>(<link linkend="d3/d96/auton_8h_a702107095bd059695d57318e7338a4a7_1a702107095bd059695d57318e7338a4a7a684d325a7303f52e64011467ff5c5758">Side::LEFT</link>,&#32;<link linkend="d3/d96/auton_8h_a78abb31bad0fd1834c54a3ca6f8daab5_1a78abb31bad0fd1834c54a3ca6f8daab5aa2d9547b5d3dd9f05984475f7c926da0">Color::RED</link>);
+85 
+86 &#32;&#32;<emphasis class="comment">//&#32;..........................................................................</emphasis>
+87 &#32;&#32;<emphasis class="comment">//&#32;Insert&#32;autonomous&#32;user&#32;code&#32;here.</emphasis>
+88 &#32;&#32;<emphasis class="comment">//&#32;..........................................................................</emphasis>
+89 
+90 }
+91 
+92 <emphasis class="comment">/*---------------------------------------------------------------------------*/</emphasis>
+93 <emphasis class="comment">/*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+94 <emphasis class="comment">/*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;User&#32;Control&#32;Task&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+95 <emphasis class="comment">/*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+96 <emphasis class="comment">/*&#32;&#32;This&#32;task&#32;is&#32;used&#32;to&#32;control&#32;your&#32;robot&#32;during&#32;the&#32;user&#32;control&#32;phase&#32;of&#32;*/</emphasis>
+97 <emphasis class="comment">/*&#32;&#32;a&#32;VEX&#32;Competition.&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+98 <emphasis class="comment">/*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+99 <emphasis class="comment">/*&#32;&#32;You&#32;must&#32;modify&#32;the&#32;code&#32;to&#32;add&#32;your&#32;own&#32;robot&#32;specific&#32;commands&#32;here.&#32;&#32;&#32;*/</emphasis>
+100 <emphasis class="comment">/*---------------------------------------------------------------------------*/</emphasis>
+101 
+<link linkend="df/d0a/main_8cpp_a0b51ae97a13db57021eefe87a9903444_1a0b51ae97a13db57021eefe87a9903444">102 </link><emphasis class="keywordtype">void</emphasis>&#32;<link linkend="df/d0a/main_8cpp_a0b51ae97a13db57021eefe87a9903444_1a0b51ae97a13db57021eefe87a9903444">usercontrol</link>(&#32;<emphasis class="keywordtype">void</emphasis>&#32;)&#32;{
+103 &#32;&#32;<emphasis class="comment">//&#32;User&#32;control&#32;code&#32;here,&#32;inside&#32;the&#32;loop</emphasis>
+104 
+105 &#32;&#32;<emphasis class="comment">//auton(Side::RIGHT,&#32;Color::BLUE);</emphasis>
+106 &#32;&#32;<emphasis class="keywordflow">while</emphasis>&#32;(1)&#32;{
+107 
+108 
+109 &#32;&#32;&#32;&#32;<link linkend="da/d0b/drive_8h_a928e32686c7e00c1ecde24c3da3019f7_1a928e32686c7e00c1ecde24c3da3019f7">drive</link>();
+110 
+111 &#32;&#32;&#32;&#32;vex::task::sleep(20);&#32;<emphasis class="comment">//Sleep&#32;the&#32;task&#32;for&#32;a&#32;short&#32;amount&#32;of&#32;time&#32;to&#32;prevent&#32;wasted&#32;resources.&#32;</emphasis>
+112 &#32;&#32;}
+113 }
+114 
+115 
+116 <emphasis class="comment">//</emphasis>
+117 <emphasis class="comment">//&#32;Main&#32;will&#32;set&#32;up&#32;the&#32;competition&#32;functions&#32;and&#32;callbacks.</emphasis>
+118 <emphasis class="comment">//</emphasis>
+<link linkend="df/d0a/main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_1ae66f6b31b5ad750f1fe042a706a4e3d4">119 </link><emphasis class="keywordtype">int</emphasis>&#32;<link linkend="df/d0a/main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_1ae66f6b31b5ad750f1fe042a706a4e3d4">main</link>()&#32;{
+120 &#32;&#32;&#32;&#32;<emphasis class="comment">//Set&#32;up&#32;callbacks&#32;for&#32;autonomous&#32;and&#32;driver&#32;control&#32;periods.</emphasis>
+121 &#32;&#32;&#32;&#32;<link linkend="df/d0a/main_8cpp_ae38c1d025caf302610a55e0a7a9db5dd_1ae38c1d025caf302610a55e0a7a9db5dd">Competition</link>.autonomous(&#32;<link linkend="df/d0a/main_8cpp_a2df3d06bc5bced154da27fce393f991f_1a2df3d06bc5bced154da27fce393f991f">autonomous</link>&#32;);
+122 &#32;&#32;&#32;&#32;<link linkend="df/d0a/main_8cpp_ae38c1d025caf302610a55e0a7a9db5dd_1ae38c1d025caf302610a55e0a7a9db5dd">Competition</link>.drivercontrol(&#32;<link linkend="df/d0a/main_8cpp_a0b51ae97a13db57021eefe87a9903444_1a0b51ae97a13db57021eefe87a9903444">usercontrol</link>&#32;);
+123 &#32;&#32;&#32;&#32;
+124 &#32;&#32;&#32;&#32;<emphasis class="comment">//Run&#32;the&#32;pre-autonomous&#32;function.&#32;</emphasis>
+125 &#32;&#32;&#32;&#32;<link linkend="df/d0a/main_8cpp_ac6b858ea8606cdfaee934aac6be66a96_1ac6b858ea8606cdfaee934aac6be66a96">pre_auton</link>();
+126 
+127 &#32;&#32;&#32;&#32;
+128 &#32;&#32;&#32;&#32;<emphasis class="comment">//Prevent&#32;main&#32;from&#32;exiting&#32;with&#32;an&#32;infinite&#32;loop.&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+129 &#32;&#32;&#32;&#32;<emphasis class="keywordflow">while</emphasis>(1)&#32;{
+130 &#32;&#32;&#32;&#32;&#32;&#32;<link linkend="df/d0a/main_8cpp_aa8d8e260e2268c61bbbf2017f3f6ad92_1aa8d8e260e2268c61bbbf2017f3f6ad92">printTask</link>&#32;=&#32;task(<link linkend="df/d0a/main_8cpp_ae1455c81426fba02cdaa271e742cee67_1ae1455c81426fba02cdaa271e742cee67">printDisplay</link>);
+131 &#32;&#32;&#32;&#32;&#32;&#32;vex::task::sleep(100);<emphasis class="comment">//Sleep&#32;the&#32;task&#32;for&#32;a&#32;short&#32;amount&#32;of&#32;time&#32;to&#32;prevent&#32;wasted&#32;resources.</emphasis>
+132 &#32;&#32;&#32;&#32;}&#32;&#32;&#32;&#32;
+133 &#32;&#32;&#32;&#32;&#32;&#32;&#32;
+134 }
+    </computeroutput></literallayout>
+</section>

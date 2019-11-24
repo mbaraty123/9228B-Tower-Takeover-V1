@@ -1,0 +1,150 @@
+\hypertarget{drive_8cpp_source}{}\subsection{drive.\+cpp}
+\label{drive_8cpp_source}\index{src/drive.\+cpp@{src/drive.\+cpp}}
+
+\begin{DoxyCode}
+00001 \textcolor{preprocessor}{#include "\mbox{\hyperlink{drive_8h}{drive.h}}"}
+00002 \textcolor{preprocessor}{#include "\mbox{\hyperlink{declarations_8h}{declarations.h}}"}
+00003 \textcolor{preprocessor}{#include "\mbox{\hyperlink{auton_8h}{auton.h}}"}
+00004 
+\Hypertarget{drive_8cpp_source_l00005}\mbox{\hyperlink{drive_8cpp_ac84adc1c8ccd21c3c630031ad1ce5956_ac84adc1c8ccd21c3c630031ad1ce5956}{00005}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{drive_8cpp_ac84adc1c8ccd21c3c630031ad1ce5956_ac84adc1c8ccd21c3c630031ad1ce5956}{slowMode}} = \textcolor{keyword}{false};
+00006 
+\Hypertarget{drive_8cpp_source_l00007}\mbox{\hyperlink{drive_8cpp_a928e32686c7e00c1ecde24c3da3019f7_a928e32686c7e00c1ecde24c3da3019f7}{00007}} \textcolor{keywordtype}{void} \mbox{\hyperlink{drive_8cpp_a928e32686c7e00c1ecde24c3da3019f7_a928e32686c7e00c1ecde24c3da3019f7}{drive}}() \{
+00008   \mbox{\hyperlink{drive_8cpp_a6ff8820b82f28a73c88a746ddacb26bb_a6ff8820b82f28a73c88a746ddacb26bb}{arcadeDrive}}();
+00009   \mbox{\hyperlink{drive_8cpp_abc3819041cf96aad1093752a3a5de31c_abc3819041cf96aad1093752a3a5de31c}{stackControl}}();
+00010   \mbox{\hyperlink{drive_8cpp_adde1067b42b4de65ff20afb8901f7643_adde1067b42b4de65ff20afb8901f7643}{armControl}}();
+00011   \mbox{\hyperlink{drive_8cpp_a8afb2a071b21d98c49d5888a7b380ba6_a8afb2a071b21d98c49d5888a7b380ba6}{intakeControl}}();
+00012 
+00013   \textcolor{keywordflow}{if}(\mbox{\hyperlink{controller_8h_aff3b02388de758f0fe6d98930ea57626_aff3b02388de758f0fe6d98930ea57626}{buttonIsPressed}}(\mbox{\hyperlink{declarations_8h_ab04f8ff803f7f02c23e713402e13bf32_ab04f8ff803f7f02c23e713402e13bf32}{MASTER}}.ButtonUp))\{
+00014     \mbox{\hyperlink{drive_8cpp_ac84adc1c8ccd21c3c630031ad1ce5956_ac84adc1c8ccd21c3c630031ad1ce5956}{slowMode}} = \textcolor{keyword}{false};
+00015   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{controller_8h_aff3b02388de758f0fe6d98930ea57626_aff3b02388de758f0fe6d98930ea57626}{buttonIsPressed}}(\mbox{\hyperlink{declarations_8h_ab04f8ff803f7f02c23e713402e13bf32_ab04f8ff803f7f02c23e713402e13bf32}{MASTER}}.ButtonDown))\{
+00016     \mbox{\hyperlink{drive_8cpp_ac84adc1c8ccd21c3c630031ad1ce5956_ac84adc1c8ccd21c3c630031ad1ce5956}{slowMode}} = \textcolor{keyword}{true};
+00017   \}
+00018 
+00019 \}
+00020 
+\Hypertarget{drive_8cpp_source_l00021}\mbox{\hyperlink{drive_8cpp_ac522da2148fe1cfd9bea8c026e64ee7b_ac522da2148fe1cfd9bea8c026e64ee7b}{00021}} \textcolor{keywordtype}{void} \mbox{\hyperlink{drive_8cpp_ac522da2148fe1cfd9bea8c026e64ee7b_ac522da2148fe1cfd9bea8c026e64ee7b}{setSideSpeed}}(\mbox{\hyperlink{drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_a2771dd4b083c12b0f13d534e3d1914dc}{DriveSide}} side, \textcolor{keywordtype}{int} speed) \{
+00022   \textcolor{keywordflow}{if}(side == \mbox{\hyperlink{drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_a2771dd4b083c12b0f13d534e3d1914dca684d325a7303f52e64011467ff5c5758}{DriveSide::LEFT}}) \{
+00023     \mbox{\hyperlink{declarations_8h_ab24214b642128d0f3cb67e9b12e7d4fb_ab24214b642128d0f3cb67e9b12e7d4fb}{MOTOR\_BACK\_LEFT}}.spin(directionType::fwd, speed, velocityUnits::pct);
+00024     \mbox{\hyperlink{declarations_8h_a8c6f6315caf1d81bf4d4d113d0f7bffc_a8c6f6315caf1d81bf4d4d113d0f7bffc}{MOTOR\_FRONT\_LEFT}}.spin(directionType::fwd, speed, velocityUnits::pct);
+00025   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (side == \mbox{\hyperlink{drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_a2771dd4b083c12b0f13d534e3d1914dca21507b40c80068eda19865706fdc2403}{DriveSide::RIGHT}}) \{
+00026     \mbox{\hyperlink{declarations_8h_adece81dedf91c2893ba42dc05135a575_adece81dedf91c2893ba42dc05135a575}{MOTOR\_BACK\_RIGHT}}.spin(directionType::fwd, speed, velocityUnits::pct);
+00027     \mbox{\hyperlink{declarations_8h_ad6a9ea3d338421c5d709c32ae1aa42d8_ad6a9ea3d338421c5d709c32ae1aa42d8}{MOTOR\_FRONT\_RIGHT}}.spin(directionType::fwd, speed, velocityUnits::pct);
+00028   \}
+00029   \textcolor{keywordflow}{else} \{
+00030     \mbox{\hyperlink{declarations_8h_a8c6f6315caf1d81bf4d4d113d0f7bffc_a8c6f6315caf1d81bf4d4d113d0f7bffc}{MOTOR\_FRONT\_LEFT}}.spin(directionType::fwd, speed, velocityUnits::pct);
+00031     \mbox{\hyperlink{declarations_8h_ad6a9ea3d338421c5d709c32ae1aa42d8_ad6a9ea3d338421c5d709c32ae1aa42d8}{MOTOR\_FRONT\_RIGHT}}.spin(directionType::fwd, speed, velocityUnits::pct);
+00032     \mbox{\hyperlink{declarations_8h_adece81dedf91c2893ba42dc05135a575_adece81dedf91c2893ba42dc05135a575}{MOTOR\_BACK\_RIGHT}}.spin(directionType::fwd, speed, velocityUnits::pct);
+00033     \mbox{\hyperlink{declarations_8h_ab24214b642128d0f3cb67e9b12e7d4fb_ab24214b642128d0f3cb67e9b12e7d4fb}{MOTOR\_BACK\_LEFT}}.spin(directionType::fwd, speed, velocityUnits::pct);
+00034   \}
+00035 \}
+00036 
+\Hypertarget{drive_8cpp_source_l00037}\mbox{\hyperlink{drive_8cpp_a6ff8820b82f28a73c88a746ddacb26bb_a6ff8820b82f28a73c88a746ddacb26bb}{00037}} \textcolor{keywordtype}{void} \mbox{\hyperlink{drive_8cpp_a6ff8820b82f28a73c88a746ddacb26bb_a6ff8820b82f28a73c88a746ddacb26bb}{arcadeDrive}}() \{
+00038   \textcolor{keywordtype}{int} x = \mbox{\hyperlink{declarations_8h_afb49f22bdd1e93218d02bb25e513e8a0_afb49f22bdd1e93218d02bb25e513e8a0}{SPEED\_MULTIPLIER}}  * -\mbox{\hyperlink{controller_8h_a73be3a8649e7d561a68cd816420efbd9_a73be3a8649e7d561a68cd816420efbd9}{axisValue}}(\mbox{\hyperlink{declarations_8h_ab04f8ff803f7f02c23e713402e13bf32_ab04f8ff803f7f02c23e713402e13bf32}{MASTER}}.Axis1);
+00039   \textcolor{keywordtype}{int} y = \mbox{\hyperlink{declarations_8h_afb49f22bdd1e93218d02bb25e513e8a0_afb49f22bdd1e93218d02bb25e513e8a0}{SPEED\_MULTIPLIER}} * (.7  * (pow(-\mbox{\hyperlink{controller_8h_a73be3a8649e7d561a68cd816420efbd9_a73be3a8649e7d561a68cd816420efbd9}{axisValue}}(
+      \mbox{\hyperlink{declarations_8h_ab04f8ff803f7f02c23e713402e13bf32_ab04f8ff803f7f02c23e713402e13bf32}{MASTER}}.Axis3) / 9, 3) / 10));
+00040   \textcolor{keywordtype}{int} speedLeft = abs(x + y) > \mbox{\hyperlink{declarations_8h_adceb947873623dd2a87f7f69e81fbd38_adceb947873623dd2a87f7f69e81fbd38}{THRESHOLD}}? -(x + y): 0;
+00041   \textcolor{keywordtype}{int} speedRight = abs(x - y) > \mbox{\hyperlink{declarations_8h_adceb947873623dd2a87f7f69e81fbd38_adceb947873623dd2a87f7f69e81fbd38}{THRESHOLD}}? (x - y): 0;
+00042 
+00043   \textcolor{keywordflow}{if}(\mbox{\hyperlink{drive_8cpp_ac84adc1c8ccd21c3c630031ad1ce5956_ac84adc1c8ccd21c3c630031ad1ce5956}{slowMode}})\{
+00044     \mbox{\hyperlink{drive_8cpp_ac522da2148fe1cfd9bea8c026e64ee7b_ac522da2148fe1cfd9bea8c026e64ee7b}{setSideSpeed}}(\mbox{\hyperlink{drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_a2771dd4b083c12b0f13d534e3d1914dca684d325a7303f52e64011467ff5c5758}{DriveSide::LEFT}}, speedLeft / 3);
+00045      \mbox{\hyperlink{drive_8cpp_ac522da2148fe1cfd9bea8c026e64ee7b_ac522da2148fe1cfd9bea8c026e64ee7b}{setSideSpeed}}(\mbox{\hyperlink{drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_a2771dd4b083c12b0f13d534e3d1914dca21507b40c80068eda19865706fdc2403}{DriveSide::RIGHT}}, speedRight / 3);
+00046   \} \textcolor{keywordflow}{else} \{
+00047     \mbox{\hyperlink{drive_8cpp_ac522da2148fe1cfd9bea8c026e64ee7b_ac522da2148fe1cfd9bea8c026e64ee7b}{setSideSpeed}}(\mbox{\hyperlink{drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_a2771dd4b083c12b0f13d534e3d1914dca684d325a7303f52e64011467ff5c5758}{DriveSide::LEFT}}, speedLeft);
+00048     \mbox{\hyperlink{drive_8cpp_ac522da2148fe1cfd9bea8c026e64ee7b_ac522da2148fe1cfd9bea8c026e64ee7b}{setSideSpeed}}(\mbox{\hyperlink{drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_a2771dd4b083c12b0f13d534e3d1914dca21507b40c80068eda19865706fdc2403}{DriveSide::RIGHT}}, speedRight);
+00049   \}
+00050 \}
+00051 
+\Hypertarget{drive_8cpp_source_l00052}\mbox{\hyperlink{drive_8cpp_ab8605578ac6dddeb3e511513523e3354_ab8605578ac6dddeb3e511513523e3354}{00052}} \textcolor{keywordtype}{void} \mbox{\hyperlink{drive_8cpp_ab8605578ac6dddeb3e511513523e3354_ab8605578ac6dddeb3e511513523e3354}{tankDrive}}() \{
+00053   \textcolor{keywordtype}{int} l = \mbox{\hyperlink{declarations_8h_afb49f22bdd1e93218d02bb25e513e8a0_afb49f22bdd1e93218d02bb25e513e8a0}{SPEED\_MULTIPLIER}} * (.7  * (pow(\mbox{\hyperlink{controller_8h_a73be3a8649e7d561a68cd816420efbd9_a73be3a8649e7d561a68cd816420efbd9}{axisValue}}(
+      \mbox{\hyperlink{declarations_8h_ab04f8ff803f7f02c23e713402e13bf32_ab04f8ff803f7f02c23e713402e13bf32}{MASTER}}.Axis3) / 9, 3) / 10));
+00054   \textcolor{keywordtype}{int} r = \mbox{\hyperlink{declarations_8h_afb49f22bdd1e93218d02bb25e513e8a0_afb49f22bdd1e93218d02bb25e513e8a0}{SPEED\_MULTIPLIER}} * (.7  * (pow(\mbox{\hyperlink{controller_8h_a73be3a8649e7d561a68cd816420efbd9_a73be3a8649e7d561a68cd816420efbd9}{axisValue}}(
+      \mbox{\hyperlink{declarations_8h_ab04f8ff803f7f02c23e713402e13bf32_ab04f8ff803f7f02c23e713402e13bf32}{MASTER}}.Axis2) / 9, 3) / 10));
+00055   \textcolor{keywordtype}{int} speedLeft = abs(l) > \mbox{\hyperlink{declarations_8h_adceb947873623dd2a87f7f69e81fbd38_adceb947873623dd2a87f7f69e81fbd38}{THRESHOLD}}? l: 0;
+00056   \textcolor{keywordtype}{int} speedRight = abs(r) > \mbox{\hyperlink{declarations_8h_adceb947873623dd2a87f7f69e81fbd38_adceb947873623dd2a87f7f69e81fbd38}{THRESHOLD}}? r: 0;
+00057   
+00058   \textcolor{keywordflow}{if}(\mbox{\hyperlink{drive_8cpp_ac84adc1c8ccd21c3c630031ad1ce5956_ac84adc1c8ccd21c3c630031ad1ce5956}{slowMode}})\{
+00059     \mbox{\hyperlink{drive_8cpp_ac522da2148fe1cfd9bea8c026e64ee7b_ac522da2148fe1cfd9bea8c026e64ee7b}{setSideSpeed}}(\mbox{\hyperlink{drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_a2771dd4b083c12b0f13d534e3d1914dca684d325a7303f52e64011467ff5c5758}{DriveSide::LEFT}}, speedLeft / 3);
+00060      \mbox{\hyperlink{drive_8cpp_ac522da2148fe1cfd9bea8c026e64ee7b_ac522da2148fe1cfd9bea8c026e64ee7b}{setSideSpeed}}(\mbox{\hyperlink{drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_a2771dd4b083c12b0f13d534e3d1914dca21507b40c80068eda19865706fdc2403}{DriveSide::RIGHT}}, speedRight / 3);
+00061   \} \textcolor{keywordflow}{else} \{
+00062     \mbox{\hyperlink{drive_8cpp_ac522da2148fe1cfd9bea8c026e64ee7b_ac522da2148fe1cfd9bea8c026e64ee7b}{setSideSpeed}}(\mbox{\hyperlink{drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_a2771dd4b083c12b0f13d534e3d1914dca684d325a7303f52e64011467ff5c5758}{DriveSide::LEFT}}, speedLeft);
+00063     \mbox{\hyperlink{drive_8cpp_ac522da2148fe1cfd9bea8c026e64ee7b_ac522da2148fe1cfd9bea8c026e64ee7b}{setSideSpeed}}(\mbox{\hyperlink{drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_a2771dd4b083c12b0f13d534e3d1914dca21507b40c80068eda19865706fdc2403}{DriveSide::RIGHT}}, speedRight);
+00064   \}
+00065 \}
+00066 
+\Hypertarget{drive_8cpp_source_l00067}\mbox{\hyperlink{drive_8cpp_a08a55986dab46203f1eeef50123cf4bd_a08a55986dab46203f1eeef50123cf4bd}{00067}} \textcolor{keywordtype}{void} \mbox{\hyperlink{drive_8cpp_a08a55986dab46203f1eeef50123cf4bd_a08a55986dab46203f1eeef50123cf4bd}{moveStackForward}}() \{
+00068   \textcolor{keywordtype}{double} \textcolor{keyword}{final} = 1.5; 
+00069   \mbox{\hyperlink{declarations_8h_a212c888d64ffcd7e7b44a548fa0408a9_a212c888d64ffcd7e7b44a548fa0408a9}{MOTOR\_STACK}}.startSpinTo(10, rotationUnits::rev, 30, velocityUnits::pct);
+00070 \}
+00071 
+\Hypertarget{drive_8cpp_source_l00072}\mbox{\hyperlink{drive_8cpp_ac153148440cec552a2824c91569e1e5a_ac153148440cec552a2824c91569e1e5a}{00072}} \textcolor{keywordtype}{void} \mbox{\hyperlink{drive_8cpp_ac153148440cec552a2824c91569e1e5a_ac153148440cec552a2824c91569e1e5a}{moveStackBack}}() \{
+00073   \textcolor{keywordtype}{double} \textcolor{keyword}{final} = 0;
+00074   \mbox{\hyperlink{declarations_8h_a212c888d64ffcd7e7b44a548fa0408a9_a212c888d64ffcd7e7b44a548fa0408a9}{MOTOR\_STACK}}.startSpinTo(-10, rotationUnits::rev, 80, velocityUnits::pct); 
+00075 \}
+00076 
+\Hypertarget{drive_8cpp_source_l00077}\mbox{\hyperlink{drive_8cpp_abc3819041cf96aad1093752a3a5de31c_abc3819041cf96aad1093752a3a5de31c}{00077}} \textcolor{keywordtype}{void} \mbox{\hyperlink{drive_8cpp_abc3819041cf96aad1093752a3a5de31c_abc3819041cf96aad1093752a3a5de31c}{stackControl}}() \{
+00078   \textcolor{keywordflow}{if}(\mbox{\hyperlink{controller_8h_aff3b02388de758f0fe6d98930ea57626_aff3b02388de758f0fe6d98930ea57626}{buttonIsPressed}}(\mbox{\hyperlink{declarations_8h_ab04f8ff803f7f02c23e713402e13bf32_ab04f8ff803f7f02c23e713402e13bf32}{MASTER}}.ButtonX)) 
+00079     \mbox{\hyperlink{drive_8cpp_a08a55986dab46203f1eeef50123cf4bd_a08a55986dab46203f1eeef50123cf4bd}{moveStackForward}}();
+00080   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{controller_8h_aff3b02388de758f0fe6d98930ea57626_aff3b02388de758f0fe6d98930ea57626}{buttonIsPressed}}(\mbox{\hyperlink{declarations_8h_ab04f8ff803f7f02c23e713402e13bf32_ab04f8ff803f7f02c23e713402e13bf32}{MASTER}}.ButtonA))
+00081     \mbox{\hyperlink{drive_8cpp_ac153148440cec552a2824c91569e1e5a_ac153148440cec552a2824c91569e1e5a}{moveStackBack}}();
+00082   \textcolor{keywordflow}{else}\{
+00083     \mbox{\hyperlink{declarations_8h_a212c888d64ffcd7e7b44a548fa0408a9_a212c888d64ffcd7e7b44a548fa0408a9}{MOTOR\_STACK}}.stop(brakeType::brake);
+00084   \}
+00085 \}
+00086 
+\Hypertarget{drive_8cpp_source_l00087}\mbox{\hyperlink{drive_8cpp_adf7b0afb3a8dcf884db533b0217b0543_adf7b0afb3a8dcf884db533b0217b0543}{00087}} \textcolor{keywordtype}{void} \mbox{\hyperlink{drive_8cpp_adf7b0afb3a8dcf884db533b0217b0543_adf7b0afb3a8dcf884db533b0217b0543}{armUp}}()\{
+00088   \mbox{\hyperlink{declarations_8h_a9a834f9a2c804ef0d65ed2f68c10a61a_a9a834f9a2c804ef0d65ed2f68c10a61a}{MOTOR\_ARM}}.startSpinTo(60.6, rotationUnits::rev, 100, velocityUnits::pct);
+00089   \textcolor{comment}{//realValue 6.6}
+00090 \}
+00091 
+\Hypertarget{drive_8cpp_source_l00092}\mbox{\hyperlink{drive_8cpp_ab1850cc7cdb69057fe29f45eefe7ec90_ab1850cc7cdb69057fe29f45eefe7ec90}{00092}} \textcolor{keywordtype}{void} \mbox{\hyperlink{drive_8cpp_ab1850cc7cdb69057fe29f45eefe7ec90_ab1850cc7cdb69057fe29f45eefe7ec90}{armDown}}()\{
+00093   \mbox{\hyperlink{declarations_8h_a9a834f9a2c804ef0d65ed2f68c10a61a_a9a834f9a2c804ef0d65ed2f68c10a61a}{MOTOR\_ARM}}.startSpinTo(-10, rotationUnits::rev, 100, velocityUnits::pct);
+00094   \textcolor{comment}{//realValue 0}
+00095 \}
+00096 
+\Hypertarget{drive_8cpp_source_l00097}\mbox{\hyperlink{drive_8cpp_adde1067b42b4de65ff20afb8901f7643_adde1067b42b4de65ff20afb8901f7643}{00097}} \textcolor{keywordtype}{void} \mbox{\hyperlink{drive_8cpp_adde1067b42b4de65ff20afb8901f7643_adde1067b42b4de65ff20afb8901f7643}{armControl}}()\{
+00098   \textcolor{keywordflow}{if}(\mbox{\hyperlink{controller_8h_aff3b02388de758f0fe6d98930ea57626_aff3b02388de758f0fe6d98930ea57626}{buttonIsPressed}}(\mbox{\hyperlink{declarations_8h_ab04f8ff803f7f02c23e713402e13bf32_ab04f8ff803f7f02c23e713402e13bf32}{MASTER}}.ButtonR1))\{
+00099     \mbox{\hyperlink{drive_8cpp_adf7b0afb3a8dcf884db533b0217b0543_adf7b0afb3a8dcf884db533b0217b0543}{armUp}}();
+00100   \}
+00101   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{controller_8h_aff3b02388de758f0fe6d98930ea57626_aff3b02388de758f0fe6d98930ea57626}{buttonIsPressed}}(\mbox{\hyperlink{declarations_8h_ab04f8ff803f7f02c23e713402e13bf32_ab04f8ff803f7f02c23e713402e13bf32}{MASTER}}.ButtonR2)) \{
+00102     \mbox{\hyperlink{drive_8cpp_ab1850cc7cdb69057fe29f45eefe7ec90_ab1850cc7cdb69057fe29f45eefe7ec90}{armDown}}();
+00103   \}
+00104   \textcolor{keywordflow}{else} \{
+00105     \mbox{\hyperlink{declarations_8h_a9a834f9a2c804ef0d65ed2f68c10a61a_a9a834f9a2c804ef0d65ed2f68c10a61a}{MOTOR\_ARM}}.stop(brakeType::hold);
+00106   \}
+00107 \}
+00108 
+\Hypertarget{drive_8cpp_source_l00109}\mbox{\hyperlink{drive_8cpp_aa0846c73538fc48569a7c7c3689a59f0_aa0846c73538fc48569a7c7c3689a59f0}{00109}} \textcolor{keywordtype}{void} \mbox{\hyperlink{drive_8cpp_aa0846c73538fc48569a7c7c3689a59f0_aa0846c73538fc48569a7c7c3689a59f0}{intakeIn}}() \{
+00110   \textcolor{keywordflow}{if}(!\mbox{\hyperlink{drive_8cpp_ac84adc1c8ccd21c3c630031ad1ce5956_ac84adc1c8ccd21c3c630031ad1ce5956}{slowMode}}) \{
+00111     \mbox{\hyperlink{declarations_8h_a34de211d15bfb3c0ac450597fd96b4fc_a34de211d15bfb3c0ac450597fd96b4fc}{MOTOR\_INTAKE\_A}}.spin(directionType::fwd, 100, velocityUnits::pct);
+00112     \mbox{\hyperlink{declarations_8h_a5ae79e7ed71b0b94b3983c22c60c2eaa_a5ae79e7ed71b0b94b3983c22c60c2eaa}{MOTOR\_INTAKE\_B}}.spin(directionType::fwd, 100, velocityUnits::pct);
+00113   \} \textcolor{keywordflow}{else} \{
+00114     \mbox{\hyperlink{declarations_8h_a34de211d15bfb3c0ac450597fd96b4fc_a34de211d15bfb3c0ac450597fd96b4fc}{MOTOR\_INTAKE\_A}}.spin(directionType::fwd, (100), velocityUnits::pct);
+00115     \mbox{\hyperlink{declarations_8h_a5ae79e7ed71b0b94b3983c22c60c2eaa_a5ae79e7ed71b0b94b3983c22c60c2eaa}{MOTOR\_INTAKE\_B}}.spin(directionType::fwd, (100), velocityUnits::pct);
+00116   \}
+00117 \}
+00118 
+\Hypertarget{drive_8cpp_source_l00119}\mbox{\hyperlink{drive_8cpp_aaca1ffa87592c1c5783fe6e18f9c655b_aaca1ffa87592c1c5783fe6e18f9c655b}{00119}} \textcolor{keywordtype}{void} \mbox{\hyperlink{drive_8cpp_aaca1ffa87592c1c5783fe6e18f9c655b_aaca1ffa87592c1c5783fe6e18f9c655b}{intakeOut}}() \{
+00120    \textcolor{keywordflow}{if}(!\mbox{\hyperlink{drive_8cpp_ac84adc1c8ccd21c3c630031ad1ce5956_ac84adc1c8ccd21c3c630031ad1ce5956}{slowMode}}) \{
+00121     \mbox{\hyperlink{declarations_8h_a34de211d15bfb3c0ac450597fd96b4fc_a34de211d15bfb3c0ac450597fd96b4fc}{MOTOR\_INTAKE\_A}}.spin(directionType::rev, 100, velocityUnits::pct);
+00122     \mbox{\hyperlink{declarations_8h_a5ae79e7ed71b0b94b3983c22c60c2eaa_a5ae79e7ed71b0b94b3983c22c60c2eaa}{MOTOR\_INTAKE\_B}}.spin(directionType::rev, 100, velocityUnits::pct);
+00123   \} \textcolor{keywordflow}{else} \{
+00124     \mbox{\hyperlink{declarations_8h_a34de211d15bfb3c0ac450597fd96b4fc_a34de211d15bfb3c0ac450597fd96b4fc}{MOTOR\_INTAKE\_A}}.spin(directionType::rev, .5*(100), velocityUnits::pct);
+00125     \mbox{\hyperlink{declarations_8h_a5ae79e7ed71b0b94b3983c22c60c2eaa_a5ae79e7ed71b0b94b3983c22c60c2eaa}{MOTOR\_INTAKE\_B}}.spin(directionType::rev, .5*(100), velocityUnits::pct);
+00126   \}
+00127 \}
+00128 
+\Hypertarget{drive_8cpp_source_l00129}\mbox{\hyperlink{drive_8cpp_a8afb2a071b21d98c49d5888a7b380ba6_a8afb2a071b21d98c49d5888a7b380ba6}{00129}} \textcolor{keywordtype}{void} \mbox{\hyperlink{drive_8cpp_a8afb2a071b21d98c49d5888a7b380ba6_a8afb2a071b21d98c49d5888a7b380ba6}{intakeControl}}() \{
+00130   \textcolor{keywordflow}{if}(\mbox{\hyperlink{controller_8h_aff3b02388de758f0fe6d98930ea57626_aff3b02388de758f0fe6d98930ea57626}{buttonIsPressed}}(\mbox{\hyperlink{declarations_8h_ab04f8ff803f7f02c23e713402e13bf32_ab04f8ff803f7f02c23e713402e13bf32}{MASTER}}.ButtonL1))\{
+00131     \mbox{\hyperlink{drive_8cpp_aa0846c73538fc48569a7c7c3689a59f0_aa0846c73538fc48569a7c7c3689a59f0}{intakeIn}}();
+00132   \}
+00133   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{controller_8h_aff3b02388de758f0fe6d98930ea57626_aff3b02388de758f0fe6d98930ea57626}{buttonIsPressed}}(\mbox{\hyperlink{declarations_8h_ab04f8ff803f7f02c23e713402e13bf32_ab04f8ff803f7f02c23e713402e13bf32}{MASTER}}.ButtonL2)) \{
+00134     \mbox{\hyperlink{drive_8cpp_aaca1ffa87592c1c5783fe6e18f9c655b_aaca1ffa87592c1c5783fe6e18f9c655b}{intakeOut}}();
+00135   \}
+00136   \textcolor{keywordflow}{else} \{
+00137     \mbox{\hyperlink{declarations_8h_a34de211d15bfb3c0ac450597fd96b4fc_a34de211d15bfb3c0ac450597fd96b4fc}{MOTOR\_INTAKE\_A}}.stop(brakeType::hold);
+00138     \mbox{\hyperlink{declarations_8h_a5ae79e7ed71b0b94b3983c22c60c2eaa_a5ae79e7ed71b0b94b3983c22c60c2eaa}{MOTOR\_INTAKE\_B}}.stop(brakeType::hold);
+00139   \}
+00140 \}
+00141 
+00142 
+\end{DoxyCode}
