@@ -1,7 +1,21 @@
-\hypertarget{controller_8h}{}\subsection{include/controller.h File Reference}
-\label{controller_8h}\index{include/controller.\+h@{include/controller.\+h}}
+\hypertarget{controller_8h}{}\doxysection{include/controller.h File Reference}
+\label{controller_8h}\index{include/controller.h@{include/controller.h}}
 {\ttfamily \#include \char`\"{}vex.\+h\char`\"{}}\newline
-\subsubsection*{Functions}
+Include dependency graph for controller.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/d52/controller_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d33/controller_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 int \mbox{\hyperlink{controller_8h_a73be3a8649e7d561a68cd816420efbd9_a73be3a8649e7d561a68cd816420efbd9}{axis\+Value}} (controller\+::axis Axis)
@@ -10,11 +24,26 @@ bool \mbox{\hyperlink{controller_8h_aff3b02388de758f0fe6d98930ea57626_aff3b02388
 \end{DoxyCompactItemize}
 
 
-\subsubsection{Function Documentation}
+\doxysubsection{Detailed Description}
+Declares the functions to simplify reading commands on the controller
+
+\begin{DoxyAuthor}{Author}
+Michael Baraty 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/9/2019 
+\end{DoxyDate}
+
+
+Definition in file \mbox{\hyperlink{controller_8h_source}{controller.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
 \mbox{\Hypertarget{controller_8h_a73be3a8649e7d561a68cd816420efbd9_a73be3a8649e7d561a68cd816420efbd9}\label{controller_8h_a73be3a8649e7d561a68cd816420efbd9_a73be3a8649e7d561a68cd816420efbd9}} 
-\index{controller.\+h@{controller.\+h}!axis\+Value@{axis\+Value}}
-\index{axis\+Value@{axis\+Value}!controller.\+h@{controller.\+h}}
-\paragraph{\texorpdfstring{axis\+Value()}{axisValue()}}
+\index{controller.h@{controller.h}!axisValue@{axisValue}}
+\index{axisValue@{axisValue}!controller.h@{controller.h}}
+\doxysubsubsection{\texorpdfstring{axisValue()}{axisValue()}}
 {\footnotesize\ttfamily int axis\+Value (\begin{DoxyParamCaption}\item[{controller\+::axis}]{Axis }\end{DoxyParamCaption})}
 
 Returns an axis value of the controller in a -\/100 -\/ 100 scale, designed to be used with motor speeds in percent 
@@ -33,15 +62,23 @@ Michael Baraty
 Definition at line \mbox{\hyperlink{controller_8cpp_source_l00004}{4}} of file \mbox{\hyperlink{controller_8cpp_source}{controller.\+cpp}}.
 
 
-\begin{DoxyCode}
-00004                                    \{
-00005   \textcolor{keywordflow}{return} Axis.position();
-00006 \}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00004                                    \{}
+\DoxyCodeLine{00005   \textcolor{keywordflow}{return} Axis.position();}
+\DoxyCodeLine{00006 \}}
+
 \end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dd9/controller_8h_a73be3a8649e7d561a68cd816420efbd9_a73be3a8649e7d561a68cd816420efbd9_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{controller_8h_aff3b02388de758f0fe6d98930ea57626_aff3b02388de758f0fe6d98930ea57626}\label{controller_8h_aff3b02388de758f0fe6d98930ea57626_aff3b02388de758f0fe6d98930ea57626}} 
-\index{controller.\+h@{controller.\+h}!button\+Is\+Pressed@{button\+Is\+Pressed}}
-\index{button\+Is\+Pressed@{button\+Is\+Pressed}!controller.\+h@{controller.\+h}}
-\paragraph{\texorpdfstring{button\+Is\+Pressed()}{buttonIsPressed()}}
+\index{controller.h@{controller.h}!buttonIsPressed@{buttonIsPressed}}
+\index{buttonIsPressed@{buttonIsPressed}!controller.h@{controller.h}}
+\doxysubsubsection{\texorpdfstring{buttonIsPressed()}{buttonIsPressed()}}
 {\footnotesize\ttfamily bool button\+Is\+Pressed (\begin{DoxyParamCaption}\item[{controller\+::button}]{Button }\end{DoxyParamCaption})}
 
 Returns a boolean for whether a designated button is being pressed 
@@ -60,8 +97,16 @@ Michael Baraty
 Definition at line \mbox{\hyperlink{controller_8cpp_source_l00008}{8}} of file \mbox{\hyperlink{controller_8cpp_source}{controller.\+cpp}}.
 
 
-\begin{DoxyCode}
-00008                                               \{
-00009   \textcolor{keywordflow}{return} Button.pressing();
-00010 \}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00008                                               \{}
+\DoxyCodeLine{00009   \textcolor{keywordflow}{return} Button.pressing();}
+\DoxyCodeLine{00010 \}}
+
 \end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dd9/controller_8h_aff3b02388de758f0fe6d98930ea57626_aff3b02388de758f0fe6d98930ea57626_icgraph}
+\end{center}
+\end{figure}

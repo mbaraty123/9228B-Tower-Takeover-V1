@@ -1,0 +1,12 @@
+<map id="auton" name="auton">
+<area shape="rect" id="node1" title="the autonomous switcher" alt="" coords="5,104,60,129"/>
+<area shape="rect" id="node2" href="$db/ddf/auton_8cpp_a5bb01d00c76862cb15431efd4090bee9.html#a5bb01d00c76862cb15431efd4090bee9" title=" " alt="" coords="112,5,216,31"/>
+<area shape="rect" id="node5" href="$db/ddf/auton_8cpp_ab9984e9a12048995fb71a06a1c94fd31.html#ab9984e9a12048995fb71a06a1c94fd31" title=" " alt="" coords="108,203,221,228"/>
+<area shape="rect" id="node8" href="$db/ddf/auton_8cpp_aae46c4423bc7ed2947e82c4c5dd7f469.html#aae46c4423bc7ed2947e82c4c5dd7f469" title=" " alt="" coords="114,55,215,80"/>
+<area shape="rect" id="node9" href="$db/ddf/auton_8cpp_aaf3b274e9144b7072829ca58203492a6.html#aaf3b274e9144b7072829ca58203492a6" title=" " alt="" coords="109,153,219,179"/>
+<area shape="rect" id="node10" href="$db/ddf/auton_8cpp_abba3fa3f69d7ee97541aa1169ee13cee.html#abba3fa3f69d7ee97541aa1169ee13cee" title=" " alt="" coords="123,104,206,129"/>
+<area shape="rect" id="node3" href="$db/ddf/auton_8cpp_af5833bec4b862d3da7fc3700ca7d2a6b.html#af5833bec4b862d3da7fc3700ca7d2a6b" title=" " alt="" coords="296,104,398,129"/>
+<area shape="rect" id="node4" href="$db/ddf/auton_8cpp_a241030fa952d5f1fdbe92a97a20e6a36.html#a241030fa952d5f1fdbe92a97a20e6a36" title=" " alt="" coords="269,31,425,56"/>
+<area shape="rect" id="node6" href="$da/d0b/drive_8h_aa0846c73538fc48569a7c7c3689a59f0.html#aa0846c73538fc48569a7c7c3689a59f0" title=" " alt="" coords="313,153,381,179"/>
+<area shape="rect" id="node7" href="$db/ddf/auton_8cpp_a362446334157b1edf93062607b0f5e4c.html#a362446334157b1edf93062607b0f5e4c" title=" " alt="" coords="292,203,402,228"/>
+</map>

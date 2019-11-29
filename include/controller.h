@@ -1,5 +1,6 @@
 /**
   * Declares the functions to simplify reading commands on the controller
+  * @file controller.h
   * @author Michael Baraty
   * @date 11/9/2019
   */

@@ -1,7 +1,14 @@
-\hypertarget{controller_8cpp}{}\subsection{src/controller.cpp File Reference}
-\label{controller_8cpp}\index{src/controller.\+cpp@{src/controller.\+cpp}}
+\hypertarget{controller_8cpp}{}\doxysection{src/controller.cpp File Reference}
+\label{controller_8cpp}\index{src/controller.cpp@{src/controller.cpp}}
 {\ttfamily \#include \char`\"{}controller.\+h\char`\"{}}\newline
-\subsubsection*{Functions}
+Include dependency graph for controller.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d7c/controller_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 int \mbox{\hyperlink{controller_8cpp_a73be3a8649e7d561a68cd816420efbd9_a73be3a8649e7d561a68cd816420efbd9}{axis\+Value}} (controller\+::axis Axis)
@@ -10,11 +17,11 @@ bool \mbox{\hyperlink{controller_8cpp_aff3b02388de758f0fe6d98930ea57626_aff3b023
 \end{DoxyCompactItemize}
 
 
-\subsubsection{Function Documentation}
+\doxysubsection{Function Documentation}
 \mbox{\Hypertarget{controller_8cpp_a73be3a8649e7d561a68cd816420efbd9_a73be3a8649e7d561a68cd816420efbd9}\label{controller_8cpp_a73be3a8649e7d561a68cd816420efbd9_a73be3a8649e7d561a68cd816420efbd9}} 
-\index{controller.\+cpp@{controller.\+cpp}!axis\+Value@{axis\+Value}}
-\index{axis\+Value@{axis\+Value}!controller.\+cpp@{controller.\+cpp}}
-\paragraph{\texorpdfstring{axis\+Value()}{axisValue()}}
+\index{controller.cpp@{controller.cpp}!axisValue@{axisValue}}
+\index{axisValue@{axisValue}!controller.cpp@{controller.cpp}}
+\doxysubsubsection{\texorpdfstring{axisValue()}{axisValue()}}
 {\footnotesize\ttfamily int axis\+Value (\begin{DoxyParamCaption}\item[{controller\+::axis}]{Axis }\end{DoxyParamCaption})}
 
 Returns an axis value of the controller in a -\/100 -\/ 100 scale, designed to be used with motor speeds in percent 
@@ -33,15 +40,23 @@ Michael Baraty
 Definition at line \mbox{\hyperlink{controller_8cpp_source_l00004}{4}} of file \mbox{\hyperlink{controller_8cpp_source}{controller.\+cpp}}.
 
 
-\begin{DoxyCode}
-00004                                    \{
-00005   \textcolor{keywordflow}{return} Axis.position();
-00006 \}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00004                                    \{}
+\DoxyCodeLine{00005   \textcolor{keywordflow}{return} Axis.position();}
+\DoxyCodeLine{00006 \}}
+
 \end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d47/controller_8cpp_a73be3a8649e7d561a68cd816420efbd9_a73be3a8649e7d561a68cd816420efbd9_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{controller_8cpp_aff3b02388de758f0fe6d98930ea57626_aff3b02388de758f0fe6d98930ea57626}\label{controller_8cpp_aff3b02388de758f0fe6d98930ea57626_aff3b02388de758f0fe6d98930ea57626}} 
-\index{controller.\+cpp@{controller.\+cpp}!button\+Is\+Pressed@{button\+Is\+Pressed}}
-\index{button\+Is\+Pressed@{button\+Is\+Pressed}!controller.\+cpp@{controller.\+cpp}}
-\paragraph{\texorpdfstring{button\+Is\+Pressed()}{buttonIsPressed()}}
+\index{controller.cpp@{controller.cpp}!buttonIsPressed@{buttonIsPressed}}
+\index{buttonIsPressed@{buttonIsPressed}!controller.cpp@{controller.cpp}}
+\doxysubsubsection{\texorpdfstring{buttonIsPressed()}{buttonIsPressed()}}
 {\footnotesize\ttfamily bool button\+Is\+Pressed (\begin{DoxyParamCaption}\item[{controller\+::button}]{Button }\end{DoxyParamCaption})}
 
 Returns a boolean for whether a designated button is being pressed 
@@ -60,8 +75,16 @@ Michael Baraty
 Definition at line \mbox{\hyperlink{controller_8cpp_source_l00008}{8}} of file \mbox{\hyperlink{controller_8cpp_source}{controller.\+cpp}}.
 
 
-\begin{DoxyCode}
-00008                                               \{
-00009   \textcolor{keywordflow}{return} Button.pressing();
-00010 \}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00008                                               \{}
+\DoxyCodeLine{00009   \textcolor{keywordflow}{return} Button.pressing();}
+\DoxyCodeLine{00010 \}}
+
 \end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d47/controller_8cpp_aff3b02388de758f0fe6d98930ea57626_aff3b02388de758f0fe6d98930ea57626_icgraph}
+\end{center}
+\end{figure}

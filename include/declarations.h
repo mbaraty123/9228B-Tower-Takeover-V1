@@ -1,10 +1,12 @@
 /**
   * Declares all the contants necessary for the entire project
+  * @file declarations.h
   * @author Michael Baraty
   * @date 11/9/2019
   */
 #ifndef DECLARATIONS_H
 #define DECLARATIONS_H
+
 using namespace vex;
 
 /**

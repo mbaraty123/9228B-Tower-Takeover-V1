@@ -1,45 +1,46 @@
-\hypertarget{drive_8h_source}{}\subsection{drive.\+h}
-\label{drive_8h_source}\index{include/drive.\+h@{include/drive.\+h}}
+\hypertarget{drive_8h_source}{}\doxysection{drive.\+h}
+\label{drive_8h_source}\index{include/drive.h@{include/drive.h}}
 
-\begin{DoxyCode}
-00001 
-00006 \textcolor{preprocessor}{#ifndef DRIVE\_H}
-00007 \textcolor{preprocessor}{#define DRIVE\_H}
-00008 
-00009 \textcolor{preprocessor}{#include "\mbox{\hyperlink{controller_8h}{controller.h}}"}
-00010 
-\Hypertarget{drive_8h_source_l00016}\mbox{\hyperlink{drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_a2771dd4b083c12b0f13d534e3d1914dc}{00016}} \textcolor{keyword}{enum class} \mbox{\hyperlink{drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_a2771dd4b083c12b0f13d534e3d1914dc}{DriveSide}} : int \{
-00017     \mbox{\hyperlink{auton_8h_a702107095bd059695d57318e7338a4a7_a702107095bd059695d57318e7338a4a7a684d325a7303f52e64011467ff5c5758}{LEFT}} = 0,
-00018     \mbox{\hyperlink{auton_8h_a702107095bd059695d57318e7338a4a7_a702107095bd059695d57318e7338a4a7a21507b40c80068eda19865706fdc2403}{RIGHT}} = 1,
-00019     \mbox{\hyperlink{drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_a2771dd4b083c12b0f13d534e3d1914dca6328e5e3186c227a021ef2ff77e40197}{BOTH}} = 2
-00020  \};
-00021 
-00027 \textcolor{keywordtype}{void} \mbox{\hyperlink{drive_8h_a6ff8820b82f28a73c88a746ddacb26bb_a6ff8820b82f28a73c88a746ddacb26bb}{arcadeDrive}}();
-00028 
-00034 \textcolor{keywordtype}{void} \mbox{\hyperlink{drive_8h_ab8605578ac6dddeb3e511513523e3354_ab8605578ac6dddeb3e511513523e3354}{tankDrive}}();
-00035 
-00043 \textcolor{keywordtype}{void} \mbox{\hyperlink{drive_8h_ac522da2148fe1cfd9bea8c026e64ee7b_ac522da2148fe1cfd9bea8c026e64ee7b}{setSideSpeed}}(\mbox{\hyperlink{drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_a2771dd4b083c12b0f13d534e3d1914dc}{DriveSide}} side, \textcolor{keywordtype}{int} speed);
-00044 
-00050 \textcolor{keywordtype}{void} \mbox{\hyperlink{drive_8h_a928e32686c7e00c1ecde24c3da3019f7_a928e32686c7e00c1ecde24c3da3019f7}{drive}}();
-00051 
-00057 \textcolor{keywordtype}{void} \mbox{\hyperlink{drive_8h_a08a55986dab46203f1eeef50123cf4bd_a08a55986dab46203f1eeef50123cf4bd}{moveStackForward}}();
-00058 
-00064 \textcolor{keywordtype}{void} \mbox{\hyperlink{drive_8h_ac153148440cec552a2824c91569e1e5a_ac153148440cec552a2824c91569e1e5a}{moveStackBack}}();
-00065 
-00071 \textcolor{keywordtype}{void} \mbox{\hyperlink{drive_8h_abc3819041cf96aad1093752a3a5de31c_abc3819041cf96aad1093752a3a5de31c}{stackControl}}();
-00072 
-00078 \textcolor{keywordtype}{void} \mbox{\hyperlink{drive_8h_adf7b0afb3a8dcf884db533b0217b0543_adf7b0afb3a8dcf884db533b0217b0543}{armUp}}();
-00079 
-00085 \textcolor{keywordtype}{void} \mbox{\hyperlink{drive_8h_ab1850cc7cdb69057fe29f45eefe7ec90_ab1850cc7cdb69057fe29f45eefe7ec90}{armDown}}();
-00086 
-00092 \textcolor{keywordtype}{void} \mbox{\hyperlink{drive_8h_adde1067b42b4de65ff20afb8901f7643_adde1067b42b4de65ff20afb8901f7643}{armControl}}();
-00093 
-00099 \textcolor{keywordtype}{void} \mbox{\hyperlink{drive_8h_aa0846c73538fc48569a7c7c3689a59f0_aa0846c73538fc48569a7c7c3689a59f0}{intakeIn}}();
-00100 
-00106 \textcolor{keywordtype}{void} \mbox{\hyperlink{drive_8h_aaca1ffa87592c1c5783fe6e18f9c655b_aaca1ffa87592c1c5783fe6e18f9c655b}{intakeOut}}();
-00107 
-00113 \textcolor{keywordtype}{void} \mbox{\hyperlink{drive_8h_a8afb2a071b21d98c49d5888a7b380ba6_a8afb2a071b21d98c49d5888a7b380ba6}{intakeControl}}();
-00114 
-00115 
-00116 \textcolor{preprocessor}{#endif}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 }
+\DoxyCodeLine{00007 \textcolor{preprocessor}{\#ifndef DRIVE\_H}}
+\DoxyCodeLine{00008 \textcolor{preprocessor}{\#define DRIVE\_H}}
+\DoxyCodeLine{00009 }
+\DoxyCodeLine{00010 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{controller_8h}{controller.h}}"}}
+\DoxyCodeLine{00011 }
+\DoxyCodeLine{\Hypertarget{drive_8h_source_l00017}\mbox{\hyperlink{drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_a2771dd4b083c12b0f13d534e3d1914dc}{00017}} \textcolor{keyword}{enum class} \mbox{\hyperlink{drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_a2771dd4b083c12b0f13d534e3d1914dc}{DriveSide}} : int \{}
+\DoxyCodeLine{00018     \mbox{\hyperlink{auton_8h_a702107095bd059695d57318e7338a4a7_a702107095bd059695d57318e7338a4a7a684d325a7303f52e64011467ff5c5758}{LEFT}} = 0,}
+\DoxyCodeLine{00019     \mbox{\hyperlink{auton_8h_a702107095bd059695d57318e7338a4a7_a702107095bd059695d57318e7338a4a7a21507b40c80068eda19865706fdc2403}{RIGHT}} = 1,}
+\DoxyCodeLine{00020     \mbox{\hyperlink{drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_a2771dd4b083c12b0f13d534e3d1914dca6328e5e3186c227a021ef2ff77e40197}{BOTH}} = 2}
+\DoxyCodeLine{00021  \};}
+\DoxyCodeLine{00022 }
+\DoxyCodeLine{00028 \textcolor{keywordtype}{void} \mbox{\hyperlink{drive_8h_a6ff8820b82f28a73c88a746ddacb26bb_a6ff8820b82f28a73c88a746ddacb26bb}{arcadeDrive}}();}
+\DoxyCodeLine{00029 }
+\DoxyCodeLine{00035 \textcolor{keywordtype}{void} \mbox{\hyperlink{drive_8h_ab8605578ac6dddeb3e511513523e3354_ab8605578ac6dddeb3e511513523e3354}{tankDrive}}();}
+\DoxyCodeLine{00036 }
+\DoxyCodeLine{00044 \textcolor{keywordtype}{void} \mbox{\hyperlink{drive_8h_ac522da2148fe1cfd9bea8c026e64ee7b_ac522da2148fe1cfd9bea8c026e64ee7b}{setSideSpeed}}(\mbox{\hyperlink{drive_8h_a2771dd4b083c12b0f13d534e3d1914dc_a2771dd4b083c12b0f13d534e3d1914dc}{DriveSide}} side, \textcolor{keywordtype}{int} speed);}
+\DoxyCodeLine{00045 }
+\DoxyCodeLine{00051 \textcolor{keywordtype}{void} \mbox{\hyperlink{drive_8h_a928e32686c7e00c1ecde24c3da3019f7_a928e32686c7e00c1ecde24c3da3019f7}{drive}}();}
+\DoxyCodeLine{00052 }
+\DoxyCodeLine{00058 \textcolor{keywordtype}{void} \mbox{\hyperlink{drive_8h_a08a55986dab46203f1eeef50123cf4bd_a08a55986dab46203f1eeef50123cf4bd}{moveStackForward}}();}
+\DoxyCodeLine{00059 }
+\DoxyCodeLine{00065 \textcolor{keywordtype}{void} \mbox{\hyperlink{drive_8h_ac153148440cec552a2824c91569e1e5a_ac153148440cec552a2824c91569e1e5a}{moveStackBack}}();}
+\DoxyCodeLine{00066 }
+\DoxyCodeLine{00072 \textcolor{keywordtype}{void} \mbox{\hyperlink{drive_8h_abc3819041cf96aad1093752a3a5de31c_abc3819041cf96aad1093752a3a5de31c}{stackControl}}();}
+\DoxyCodeLine{00073 }
+\DoxyCodeLine{00079 \textcolor{keywordtype}{void} \mbox{\hyperlink{drive_8h_adf7b0afb3a8dcf884db533b0217b0543_adf7b0afb3a8dcf884db533b0217b0543}{armUp}}();}
+\DoxyCodeLine{00080 }
+\DoxyCodeLine{00086 \textcolor{keywordtype}{void} \mbox{\hyperlink{drive_8h_ab1850cc7cdb69057fe29f45eefe7ec90_ab1850cc7cdb69057fe29f45eefe7ec90}{armDown}}();}
+\DoxyCodeLine{00087 }
+\DoxyCodeLine{00093 \textcolor{keywordtype}{void} \mbox{\hyperlink{drive_8h_adde1067b42b4de65ff20afb8901f7643_adde1067b42b4de65ff20afb8901f7643}{armControl}}();}
+\DoxyCodeLine{00094 }
+\DoxyCodeLine{00100 \textcolor{keywordtype}{void} \mbox{\hyperlink{drive_8h_aa0846c73538fc48569a7c7c3689a59f0_aa0846c73538fc48569a7c7c3689a59f0}{intakeIn}}();}
+\DoxyCodeLine{00101 }
+\DoxyCodeLine{00107 \textcolor{keywordtype}{void} \mbox{\hyperlink{drive_8h_aaca1ffa87592c1c5783fe6e18f9c655b_aaca1ffa87592c1c5783fe6e18f9c655b}{intakeOut}}();}
+\DoxyCodeLine{00108 }
+\DoxyCodeLine{00114 \textcolor{keywordtype}{void} \mbox{\hyperlink{drive_8h_a8afb2a071b21d98c49d5888a7b380ba6_a8afb2a071b21d98c49d5888a7b380ba6}{intakeControl}}();}
+\DoxyCodeLine{00115 }
+\DoxyCodeLine{00116 }
+\DoxyCodeLine{00117 \textcolor{preprocessor}{\#endif}}
+
 \end{DoxyCode}

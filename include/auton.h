@@ -1,5 +1,6 @@
 /**
   * Declares the autonomous functions for the robot
+  * @file auton.h
   * @author Michael Baraty
   * @date 11/9/2019
   */
@@ -9,6 +10,8 @@
 /**
   * Moves the robot forward for a certain distance
   * @param inches The distance to move in inches (negative for reverse)
+  * @param speed How fast the robot should move at a percent scale. Defaults to 50
+  * @param blocking Whether the function should be blocking or not. Defaults to true
   * @author Michael Baraty
   * @date 11/9/2019
   */
@@ -17,6 +20,7 @@ bool moveForward(double inches, double speed, bool blocking);
 /**
   * Pivots the robot clockwise to a certain angle
   * @param degrees The number of degrees to pivot the robot
+  * @param blocking Whether the function should be blocking or not. Defaults to true
   * @author Michael Baraty
   * @date 11/9/2019
   */
@@ -25,6 +29,7 @@ bool pivotClockwise(float degrees, bool blocking);
 /**
   * Pivots the robot counter-clockwise to a certain angle
   * @param degrees The number of degrees to pivot the robot
+  * @param blocking Whether the function should be blocking or not. Defaults to true
   * @author Michael Baraty
   * @date 11/9/2019
   */
@@ -94,14 +99,41 @@ void autonRedLeft();
   */
 void autonRedRight();
 
+/**
+  * Initiates the specified experimental autonomous routine
+  * @param side The side in relastion to the zone th erobot is going ot be near
+  * @param color The color the robot is starting in
+  * @author Michael Baraty
+  * @date 11/9/2019
+  */
 void badAuton(Side side, Color color);
 
+/**
+  * Initiates blue left experimental autonomous routine
+  * @author Michael Baraty
+  * @date 11/9/2019
+  */
 void badAutonBlueLeft();
 
+/**
+  * Initiates blue right experimental autonomous routine
+  * @author Michael Baraty
+  * @date 11/9/2019
+  */
 void badAutonBlueRight();
 
+/**
+  * Initiates red left experimental autonomous routine
+  * @author Michael Baraty
+  * @date 11/9/2019
+  */
 void badAutonRedLeft();
 
+/**
+  * Initiates red right experimental autonomous routine
+  * @author Michael Baraty
+  * @date 11/9/2019
+  */
 void badAutonRedRight();
 
 #endif

@@ -1,147 +1,140 @@
-\hypertarget{main_8cpp_source}{}\subsection{main.\+cpp}
-\label{main_8cpp_source}\index{src/main.\+cpp@{src/main.\+cpp}}
+\hypertarget{main_8cpp_source}{}\doxysection{main.\+cpp}
+\label{main_8cpp_source}\index{src/main.cpp@{src/main.cpp}}
 
-\begin{DoxyCode}
-00001 \textcolor{comment}{/*----------------------------------------------------------------------------*/}
-00002 \textcolor{comment}{/*                                                                            */}
-00003 \textcolor{comment}{/*    Module:       main.cpp                                                  */}
-00004 \textcolor{comment}{/*    Author:       mbaraty                                                   */}
-00005 \textcolor{comment}{/*    Created:      Thu Sep 12 2019                                           */}
-00006 \textcolor{comment}{/*    Description:  V5 project                                                */}
-00007 \textcolor{comment}{/*                                                                            */}
-00008 \textcolor{comment}{/*----------------------------------------------------------------------------*/}
-00009 \textcolor{preprocessor}{#include "\mbox{\hyperlink{vex_8h}{vex.h}}"}
-00010 \textcolor{preprocessor}{#include "\mbox{\hyperlink{drive_8h}{drive.h}}"}
-00011 \textcolor{preprocessor}{#include "\mbox{\hyperlink{auton_8h}{auton.h}}"}
-00012 
-00013 \textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacevex}{vex}};
-00014 
-00015 \textcolor{comment}{// A global instance of vex::competition}
-\Hypertarget{main_8cpp_source_l00016}\mbox{\hyperlink{main_8cpp_ae38c1d025caf302610a55e0a7a9db5dd_ae38c1d025caf302610a55e0a7a9db5dd}{00016}} vex::competition \mbox{\hyperlink{main_8cpp_ae38c1d025caf302610a55e0a7a9db5dd_ae38c1d025caf302610a55e0a7a9db5dd}{Competition}};
-\Hypertarget{main_8cpp_source_l00017}\mbox{\hyperlink{main_8cpp_a4918ae1421e0a76946a52104b80cd8b8_a4918ae1421e0a76946a52104b80cd8b8}{00017}} vex::brain \mbox{\hyperlink{main_8cpp_a4918ae1421e0a76946a52104b80cd8b8_a4918ae1421e0a76946a52104b80cd8b8}{Brain}};
-\Hypertarget{main_8cpp_source_l00018}\mbox{\hyperlink{main_8cpp_ab04f8ff803f7f02c23e713402e13bf32_ab04f8ff803f7f02c23e713402e13bf32}{00018}} controller \mbox{\hyperlink{main_8cpp_ab04f8ff803f7f02c23e713402e13bf32_ab04f8ff803f7f02c23e713402e13bf32}{MASTER}} = controller();
-00019 
-\Hypertarget{main_8cpp_source_l00020}\mbox{\hyperlink{main_8cpp_aa8d8e260e2268c61bbbf2017f3f6ad92_aa8d8e260e2268c61bbbf2017f3f6ad92}{00020}} task \mbox{\hyperlink{main_8cpp_aa8d8e260e2268c61bbbf2017f3f6ad92_aa8d8e260e2268c61bbbf2017f3f6ad92}{printTask}};
-00021 
-\Hypertarget{main_8cpp_source_l00022}\mbox{\hyperlink{main_8cpp_ab24214b642128d0f3cb67e9b12e7d4fb_ab24214b642128d0f3cb67e9b12e7d4fb}{00022}} motor \mbox{\hyperlink{main_8cpp_ab24214b642128d0f3cb67e9b12e7d4fb_ab24214b642128d0f3cb67e9b12e7d4fb}{MOTOR\_BACK\_LEFT}}   = motor(PORT9, \textcolor{keyword}{false});
-\Hypertarget{main_8cpp_source_l00023}\mbox{\hyperlink{main_8cpp_adece81dedf91c2893ba42dc05135a575_adece81dedf91c2893ba42dc05135a575}{00023}} motor \mbox{\hyperlink{main_8cpp_adece81dedf91c2893ba42dc05135a575_adece81dedf91c2893ba42dc05135a575}{MOTOR\_BACK\_RIGHT}}  = motor(PORT3, \textcolor{keyword}{true});
-\Hypertarget{main_8cpp_source_l00024}\mbox{\hyperlink{main_8cpp_a8c6f6315caf1d81bf4d4d113d0f7bffc_a8c6f6315caf1d81bf4d4d113d0f7bffc}{00024}} motor \mbox{\hyperlink{main_8cpp_a8c6f6315caf1d81bf4d4d113d0f7bffc_a8c6f6315caf1d81bf4d4d113d0f7bffc}{MOTOR\_FRONT\_LEFT}}  = motor(PORT10, \textcolor{keyword}{false});
-\Hypertarget{main_8cpp_source_l00025}\mbox{\hyperlink{main_8cpp_ad6a9ea3d338421c5d709c32ae1aa42d8_ad6a9ea3d338421c5d709c32ae1aa42d8}{00025}} motor \mbox{\hyperlink{main_8cpp_ad6a9ea3d338421c5d709c32ae1aa42d8_ad6a9ea3d338421c5d709c32ae1aa42d8}{MOTOR\_FRONT\_RIGHT}} = motor(PORT2, \textcolor{keyword}{true});
-\Hypertarget{main_8cpp_source_l00026}\mbox{\hyperlink{main_8cpp_a34de211d15bfb3c0ac450597fd96b4fc_a34de211d15bfb3c0ac450597fd96b4fc}{00026}} motor \mbox{\hyperlink{main_8cpp_a34de211d15bfb3c0ac450597fd96b4fc_a34de211d15bfb3c0ac450597fd96b4fc}{MOTOR\_INTAKE\_A}}    = motor(PORT15, gearSetting::ratio36\_1, \textcolor{keyword}{true});
-\Hypertarget{main_8cpp_source_l00027}\mbox{\hyperlink{main_8cpp_a5ae79e7ed71b0b94b3983c22c60c2eaa_a5ae79e7ed71b0b94b3983c22c60c2eaa}{00027}} motor \mbox{\hyperlink{main_8cpp_a5ae79e7ed71b0b94b3983c22c60c2eaa_a5ae79e7ed71b0b94b3983c22c60c2eaa}{MOTOR\_INTAKE\_B}}    = motor(PORT16, gearSetting::ratio36\_1, \textcolor{keyword}{false});
-\Hypertarget{main_8cpp_source_l00028}\mbox{\hyperlink{main_8cpp_a212c888d64ffcd7e7b44a548fa0408a9_a212c888d64ffcd7e7b44a548fa0408a9}{00028}} motor \mbox{\hyperlink{main_8cpp_a212c888d64ffcd7e7b44a548fa0408a9_a212c888d64ffcd7e7b44a548fa0408a9}{MOTOR\_STACK}}       = motor(PORT17, \textcolor{keyword}{false});
-\Hypertarget{main_8cpp_source_l00029}\mbox{\hyperlink{main_8cpp_a9a834f9a2c804ef0d65ed2f68c10a61a_a9a834f9a2c804ef0d65ed2f68c10a61a}{00029}} motor \mbox{\hyperlink{main_8cpp_a9a834f9a2c804ef0d65ed2f68c10a61a_a9a834f9a2c804ef0d65ed2f68c10a61a}{MOTOR\_ARM}}         = motor(PORT12, gearSetting::ratio36\_1, \textcolor{keyword}{true});
-00030 
-00031 \textcolor{comment}{// define your global instances of motors and other devices here}
-00032 
-\Hypertarget{main_8cpp_source_l00033}\mbox{\hyperlink{main_8cpp_acb559820d9ca11295b4500f179ef6392_acb559820d9ca11295b4500f179ef6392}{00033}} \textcolor{keywordtype}{int} \mbox{\hyperlink{main_8cpp_acb559820d9ca11295b4500f179ef6392_acb559820d9ca11295b4500f179ef6392}{i}} = 0;
-00034 
-\Hypertarget{main_8cpp_source_l00035}\mbox{\hyperlink{main_8cpp_ae1455c81426fba02cdaa271e742cee67_ae1455c81426fba02cdaa271e742cee67}{00035}} \textcolor{keywordtype}{int} \mbox{\hyperlink{main_8cpp_ae1455c81426fba02cdaa271e742cee67_ae1455c81426fba02cdaa271e742cee67}{printDisplay}}() \{
-00036   \textcolor{keywordflow}{while}(\textcolor{keyword}{true})\{
-00037     \mbox{\hyperlink{main_8cpp_a4918ae1421e0a76946a52104b80cd8b8_a4918ae1421e0a76946a52104b80cd8b8}{Brain}}.Screen.printAt(0, 20, \textcolor{stringliteral}{"%2.2f\(\backslash\)n..>BACK LEFT"}, \mbox{\hyperlink{main_8cpp_ab24214b642128d0f3cb67e9b12e7d4fb_ab24214b642128d0f3cb67e9b12e7d4fb}{MOTOR\_BACK\_LEFT}}.temperature(
-      temperatureUnits::celsius));
-00038     \mbox{\hyperlink{main_8cpp_a4918ae1421e0a76946a52104b80cd8b8_a4918ae1421e0a76946a52104b80cd8b8}{Brain}}.Screen.printAt(0, 50, \textcolor{stringliteral}{"%2.2f\(\backslash\)n..>BACK RIGHT"}, \mbox{\hyperlink{main_8cpp_adece81dedf91c2893ba42dc05135a575_adece81dedf91c2893ba42dc05135a575}{MOTOR\_BACK\_RIGHT}}.temperature(
-      temperatureUnits::celsius));
-00039     \mbox{\hyperlink{main_8cpp_a4918ae1421e0a76946a52104b80cd8b8_a4918ae1421e0a76946a52104b80cd8b8}{Brain}}.Screen.printAt(0, 80, \textcolor{stringliteral}{"%2.2f\(\backslash\)n..>FRONT LEFT"}, \mbox{\hyperlink{main_8cpp_a8c6f6315caf1d81bf4d4d113d0f7bffc_a8c6f6315caf1d81bf4d4d113d0f7bffc}{MOTOR\_FRONT\_LEFT}}.temperature(
-      temperatureUnits::celsius));
-00040     \mbox{\hyperlink{main_8cpp_a4918ae1421e0a76946a52104b80cd8b8_a4918ae1421e0a76946a52104b80cd8b8}{Brain}}.Screen.printAt(0, 110, \textcolor{stringliteral}{"%2.2f\(\backslash\)n..>FRONT RIGHT"}, \mbox{\hyperlink{main_8cpp_ad6a9ea3d338421c5d709c32ae1aa42d8_ad6a9ea3d338421c5d709c32ae1aa42d8}{MOTOR\_FRONT\_RIGHT}}.
-      temperature(temperatureUnits::celsius));
-00041     \mbox{\hyperlink{main_8cpp_a4918ae1421e0a76946a52104b80cd8b8_a4918ae1421e0a76946a52104b80cd8b8}{Brain}}.Screen.printAt(0, 140, \textcolor{stringliteral}{"%2.2f\(\backslash\)n..>INTAKE A"}, \mbox{\hyperlink{main_8cpp_a34de211d15bfb3c0ac450597fd96b4fc_a34de211d15bfb3c0ac450597fd96b4fc}{MOTOR\_INTAKE\_A}}.temperature(
-      temperatureUnits::celsius));
-00042     \mbox{\hyperlink{main_8cpp_a4918ae1421e0a76946a52104b80cd8b8_a4918ae1421e0a76946a52104b80cd8b8}{Brain}}.Screen.printAt(0, 170, \textcolor{stringliteral}{"%2.2f\(\backslash\)n..>INTAKE B"}, \mbox{\hyperlink{main_8cpp_a5ae79e7ed71b0b94b3983c22c60c2eaa_a5ae79e7ed71b0b94b3983c22c60c2eaa}{MOTOR\_INTAKE\_B}}.temperature(
-      temperatureUnits::celsius));
-00043     \mbox{\hyperlink{main_8cpp_a4918ae1421e0a76946a52104b80cd8b8_a4918ae1421e0a76946a52104b80cd8b8}{Brain}}.Screen.printAt(0, 200, \textcolor{stringliteral}{"%2.2f\(\backslash\)n..>ARM"}, \mbox{\hyperlink{main_8cpp_a9a834f9a2c804ef0d65ed2f68c10a61a_a9a834f9a2c804ef0d65ed2f68c10a61a}{MOTOR\_ARM}}.temperature(
-      temperatureUnits::celsius));
-00044     \mbox{\hyperlink{main_8cpp_a4918ae1421e0a76946a52104b80cd8b8_a4918ae1421e0a76946a52104b80cd8b8}{Brain}}.Screen.printAt(0, 230, \textcolor{stringliteral}{"%2.2f\(\backslash\)n..>MAGAZINE"}, \mbox{\hyperlink{main_8cpp_a212c888d64ffcd7e7b44a548fa0408a9_a212c888d64ffcd7e7b44a548fa0408a9}{MOTOR\_STACK}}.temperature(
-      temperatureUnits::celsius));
-00045 
-00046   printf(\textcolor{stringliteral}{"%d\(\backslash\)n"}, \mbox{\hyperlink{main_8cpp_acb559820d9ca11295b4500f179ef6392_acb559820d9ca11295b4500f179ef6392}{i}});
-00047   \mbox{\hyperlink{main_8cpp_acb559820d9ca11295b4500f179ef6392_acb559820d9ca11295b4500f179ef6392}{i}}++;
-00048     
-00049     task::sleep(1000);
-00050   \}
-00051 \}
-00052 
-00053 
-00054 \textcolor{comment}{/*---------------------------------------------------------------------------*/}
-00055 \textcolor{comment}{/*                          Pre-Autonomous Functions                         */}
-00056 \textcolor{comment}{/*                                                                           */}
-00057 \textcolor{comment}{/*  You may want to perform some actions before the competition starts.      */}
-00058 \textcolor{comment}{/*  Do them in the following function.  You must return from this function   */}
-00059 \textcolor{comment}{/*  or the autonomous and usercontrol tasks will not be started.  This       */}
-00060 \textcolor{comment}{/*  function is only called once after the cortex has been powered on and    */} 
-00061 \textcolor{comment}{/*  not every time that the robot is disabled.                               */}
-00062 \textcolor{comment}{/*---------------------------------------------------------------------------*/}
-00063 
-\Hypertarget{main_8cpp_source_l00064}\mbox{\hyperlink{main_8cpp_ac6b858ea8606cdfaee934aac6be66a96_ac6b858ea8606cdfaee934aac6be66a96}{00064}} \textcolor{keywordtype}{void} \mbox{\hyperlink{main_8cpp_ac6b858ea8606cdfaee934aac6be66a96_ac6b858ea8606cdfaee934aac6be66a96}{pre\_auton}}( \textcolor{keywordtype}{void} ) \{
-00065   \textcolor{comment}{// All activities that occur before the competition starts}
-00066   \textcolor{comment}{// Example: clearing encoders, setting servo positions, ...}
-00067   
-00068 \}
-00069 
-00070 \textcolor{comment}{/*---------------------------------------------------------------------------*/}
-00071 \textcolor{comment}{/*                                                                           */}
-00072 \textcolor{comment}{/*                              Autonomous Task                              */}
-00073 \textcolor{comment}{/*                                                                           */}
-00074 \textcolor{comment}{/*  This task is used to control your robot during the autonomous phase of   */}
-00075 \textcolor{comment}{/*  a VEX Competition.                                                       */}
-00076 \textcolor{comment}{/*                                                                           */}
-00077 \textcolor{comment}{/*  You must modify the code to add your own robot specific commands here.   */}
-00078 \textcolor{comment}{/*---------------------------------------------------------------------------*/}
-00079 
-\Hypertarget{main_8cpp_source_l00080}\mbox{\hyperlink{main_8cpp_a2df3d06bc5bced154da27fce393f991f_a2df3d06bc5bced154da27fce393f991f}{00080}} \textcolor{keywordtype}{void} \mbox{\hyperlink{main_8cpp_a2df3d06bc5bced154da27fce393f991f_a2df3d06bc5bced154da27fce393f991f}{autonomous}}( \textcolor{keywordtype}{void} ) \{
-00081 
-00082   \textcolor{comment}{//printDisplay();}
-00083 
-00084   \mbox{\hyperlink{auton_8h_a9c7e58a3b4bb5cdd30a6b3ed32e8f962_a9c7e58a3b4bb5cdd30a6b3ed32e8f962}{auton}}(\mbox{\hyperlink{auton_8h_a702107095bd059695d57318e7338a4a7_a702107095bd059695d57318e7338a4a7a684d325a7303f52e64011467ff5c5758}{Side::LEFT}}, \mbox{\hyperlink{auton_8h_a78abb31bad0fd1834c54a3ca6f8daab5_a78abb31bad0fd1834c54a3ca6f8daab5aa2d9547b5d3dd9f05984475f7c926da0}{Color::RED}});
-00085 
-00086   \textcolor{comment}{// ..........................................................................}
-00087   \textcolor{comment}{// Insert autonomous user code here.}
-00088   \textcolor{comment}{// ..........................................................................}
-00089 
-00090 \}
-00091 
-00092 \textcolor{comment}{/*---------------------------------------------------------------------------*/}
-00093 \textcolor{comment}{/*                                                                           */}
-00094 \textcolor{comment}{/*                              User Control Task                            */}
-00095 \textcolor{comment}{/*                                                                           */}
-00096 \textcolor{comment}{/*  This task is used to control your robot during the user control phase of */}
-00097 \textcolor{comment}{/*  a VEX Competition.                                                       */}
-00098 \textcolor{comment}{/*                                                                           */}
-00099 \textcolor{comment}{/*  You must modify the code to add your own robot specific commands here.   */}
-00100 \textcolor{comment}{/*---------------------------------------------------------------------------*/}
-00101 
-\Hypertarget{main_8cpp_source_l00102}\mbox{\hyperlink{main_8cpp_a0b51ae97a13db57021eefe87a9903444_a0b51ae97a13db57021eefe87a9903444}{00102}} \textcolor{keywordtype}{void} \mbox{\hyperlink{main_8cpp_a0b51ae97a13db57021eefe87a9903444_a0b51ae97a13db57021eefe87a9903444}{usercontrol}}( \textcolor{keywordtype}{void} ) \{
-00103   \textcolor{comment}{// User control code here, inside the loop}
-00104 
-00105   \textcolor{comment}{//auton(Side::RIGHT, Color::BLUE);}
-00106   \textcolor{keywordflow}{while} (1) \{
-00107 
-00108 
-00109     \mbox{\hyperlink{drive_8h_a928e32686c7e00c1ecde24c3da3019f7_a928e32686c7e00c1ecde24c3da3019f7}{drive}}();
-00110 
-00111     vex::task::sleep(20); \textcolor{comment}{//Sleep the task for a short amount of time to prevent wasted resources. }
-00112   \}
-00113 \}
-00114 
-00115 
-00116 \textcolor{comment}{//}
-00117 \textcolor{comment}{// Main will set up the competition functions and callbacks.}
-00118 \textcolor{comment}{//}
-\Hypertarget{main_8cpp_source_l00119}\mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_ae66f6b31b5ad750f1fe042a706a4e3d4}{00119}} \textcolor{keywordtype}{int} \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}() \{
-00120     \textcolor{comment}{//Set up callbacks for autonomous and driver control periods.}
-00121     \mbox{\hyperlink{main_8cpp_ae38c1d025caf302610a55e0a7a9db5dd_ae38c1d025caf302610a55e0a7a9db5dd}{Competition}}.autonomous( \mbox{\hyperlink{main_8cpp_a2df3d06bc5bced154da27fce393f991f_a2df3d06bc5bced154da27fce393f991f}{autonomous}} );
-00122     \mbox{\hyperlink{main_8cpp_ae38c1d025caf302610a55e0a7a9db5dd_ae38c1d025caf302610a55e0a7a9db5dd}{Competition}}.drivercontrol( \mbox{\hyperlink{main_8cpp_a0b51ae97a13db57021eefe87a9903444_a0b51ae97a13db57021eefe87a9903444}{usercontrol}} );
-00123     
-00124     \textcolor{comment}{//Run the pre-autonomous function. }
-00125     \mbox{\hyperlink{main_8cpp_ac6b858ea8606cdfaee934aac6be66a96_ac6b858ea8606cdfaee934aac6be66a96}{pre\_auton}}();
-00126 
-00127     
-00128     \textcolor{comment}{//Prevent main from exiting with an infinite loop.                        }
-00129     \textcolor{keywordflow}{while}(1) \{
-00130       \mbox{\hyperlink{main_8cpp_aa8d8e260e2268c61bbbf2017f3f6ad92_aa8d8e260e2268c61bbbf2017f3f6ad92}{printTask}} = task(\mbox{\hyperlink{main_8cpp_ae1455c81426fba02cdaa271e742cee67_ae1455c81426fba02cdaa271e742cee67}{printDisplay}});
-00131       vex::task::sleep(100);\textcolor{comment}{//Sleep the task for a short amount of time to prevent wasted resources.}
-00132     \}    
-00133        
-00134 \}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00002 \textcolor{comment}{/*                                                                            */}}
+\DoxyCodeLine{00003 \textcolor{comment}{/*    Module:       main.cpp                                                  */}}
+\DoxyCodeLine{00004 \textcolor{comment}{/*    Author:       mbaraty                                                   */}}
+\DoxyCodeLine{00005 \textcolor{comment}{/*    Created:      Thu Sep 12 2019                                           */}}
+\DoxyCodeLine{00006 \textcolor{comment}{/*    Description:  V5 project                                                */}}
+\DoxyCodeLine{00007 \textcolor{comment}{/*                                                                            */}}
+\DoxyCodeLine{00008 \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00009 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{vex_8h}{vex.h}}"}}
+\DoxyCodeLine{00010 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{drive_8h}{drive.h}}"}}
+\DoxyCodeLine{00011 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{auton_8h}{auton.h}}"}}
+\DoxyCodeLine{00012 }
+\DoxyCodeLine{00013 \textcolor{keyword}{using namespace }vex;}
+\DoxyCodeLine{00014 }
+\DoxyCodeLine{00015 \textcolor{comment}{// A global instance of vex::competition}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00016}\mbox{\hyperlink{main_8cpp_ae38c1d025caf302610a55e0a7a9db5dd_ae38c1d025caf302610a55e0a7a9db5dd}{00016}} vex::competition \mbox{\hyperlink{main_8cpp_ae38c1d025caf302610a55e0a7a9db5dd_ae38c1d025caf302610a55e0a7a9db5dd}{Competition}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00017}\mbox{\hyperlink{main_8cpp_a4918ae1421e0a76946a52104b80cd8b8_a4918ae1421e0a76946a52104b80cd8b8}{00017}} vex::brain \mbox{\hyperlink{main_8cpp_a4918ae1421e0a76946a52104b80cd8b8_a4918ae1421e0a76946a52104b80cd8b8}{Brain}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00018}\mbox{\hyperlink{main_8cpp_ab04f8ff803f7f02c23e713402e13bf32_ab04f8ff803f7f02c23e713402e13bf32}{00018}} controller \mbox{\hyperlink{main_8cpp_ab04f8ff803f7f02c23e713402e13bf32_ab04f8ff803f7f02c23e713402e13bf32}{MASTER}} = controller();}
+\DoxyCodeLine{00019 }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00020}\mbox{\hyperlink{main_8cpp_aa8d8e260e2268c61bbbf2017f3f6ad92_aa8d8e260e2268c61bbbf2017f3f6ad92}{00020}} task \mbox{\hyperlink{main_8cpp_aa8d8e260e2268c61bbbf2017f3f6ad92_aa8d8e260e2268c61bbbf2017f3f6ad92}{printTask}};}
+\DoxyCodeLine{00021 }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00022}\mbox{\hyperlink{main_8cpp_ab24214b642128d0f3cb67e9b12e7d4fb_ab24214b642128d0f3cb67e9b12e7d4fb}{00022}} motor \mbox{\hyperlink{main_8cpp_ab24214b642128d0f3cb67e9b12e7d4fb_ab24214b642128d0f3cb67e9b12e7d4fb}{MOTOR\_BACK\_LEFT}}   = motor(PORT9, \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00023}\mbox{\hyperlink{main_8cpp_adece81dedf91c2893ba42dc05135a575_adece81dedf91c2893ba42dc05135a575}{00023}} motor \mbox{\hyperlink{main_8cpp_adece81dedf91c2893ba42dc05135a575_adece81dedf91c2893ba42dc05135a575}{MOTOR\_BACK\_RIGHT}}  = motor(PORT3, \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00024}\mbox{\hyperlink{main_8cpp_a8c6f6315caf1d81bf4d4d113d0f7bffc_a8c6f6315caf1d81bf4d4d113d0f7bffc}{00024}} motor \mbox{\hyperlink{main_8cpp_a8c6f6315caf1d81bf4d4d113d0f7bffc_a8c6f6315caf1d81bf4d4d113d0f7bffc}{MOTOR\_FRONT\_LEFT}}  = motor(PORT10, \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00025}\mbox{\hyperlink{main_8cpp_ad6a9ea3d338421c5d709c32ae1aa42d8_ad6a9ea3d338421c5d709c32ae1aa42d8}{00025}} motor \mbox{\hyperlink{main_8cpp_ad6a9ea3d338421c5d709c32ae1aa42d8_ad6a9ea3d338421c5d709c32ae1aa42d8}{MOTOR\_FRONT\_RIGHT}} = motor(PORT2, \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00026}\mbox{\hyperlink{main_8cpp_a34de211d15bfb3c0ac450597fd96b4fc_a34de211d15bfb3c0ac450597fd96b4fc}{00026}} motor \mbox{\hyperlink{main_8cpp_a34de211d15bfb3c0ac450597fd96b4fc_a34de211d15bfb3c0ac450597fd96b4fc}{MOTOR\_INTAKE\_A}}    = motor(PORT15, gearSetting::ratio36\_1, \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00027}\mbox{\hyperlink{main_8cpp_a5ae79e7ed71b0b94b3983c22c60c2eaa_a5ae79e7ed71b0b94b3983c22c60c2eaa}{00027}} motor \mbox{\hyperlink{main_8cpp_a5ae79e7ed71b0b94b3983c22c60c2eaa_a5ae79e7ed71b0b94b3983c22c60c2eaa}{MOTOR\_INTAKE\_B}}    = motor(PORT16, gearSetting::ratio36\_1, \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00028}\mbox{\hyperlink{main_8cpp_a212c888d64ffcd7e7b44a548fa0408a9_a212c888d64ffcd7e7b44a548fa0408a9}{00028}} motor \mbox{\hyperlink{main_8cpp_a212c888d64ffcd7e7b44a548fa0408a9_a212c888d64ffcd7e7b44a548fa0408a9}{MOTOR\_STACK}}       = motor(PORT17, \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00029}\mbox{\hyperlink{main_8cpp_a9a834f9a2c804ef0d65ed2f68c10a61a_a9a834f9a2c804ef0d65ed2f68c10a61a}{00029}} motor \mbox{\hyperlink{main_8cpp_a9a834f9a2c804ef0d65ed2f68c10a61a_a9a834f9a2c804ef0d65ed2f68c10a61a}{MOTOR\_ARM}}         = motor(PORT12, gearSetting::ratio36\_1, \textcolor{keyword}{true});}
+\DoxyCodeLine{00030 }
+\DoxyCodeLine{00031 \textcolor{comment}{// define your global instances of motors and other devices here}}
+\DoxyCodeLine{00032 }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00033}\mbox{\hyperlink{main_8cpp_acb559820d9ca11295b4500f179ef6392_acb559820d9ca11295b4500f179ef6392}{00033}} \textcolor{keywordtype}{int} \mbox{\hyperlink{main_8cpp_acb559820d9ca11295b4500f179ef6392_acb559820d9ca11295b4500f179ef6392}{i}} = 0;}
+\DoxyCodeLine{00034 }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00035}\mbox{\hyperlink{main_8cpp_ae1455c81426fba02cdaa271e742cee67_ae1455c81426fba02cdaa271e742cee67}{00035}} \textcolor{keywordtype}{int} \mbox{\hyperlink{main_8cpp_ae1455c81426fba02cdaa271e742cee67_ae1455c81426fba02cdaa271e742cee67}{printDisplay}}() \{}
+\DoxyCodeLine{00036   \textcolor{keywordflow}{while}(\textcolor{keyword}{true})\{}
+\DoxyCodeLine{00037     \mbox{\hyperlink{main_8cpp_a4918ae1421e0a76946a52104b80cd8b8_a4918ae1421e0a76946a52104b80cd8b8}{Brain}}.Screen.printAt(0, 20, \textcolor{stringliteral}{"\%2.2f\(\backslash\)n..>BACK LEFT"}, \mbox{\hyperlink{main_8cpp_ab24214b642128d0f3cb67e9b12e7d4fb_ab24214b642128d0f3cb67e9b12e7d4fb}{MOTOR\_BACK\_LEFT}}.temperature(temperatureUnits::celsius));}
+\DoxyCodeLine{00038     \mbox{\hyperlink{main_8cpp_a4918ae1421e0a76946a52104b80cd8b8_a4918ae1421e0a76946a52104b80cd8b8}{Brain}}.Screen.printAt(0, 50, \textcolor{stringliteral}{"\%2.2f\(\backslash\)n..>BACK RIGHT"}, \mbox{\hyperlink{main_8cpp_adece81dedf91c2893ba42dc05135a575_adece81dedf91c2893ba42dc05135a575}{MOTOR\_BACK\_RIGHT}}.temperature(temperatureUnits::celsius));}
+\DoxyCodeLine{00039     \mbox{\hyperlink{main_8cpp_a4918ae1421e0a76946a52104b80cd8b8_a4918ae1421e0a76946a52104b80cd8b8}{Brain}}.Screen.printAt(0, 80, \textcolor{stringliteral}{"\%2.2f\(\backslash\)n..>FRONT LEFT"}, \mbox{\hyperlink{main_8cpp_a8c6f6315caf1d81bf4d4d113d0f7bffc_a8c6f6315caf1d81bf4d4d113d0f7bffc}{MOTOR\_FRONT\_LEFT}}.temperature(temperatureUnits::celsius));}
+\DoxyCodeLine{00040     \mbox{\hyperlink{main_8cpp_a4918ae1421e0a76946a52104b80cd8b8_a4918ae1421e0a76946a52104b80cd8b8}{Brain}}.Screen.printAt(0, 110, \textcolor{stringliteral}{"\%2.2f\(\backslash\)n..>FRONT RIGHT"}, \mbox{\hyperlink{main_8cpp_ad6a9ea3d338421c5d709c32ae1aa42d8_ad6a9ea3d338421c5d709c32ae1aa42d8}{MOTOR\_FRONT\_RIGHT}}.temperature(temperatureUnits::celsius));}
+\DoxyCodeLine{00041     \mbox{\hyperlink{main_8cpp_a4918ae1421e0a76946a52104b80cd8b8_a4918ae1421e0a76946a52104b80cd8b8}{Brain}}.Screen.printAt(0, 140, \textcolor{stringliteral}{"\%2.2f\(\backslash\)n..>INTAKE A"}, \mbox{\hyperlink{main_8cpp_a34de211d15bfb3c0ac450597fd96b4fc_a34de211d15bfb3c0ac450597fd96b4fc}{MOTOR\_INTAKE\_A}}.temperature(temperatureUnits::celsius));}
+\DoxyCodeLine{00042     \mbox{\hyperlink{main_8cpp_a4918ae1421e0a76946a52104b80cd8b8_a4918ae1421e0a76946a52104b80cd8b8}{Brain}}.Screen.printAt(0, 170, \textcolor{stringliteral}{"\%2.2f\(\backslash\)n..>INTAKE B"}, \mbox{\hyperlink{main_8cpp_a5ae79e7ed71b0b94b3983c22c60c2eaa_a5ae79e7ed71b0b94b3983c22c60c2eaa}{MOTOR\_INTAKE\_B}}.temperature(temperatureUnits::celsius));}
+\DoxyCodeLine{00043     \mbox{\hyperlink{main_8cpp_a4918ae1421e0a76946a52104b80cd8b8_a4918ae1421e0a76946a52104b80cd8b8}{Brain}}.Screen.printAt(0, 200, \textcolor{stringliteral}{"\%2.2f\(\backslash\)n..>ARM"}, \mbox{\hyperlink{main_8cpp_a9a834f9a2c804ef0d65ed2f68c10a61a_a9a834f9a2c804ef0d65ed2f68c10a61a}{MOTOR\_ARM}}.temperature(temperatureUnits::celsius));}
+\DoxyCodeLine{00044     \mbox{\hyperlink{main_8cpp_a4918ae1421e0a76946a52104b80cd8b8_a4918ae1421e0a76946a52104b80cd8b8}{Brain}}.Screen.printAt(0, 230, \textcolor{stringliteral}{"\%2.2f\(\backslash\)n..>MAGAZINE"}, \mbox{\hyperlink{main_8cpp_a212c888d64ffcd7e7b44a548fa0408a9_a212c888d64ffcd7e7b44a548fa0408a9}{MOTOR\_STACK}}.temperature(temperatureUnits::celsius));}
+\DoxyCodeLine{00045 }
+\DoxyCodeLine{00046   printf(\textcolor{stringliteral}{"\%d\(\backslash\)n"}, \mbox{\hyperlink{main_8cpp_acb559820d9ca11295b4500f179ef6392_acb559820d9ca11295b4500f179ef6392}{i}});}
+\DoxyCodeLine{00047   \mbox{\hyperlink{main_8cpp_acb559820d9ca11295b4500f179ef6392_acb559820d9ca11295b4500f179ef6392}{i}}++;}
+\DoxyCodeLine{00048     }
+\DoxyCodeLine{00049     task::sleep(1000);}
+\DoxyCodeLine{00050   \}}
+\DoxyCodeLine{00051 \}}
+\DoxyCodeLine{00052 }
+\DoxyCodeLine{00053 }
+\DoxyCodeLine{00054 \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00055 \textcolor{comment}{/*                          Pre-\/Autonomous Functions                         */}}
+\DoxyCodeLine{00056 \textcolor{comment}{/*                                                                           */}}
+\DoxyCodeLine{00057 \textcolor{comment}{/*  You may want to perform some actions before the competition starts.      */}}
+\DoxyCodeLine{00058 \textcolor{comment}{/*  Do them in the following function.  You must return from this function   */}}
+\DoxyCodeLine{00059 \textcolor{comment}{/*  or the autonomous and usercontrol tasks will not be started.  This       */}}
+\DoxyCodeLine{00060 \textcolor{comment}{/*  function is only called once after the cortex has been powered on and    */} }
+\DoxyCodeLine{00061 \textcolor{comment}{/*  not every time that the robot is disabled.                               */}}
+\DoxyCodeLine{00062 \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00063 }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00064}\mbox{\hyperlink{main_8cpp_ac6b858ea8606cdfaee934aac6be66a96_ac6b858ea8606cdfaee934aac6be66a96}{00064}} \textcolor{keywordtype}{void} \mbox{\hyperlink{main_8cpp_ac6b858ea8606cdfaee934aac6be66a96_ac6b858ea8606cdfaee934aac6be66a96}{pre\_auton}}( \textcolor{keywordtype}{void} ) \{}
+\DoxyCodeLine{00065   \textcolor{comment}{// All activities that occur before the competition starts}}
+\DoxyCodeLine{00066   \textcolor{comment}{// Example: clearing encoders, setting servo positions, ...}}
+\DoxyCodeLine{00067   }
+\DoxyCodeLine{00068 \}}
+\DoxyCodeLine{00069 }
+\DoxyCodeLine{00070 \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00071 \textcolor{comment}{/*                                                                           */}}
+\DoxyCodeLine{00072 \textcolor{comment}{/*                              Autonomous Task                              */}}
+\DoxyCodeLine{00073 \textcolor{comment}{/*                                                                           */}}
+\DoxyCodeLine{00074 \textcolor{comment}{/*  This task is used to control your robot during the autonomous phase of   */}}
+\DoxyCodeLine{00075 \textcolor{comment}{/*  a VEX Competition.                                                       */}}
+\DoxyCodeLine{00076 \textcolor{comment}{/*                                                                           */}}
+\DoxyCodeLine{00077 \textcolor{comment}{/*  You must modify the code to add your own robot specific commands here.   */}}
+\DoxyCodeLine{00078 \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00079 }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00080}\mbox{\hyperlink{main_8cpp_a2df3d06bc5bced154da27fce393f991f_a2df3d06bc5bced154da27fce393f991f}{00080}} \textcolor{keywordtype}{void} \mbox{\hyperlink{main_8cpp_a2df3d06bc5bced154da27fce393f991f_a2df3d06bc5bced154da27fce393f991f}{autonomous}}( \textcolor{keywordtype}{void} ) \{}
+\DoxyCodeLine{00081 }
+\DoxyCodeLine{00082   \textcolor{comment}{//printDisplay();}}
+\DoxyCodeLine{00083 }
+\DoxyCodeLine{00084   \mbox{\hyperlink{auton_8h_a9c7e58a3b4bb5cdd30a6b3ed32e8f962_a9c7e58a3b4bb5cdd30a6b3ed32e8f962}{auton}}(\mbox{\hyperlink{auton_8h_a702107095bd059695d57318e7338a4a7_a702107095bd059695d57318e7338a4a7a684d325a7303f52e64011467ff5c5758}{Side::LEFT}}, \mbox{\hyperlink{auton_8h_a78abb31bad0fd1834c54a3ca6f8daab5_a78abb31bad0fd1834c54a3ca6f8daab5aa2d9547b5d3dd9f05984475f7c926da0}{Color::RED}});}
+\DoxyCodeLine{00085 }
+\DoxyCodeLine{00086   \textcolor{comment}{// ..........................................................................}}
+\DoxyCodeLine{00087   \textcolor{comment}{// Insert autonomous user code here.}}
+\DoxyCodeLine{00088   \textcolor{comment}{// ..........................................................................}}
+\DoxyCodeLine{00089 }
+\DoxyCodeLine{00090 \}}
+\DoxyCodeLine{00091 }
+\DoxyCodeLine{00092 \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00093 \textcolor{comment}{/*                                                                           */}}
+\DoxyCodeLine{00094 \textcolor{comment}{/*                              User Control Task                            */}}
+\DoxyCodeLine{00095 \textcolor{comment}{/*                                                                           */}}
+\DoxyCodeLine{00096 \textcolor{comment}{/*  This task is used to control your robot during the user control phase of */}}
+\DoxyCodeLine{00097 \textcolor{comment}{/*  a VEX Competition.                                                       */}}
+\DoxyCodeLine{00098 \textcolor{comment}{/*                                                                           */}}
+\DoxyCodeLine{00099 \textcolor{comment}{/*  You must modify the code to add your own robot specific commands here.   */}}
+\DoxyCodeLine{00100 \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00101 }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00102}\mbox{\hyperlink{main_8cpp_a0b51ae97a13db57021eefe87a9903444_a0b51ae97a13db57021eefe87a9903444}{00102}} \textcolor{keywordtype}{void} \mbox{\hyperlink{main_8cpp_a0b51ae97a13db57021eefe87a9903444_a0b51ae97a13db57021eefe87a9903444}{usercontrol}}( \textcolor{keywordtype}{void} ) \{}
+\DoxyCodeLine{00103   \textcolor{comment}{// User control code here, inside the loop}}
+\DoxyCodeLine{00104 }
+\DoxyCodeLine{00105   \textcolor{comment}{//auton(Side::RIGHT, Color::BLUE);}}
+\DoxyCodeLine{00106   \textcolor{keywordflow}{while} (1) \{}
+\DoxyCodeLine{00107 }
+\DoxyCodeLine{00108 }
+\DoxyCodeLine{00109     \mbox{\hyperlink{drive_8h_a928e32686c7e00c1ecde24c3da3019f7_a928e32686c7e00c1ecde24c3da3019f7}{drive}}();}
+\DoxyCodeLine{00110 }
+\DoxyCodeLine{00111     vex::task::sleep(20); \textcolor{comment}{//Sleep the task for a short amount of time to prevent wasted resources. }}
+\DoxyCodeLine{00112   \}}
+\DoxyCodeLine{00113 \}}
+\DoxyCodeLine{00114 }
+\DoxyCodeLine{00115 }
+\DoxyCodeLine{00116 \textcolor{comment}{//}}
+\DoxyCodeLine{00117 \textcolor{comment}{// Main will set up the competition functions and callbacks.}}
+\DoxyCodeLine{00118 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00119}\mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_ae66f6b31b5ad750f1fe042a706a4e3d4}{00119}} \textcolor{keywordtype}{int} \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}() \{}
+\DoxyCodeLine{00120     \textcolor{comment}{//Set up callbacks for autonomous and driver control periods.}}
+\DoxyCodeLine{00121     \mbox{\hyperlink{main_8cpp_ae38c1d025caf302610a55e0a7a9db5dd_ae38c1d025caf302610a55e0a7a9db5dd}{Competition}}.autonomous( \mbox{\hyperlink{main_8cpp_a2df3d06bc5bced154da27fce393f991f_a2df3d06bc5bced154da27fce393f991f}{autonomous}} );}
+\DoxyCodeLine{00122     \mbox{\hyperlink{main_8cpp_ae38c1d025caf302610a55e0a7a9db5dd_ae38c1d025caf302610a55e0a7a9db5dd}{Competition}}.drivercontrol( \mbox{\hyperlink{main_8cpp_a0b51ae97a13db57021eefe87a9903444_a0b51ae97a13db57021eefe87a9903444}{usercontrol}} );}
+\DoxyCodeLine{00123     }
+\DoxyCodeLine{00124     \textcolor{comment}{//Run the pre-\/autonomous function. }}
+\DoxyCodeLine{00125     \mbox{\hyperlink{main_8cpp_ac6b858ea8606cdfaee934aac6be66a96_ac6b858ea8606cdfaee934aac6be66a96}{pre\_auton}}();}
+\DoxyCodeLine{00126 }
+\DoxyCodeLine{00127     }
+\DoxyCodeLine{00128     \textcolor{comment}{//Prevent main from exiting with an infinite loop.                        }}
+\DoxyCodeLine{00129     \textcolor{keywordflow}{while}(1) \{}
+\DoxyCodeLine{00130       \mbox{\hyperlink{main_8cpp_aa8d8e260e2268c61bbbf2017f3f6ad92_aa8d8e260e2268c61bbbf2017f3f6ad92}{printTask}} = task(\mbox{\hyperlink{main_8cpp_ae1455c81426fba02cdaa271e742cee67_ae1455c81426fba02cdaa271e742cee67}{printDisplay}});}
+\DoxyCodeLine{00131       vex::task::sleep(100);\textcolor{comment}{//Sleep the task for a short amount of time to prevent wasted resources.}}
+\DoxyCodeLine{00132     \}    }
+\DoxyCodeLine{00133        }
+\DoxyCodeLine{00134 \}}
+
 \end{DoxyCode}
